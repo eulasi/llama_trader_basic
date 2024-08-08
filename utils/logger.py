@@ -13,6 +13,7 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
+
 def log_message(message, level=logging.INFO):
     if level == logging.DEBUG:
         logging.debug(message)
