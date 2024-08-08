@@ -7,6 +7,7 @@ from config.symbols import symbol_list
 
 api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
 
+
 def get_historical_data(symbol, timeframe, limit):
     try:
         barset = api.get_barset(symbol, timeframe, limit=limit)
@@ -15,6 +16,7 @@ def get_historical_data(symbol, timeframe, limit):
     except Exception as e:
         log_message(f"Error fetching historical data for {symbol}: {str(e)}", level=logging.ERROR)
         return []
+
 
 def fetch_data_for_all_symbols(timeframe, limit):
     all_data = {}
