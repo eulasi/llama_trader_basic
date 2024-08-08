@@ -1,6 +1,7 @@
 import pandas as pd
 from utils.data_fetcher import fetch_data_for_all_symbols
 
+
 def save_historical_data(symbol, data, timeframe):
     filename = f"data/historical_data/{symbol}_{timeframe}.csv"
     df = pd.DataFrame([{
@@ -14,6 +15,7 @@ def save_historical_data(symbol, data, timeframe):
     df.to_csv(filename, index=False)
     print(f"Saved historical data for {symbol} to {filename}")
 
+
 def main():
     timeframe = 'day'
     limit = 100
@@ -23,6 +25,7 @@ def main():
         if not data:
             continue
         save_historical_data(symbol, data, timeframe)
+
 
 if __name__ == "__main__":
     main()
