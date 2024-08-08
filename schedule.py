@@ -1,14 +1,11 @@
 import schedule
 import time
-import logging
 from subprocess import call
 from utils.logger import log_message
-
 
 def run_trading_bot():
     log_message("Running trading bot")
     call(["python", "main.py"])
-
 
 def main():
     # Schedule tasks
@@ -22,7 +19,6 @@ def main():
     while True:
         schedule.run_pending()
         time.sleep(1)
-
 
 if __name__ == "__main__":
     main()
