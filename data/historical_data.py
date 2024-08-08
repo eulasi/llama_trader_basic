@@ -1,9 +1,14 @@
+import os
 import pandas as pd
 from utils.data_fetcher import fetch_data_for_all_symbols
 
 
 def save_historical_data(symbol, data, timeframe):
-    filename = f"data/historical_data/{symbol}_{timeframe}.csv"
+    directory = 'data/historical_data'
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    filename = f"{directory}/{symbol}_{timeframe}.csv"
     df = pd.DataFrame([{
         'time': bar.t,
         'open': bar.o,

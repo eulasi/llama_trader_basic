@@ -8,9 +8,12 @@ from config.symbols import symbol_list
 api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
 
 
-def get_historical_data(symbol, timeframe, start, end):
+def get_historical_data(symbol, timeframe, start=None, end=None):
     try:
-        barset = api.get_bars(symbol, timeframe, start=start, end=end)
+        if start and end:
+            barset = api.get_bars(symbol, timeframe, start=start, end=end)
+        else:
+            barset = api.get_bars(symbol, timeframe, limit=1)  # Fetch the latest bar for live data
         log_message(f"Fetched historical data for {symbol} from {start} to {end}")
         return barset
     except Exception as e:
@@ -24,5 +27,5 @@ def fetch_data_for_all_symbols(timeframe, start=None, end=None):
         if start and end:
             all_data[symbol] = get_historical_data(symbol, timeframe, start, end)
         else:
-            log_message(f"Start and end dates must be provided for {symbol}.")
+            all_data[symbol] = get_historical_data(symbol, timeframe)
     return all_data

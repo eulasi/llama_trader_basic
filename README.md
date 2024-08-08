@@ -5,7 +5,7 @@ This project contains a set of tools and scripts to automate trading using the A
 ## Setup
 
 1. Clone the repository:
-git clone https://github.com/yourusername/alpaca_trading_bot.git
+git clone https://github.com/eulasi/llama_trader_basic.git
 cd alpaca_trading_bot
 
 2. Install the required dependencies:
@@ -24,7 +24,7 @@ Update the `config/credentials.py` file with your API key and secret.
    - **Purpose:** To backtest your trading strategies using historical data.
    - **Run:** When you want to test how your strategies would have performed in the past.
 
-2. **schedule.py:**
+2. **trading_schedule.py:**
    - **Purpose:** To run your trading bot at specified times.
    - **Run:** When you want to automate your trading bot to run at specific times each trading day.
 
@@ -41,7 +41,7 @@ Update the `config/credentials.py` file with your API key and secret.
 - **backtest.py:** Run this script when you want to perform backtesting on your strategies.
 - **historical_data.py:** Run this script periodically or as needed to fetch historical data.
 - **live_data.py:** Run this script to collect live market data. This can be run in parallel with your trading bot if you need real-time data.
-- **schedule.py:** Run this script to automate your trading bot to execute at specified times. This is the primary script you’ll keep running during live trading.
+- **trading_schedule.py:** Run this script to automate your trading bot to execute at specified times. This is the primary script you’ll keep running during live trading.
 
 ### Streamlined Workflow
 
@@ -58,7 +58,7 @@ Update the `config/credentials.py` file with your API key and secret.
      ```
 
 3. **Automated Trading:**
-   - Run `schedule.py` to execute your trading bot at specified times.
+   - Run `trading_schedule.py` to execute your trading bot at specified times.
      ```sh
      python trading_schedule.py
      ```

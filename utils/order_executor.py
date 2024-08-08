@@ -4,7 +4,7 @@ import alpaca_trade_api as tradeapi
 api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
 
 
-def place_order(symbol, qty, side, order_type='market', time_in_force='gtc'):
+def place_order(symbol, qty, side, order_type='market', time_in_force='day'):
     api.submit_order(
         symbol=symbol,
         qty=qty,

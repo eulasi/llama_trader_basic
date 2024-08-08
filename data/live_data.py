@@ -1,4 +1,5 @@
 import logging
+import os
 import time
 import pandas as pd
 from utils.data_fetcher import get_historical_data
@@ -7,7 +8,11 @@ from config.symbols import symbol_list
 
 
 def save_live_data(symbol, data, timeframe):
-    filename = f"data/live_data/{symbol}_{timeframe}.csv"
+    directory = 'data/live_data'
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    filename = f"{directory}/{symbol}_{timeframe}.csv"
     df = pd.DataFrame([{
         'time': bar.t,
         'open': bar.o,
@@ -24,7 +29,7 @@ def fetch_and_save_live_data():
     timeframe = 'minute'
     while True:
         for symbol in symbol_list:
-            data = get_historical_data(symbol, timeframe, start=None, end=None)
+            data = get_historical_data(symbol, timeframe)
             if not data:
                 log_message(f"No live data fetched for {symbol}")
                 continue
