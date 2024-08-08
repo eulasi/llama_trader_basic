@@ -12,11 +12,11 @@ cd alpaca_trading_bot
 pip install -r requirements.txt
 
 3. Configure your Alpaca API keys:
-- Update the `config/credentials.py` file with your API key and secret.
+Update the `config/credentials.py` file with your API key and secret.
 
 4. Run the trading bot
 
-5. Run backtests
+5. Run back tests
 
 # Streamlined Workflow
 
