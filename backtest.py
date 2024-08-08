@@ -5,17 +5,15 @@ from config.symbols import symbol_list
 
 
 def backtest(strategy, symbol, start_date, end_date):
-    data = fetch_data_for_all_symbols('1Day', start=start_date, end=end_date).get(symbol)
+    data = fetch_data_for_all_symbols('day', start=start_date, end=end_date).get(symbol)
     if not data:
         log_message(f"No data fetched for {symbol} from {start_date} to {end_date}")
         return 0
 
     closing_prices = [bar.close for bar in data]
 
-    # Assuming strategy returns signals based on closing prices
     signals = strategy(closing_prices)
 
-    # Assume starting with $1000
     initial_cash = 1000
     shares = 0
     cash = initial_cash
@@ -28,7 +26,6 @@ def backtest(strategy, symbol, start_date, end_date):
             cash += price
             shares -= 1
 
-    # Final portfolio value
     portfolio_value = cash + shares * closing_prices[-1]
     return portfolio_value
 
