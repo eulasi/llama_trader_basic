@@ -60,7 +60,7 @@ pip install -r requirements.txt
 3. **Automated Trading:**
    - Run `schedule.py` to execute your trading bot at specified times.
      ```sh
-     python schedule.py
+     python trading_schedule.py
      ```
 
 4. **Live Data Collection (Optional):**
