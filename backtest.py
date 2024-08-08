@@ -1,13 +1,17 @@
-import numpy as np
-import pandas as pd
 from utils.data_fetcher import get_historical_data
 from strategies.moving_average_crossover import moving_average_crossover
+from utils.logger import log_message
 
 
 def backtest(strategy, symbol, start_date, end_date):
     data = get_historical_data(symbol, 'day', start_date, end_date)
+    if not data:
+        log_message(f"No data fetched for {symbol} from {start_date} to {end_date}")
+        return 0
+
     closing_prices = [bar.c for bar in data]
 
+    # Assuming strategy returns signals based on closing prices
     signals = strategy(closing_prices)
 
     # Assume starting with $1000
@@ -15,12 +19,12 @@ def backtest(strategy, symbol, start_date, end_date):
     shares = 0
     cash = initial_cash
 
-    for signal in signals:
+    for signal, price in zip(signals, closing_prices):
         if signal == 'buy':
             shares += 1
-            cash -= closing_prices.pop(0)
+            cash -= price
         elif signal == 'sell':
-            cash += closing_prices.pop(0)
+            cash += price
             shares -= 1
 
     # Final portfolio value
