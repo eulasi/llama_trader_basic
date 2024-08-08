@@ -1,21 +1,22 @@
-from utils.data_fetcher import get_historical_data
+from utils.data_fetcher import fetch_data_for_all_symbols
 from strategies.moving_average_crossover import moving_average_crossover
 from utils.logger import log_message
+from config.symbols import symbol_list
 
 
 def backtest(strategy, symbol, start_date, end_date):
-    data = get_historical_data(symbol, 'day', start_date, end_date)
+    data = fetch_data_for_all_symbols('1Day', start=start_date, end=end_date).get(symbol)
     if not data:
         log_message(f"No data fetched for {symbol} from {start_date} to {end_date}")
         return 0
 
-    closing_prices = [bar.c for bar in data]
+    closing_prices = [bar.close for bar in data]
 
     # Assuming strategy returns signals based on closing prices
     signals = strategy(closing_prices)
 
-    # Assume starting with $250
-    initial_cash = 250
+    # Assume starting with $1000
+    initial_cash = 1000
     shares = 0
     cash = initial_cash
 
@@ -33,13 +34,13 @@ def backtest(strategy, symbol, start_date, end_date):
 
 
 def main():
-    symbol = 'AAPL'
     start_date = '2023-01-01'
     end_date = '2023-12-31'
     strategy = moving_average_crossover
 
-    final_portfolio_value = backtest(strategy, symbol, start_date, end_date)
-    print(f"Final portfolio value: ${final_portfolio_value}")
+    for symbol in symbol_list:
+        final_portfolio_value = backtest(strategy, symbol, start_date, end_date)
+        print(f"Final portfolio value for {symbol}: ${final_portfolio_value}")
 
 
 if __name__ == "__main__":
