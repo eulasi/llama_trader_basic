@@ -2,31 +2,6 @@
 
 This project contains a set of tools and scripts to automate trading using the Alpaca API.
 
-## Directory Structure
-
-alpaca_trading_bot/
-├── config/
-│ ├── config.py
-│ ├── credentials.py
-├── data/
-│ ├── historical_data/
-│ └── live_data/
-├── logs/
-│ ├── trading.log
-├── strategies/
-│ ├── init.py
-│ ├── moving_average_crossover.py
-│ └── mean_reversion.py
-├── utils/
-│ ├── init.py
-│ ├── data_fetcher.py
-│ ├── order_executor.py
-│ ├── logger.py
-├── main.py
-├── backtest.py
-├── requirements.txt
-└── README.md
-
 ## Setup
 
 1. Clone the repository:
@@ -106,3 +81,27 @@ This strategy buys when the current price is significantly below the mean price 
 
 This project is licensed under the MIT License.
 
+## Directory Structure
+
+alpaca_trading_bot/
+├── config/
+│ ├── config.py
+│ ├── credentials.py
+├── data/
+│ ├── historical_data/
+│ └── live_data/
+├── logs/
+│ ├── trading.log
+├── strategies/
+│ ├── init.py
+│ ├── moving_average_crossover.py
+│ └── mean_reversion.py
+├── utils/
+│ ├── init.py
+│ ├── data_fetcher.py
+│ ├── order_executor.py
+│ ├── logger.py
+├── main.py
+├── backtest.py
+├── requirements.txt
+└── README.md
