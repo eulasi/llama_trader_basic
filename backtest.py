@@ -14,8 +14,8 @@ def backtest(strategy, symbol, start_date, end_date):
     # Assuming strategy returns signals based on closing prices
     signals = strategy(closing_prices)
 
-    # Assume starting with $1000
-    initial_cash = 1000
+    # Assume starting with $250
+    initial_cash = 250
     shares = 0
     cash = initial_cash
 
