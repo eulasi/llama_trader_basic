@@ -1,35 +1,45 @@
+import logging
 import time
 import pandas as pd
 from utils.data_fetcher import get_historical_data
+from utils.logger import log_message
+from config.symbols import symbol_list
 
 
-def save_live_data(symbol, timeframe, interval, filename):
+def save_live_data(symbol, data, timeframe):
+    filename = f"data/live_data/{symbol}_{timeframe}.csv"
+    df = pd.DataFrame([{
+        'time': bar.t,
+        'open': bar.o,
+        'high': bar.h,
+        'low': bar.l,
+        'close': bar.c,
+        'volume': bar.v
+    } for bar in data])
+    df.to_csv(filename, mode='a', header=False, index=False)
+    print(f"Appended live data for {symbol} to {filename}")
+
+
+def fetch_and_save_live_data():
+    timeframe = 'minute'
     while True:
-        data = get_historical_data(symbol, timeframe, limit=1)
-        latest_bar = data[-1]
+        for symbol in symbol_list:
+            data = get_historical_data(symbol, timeframe, start=None, end=None)
+            if not data:
+                log_message(f"No live data fetched for {symbol}")
+                continue
+            save_live_data(symbol, data, timeframe)
+            log_message(f"Appended live data for {symbol}")
 
-        df = pd.DataFrame([{
-            'time': latest_bar.t,
-            'open': latest_bar.o,
-            'high': latest_bar.h,
-            'low': latest_bar.l,
-            'close': latest_bar.c,
-            'volume': latest_bar.v
-        }])
-
-        df.to_csv(filename, mode='a', header=False, index=False)
-        print(f"Appended live data for {symbol} to {filename}")
-
-        time.sleep(interval)
+        # Sleep for 60 seconds before fetching the next batch of live data
+        time.sleep(60)
 
 
 def main():
-    symbol = 'AAPL'
-    timeframe = 'minute'
-    interval = 60  # Fetch data every 60 seconds
-    filename = f"data/live_data/{symbol}_{timeframe}.csv"
-
-    save_live_data(symbol, timeframe, interval, filename)
+    try:
+        fetch_and_save_live_data()
+    except Exception as e:
+        log_message(f"Error in live data fetching: {str(e)}", level=logging.ERROR)
 
 
 if __name__ == "__main__":
