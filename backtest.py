@@ -51,7 +51,9 @@ def backtest(strategy, symbol, start_date, end_date):
 def main():
     start_date = '2023-01-01'
     end_date = '2023-12-31'
-    strategy = lambda prices: moving_average_crossover(prices)  # Use the strategy as is
+
+    def strategy(prices):
+        return moving_average_crossover(prices)  # Define strategy with def
 
     for symbol in symbol_list:
         final_portfolio_value = backtest(strategy, symbol, start_date, end_date)
