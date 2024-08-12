@@ -5,6 +5,7 @@ import pandas as pd
 from utils.data_fetcher import get_historical_data
 from utils.logger import log_message
 from config.symbols import symbol_list
+import alpaca_trade_api as tradeapi
 
 
 def save_live_data(symbol, data, timeframe):
@@ -27,14 +28,14 @@ def save_live_data(symbol, data, timeframe):
 
 def fetch_and_save_live_data():
     log_message("Starting live data fetching process")
-    timeframe = 'minute'
+    timeframe = tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Minute)  # 1-minute bars
     while True:
         for symbol in symbol_list:
             data = get_historical_data(symbol, timeframe)
             if not data:
                 log_message(f"No live data fetched for {symbol}")
                 continue
-            save_live_data(symbol, data, timeframe)
+            save_live_data(symbol, data, '1Min')  # Use '1Min' to match the correct timeframe
             log_message(f"Appended live data for {symbol}")
 
         # Sleep for 60 seconds before fetching the next batch of live data

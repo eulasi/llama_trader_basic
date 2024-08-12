@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 from utils.data_fetcher import fetch_data_for_all_symbols
+import alpaca_trade_api as tradeapi
 
 
 def save_historical_data(symbol, data, timeframe):
@@ -22,13 +23,14 @@ def save_historical_data(symbol, data, timeframe):
 
 
 def main():
-    timeframe = 'day'
+    # Set the timeframe using the appropriate TimeFrame and TimeFrameUnit
+    timeframe = tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Day)
     all_data = fetch_data_for_all_symbols(timeframe)
 
     for symbol, data in all_data.items():
         if not data:
             continue
-        save_historical_data(symbol, data, timeframe)
+        save_historical_data(symbol, data, '1Day')  # Using '1Day' to match the correct timeframe
 
 
 if __name__ == "__main__":
