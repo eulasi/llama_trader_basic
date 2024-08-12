@@ -26,6 +26,7 @@ def save_live_data(symbol, data, timeframe):
 
 
 def fetch_and_save_live_data():
+    log_message("Starting live data fetching process")
     timeframe = 'minute'
     while True:
         for symbol in symbol_list:

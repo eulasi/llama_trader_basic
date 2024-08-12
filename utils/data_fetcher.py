@@ -14,7 +14,10 @@ def get_historical_data(symbol, timeframe, start=None, end=None):
             barset = api.get_bars(symbol, timeframe, start=start, end=end)
         else:
             barset = api.get_bars(symbol, timeframe, limit=1)  # Fetch the latest bar for live data
-        log_message(f"Fetched historical data for {symbol} from {start} to {end}")
+        log_message(
+            f"Fetched historical data for {symbol} from {start} to {end}" if start and end else f"Fetched latest "
+                                                                                                f"historical data for "
+                                                                                                f"{symbol}")
         return barset
     except Exception as e:
         log_message(f"Error fetching historical data for {symbol}: {str(e)}", level=logging.ERROR)

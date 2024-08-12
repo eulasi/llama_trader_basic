@@ -23,8 +23,7 @@ def save_historical_data(symbol, data, timeframe):
 
 def main():
     timeframe = 'day'
-    limit = 100
-    all_data = fetch_data_for_all_symbols(timeframe, limit)
+    all_data = fetch_data_for_all_symbols(timeframe)
 
     for symbol, data in all_data.items():
         if not data:

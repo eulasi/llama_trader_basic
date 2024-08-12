@@ -1,3 +1,5 @@
+import logging
+
 from utils.logger import log_message
 
 
@@ -11,6 +13,10 @@ class RiskManager:
         self.current_capital = initial_capital
 
     def calculate_position_size(self, symbol_price):
+        if symbol_price <= 0:
+            log_message(f"Invalid symbol price: {symbol_price}. Cannot calculate position size.", level=logging.ERROR)
+            return 0  # Return 0 to indicate no position should be taken
+
         risk_per_trade = self.current_capital * self.risk_percentage
         position_size = risk_per_trade / symbol_price
         return position_size
@@ -27,3 +33,4 @@ class RiskManager:
 
     def update_capital(self, realized_pnl):
         self.current_capital += realized_pnl
+        log_message(f"Updated capital: {self.current_capital}")

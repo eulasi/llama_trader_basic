@@ -1,5 +1,4 @@
 import logging
-
 from config.credentials import API_KEY, API_SECRET, BASE_URL
 import alpaca_trade_api as tradeapi
 from utils.risk_management import RiskManager
@@ -13,7 +12,12 @@ risk_manager = RiskManager(max_loss_per_trade=100, max_daily_loss=500, initial_c
 
 
 def place_order(symbol, qty, side, order_type='market', time_in_force='day'):
-    symbol_price = api.get_latest_trade(symbol).price
+    latest_trade = api.get_latest_trade(symbol)
+    if latest_trade is None:
+        log_message(f"Failed to retrieve the latest trade for {symbol}. Order not placed.", level=logging.ERROR)
+        return None
+
+    symbol_price = latest_trade.price
     position_size = risk_manager.calculate_position_size(symbol_price)
 
     if qty > position_size:
@@ -38,24 +42,34 @@ def place_order(symbol, qty, side, order_type='market', time_in_force='day'):
         return order
     except Exception as e:
         log_message(f"Failed to place order for {symbol}: {str(e)}", level=logging.ERROR)
+        return None
 
 
 def handle_order_execution(order, symbol):
-    if order:
-        status = order.status
-        filled_qty = float(order.filled_qty)
-        symbol_price = api.get_latest_trade(symbol).price
+    if order is None:
+        log_message(f"No order to execute for {symbol}.", level=logging.WARNING)
+        return False
 
-        realized_pnl = 0  # Initialize realized_pnl to zero or a default value
+    status = order.status
+    filled_qty = float(order.filled_qty)
+    latest_trade = api.get_latest_trade(symbol)
+    if latest_trade is None:
+        log_message(f"Failed to retrieve the latest trade for {symbol}. Cannot calculate PnL.", level=logging.ERROR)
+        return False
 
-        if status == 'filled':
-            if order.side == 'sell':
-                realized_pnl = filled_qty * symbol_price  # Simplified PnL calculation
-                if not risk_manager.update_daily_loss(realized_pnl):
-                    log_message("Daily loss limit exceeded, halting trading.")
-                    return False
-            # Update capital only if the order is filled
-            risk_manager.update_capital(realized_pnl)
+    symbol_price = latest_trade.price
+    realized_pnl = 0  # Initialize realized_pnl to zero or a default value
 
-        log_message(f"Order executed: {status} for {symbol}")
+    if status == 'filled':
+        if order.side == 'sell':
+            realized_pnl = filled_qty * symbol_price  # Simplified PnL calculation
+            if not risk_manager.update_daily_loss(realized_pnl):
+                log_message("Daily loss limit exceeded, halting trading.")
+                return False
+        # Update capital only if the order is filled
+        risk_manager.update_capital(realized_pnl)
+    else:
+        log_message(f"Order for {symbol} was not filled. Status: {status}", level=logging.WARNING)
+
+    log_message(f"Order executed: {status} for {symbol}")
     return True

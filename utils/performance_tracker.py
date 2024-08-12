@@ -32,6 +32,8 @@ class PerformanceTracker:
             self.loss_count += 1
 
         self.update_drawdown()
+        # Optional: Log or print each trade recorded
+        print(f"Recorded trade for {symbol}: {side} {qty} shares at {price} each, PnL: {pnl}")
 
     def update_drawdown(self):
         if self.total_pnl > self.current_peak:
@@ -54,7 +56,10 @@ class PerformanceTracker:
         }
 
     def save_metrics(self, filename="performance_metrics.csv"):
-        metrics_df = pd.DataFrame(self.trades)
-        filepath = os.path.join(self.metrics_directory, filename)
-        metrics_df.to_csv(filepath, index=False)
-        print(f"Performance metrics saved to {filepath}")
+        try:
+            metrics_df = pd.DataFrame(self.trades)
+            filepath = os.path.join(self.metrics_directory, filename)
+            metrics_df.to_csv(filepath, index=False)
+            print(f"Performance metrics saved to {filepath}")
+        except Exception as e:
+            print(f"Failed to save performance metrics: {str(e)}")
