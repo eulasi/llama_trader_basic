@@ -2,15 +2,16 @@ from utils.logger import log_message
 
 
 class RiskManager:
-    def __init__(self, max_loss_per_trade, max_daily_loss, initial_capital):
+    def __init__(self, max_loss_per_trade, max_daily_loss, initial_capital, risk_percentage=1):
         self.max_loss_per_trade = max_loss_per_trade
         self.max_daily_loss = max_daily_loss
         self.initial_capital = initial_capital
+        self.risk_percentage = risk_percentage / 100
         self.daily_loss = 0
+        self.current_capital = initial_capital
 
     def calculate_position_size(self, symbol_price):
-        # Risk a fixed percentage of capital per trade
-        risk_per_trade = self.max_loss_per_trade
+        risk_per_trade = self.current_capital * self.risk_percentage
         position_size = risk_per_trade / symbol_price
         return position_size
 
@@ -23,3 +24,6 @@ class RiskManager:
 
     def reset_daily_loss(self):
         self.daily_loss = 0
+
+    def update_capital(self, realized_pnl):
+        self.current_capital += realized_pnl

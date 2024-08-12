@@ -41,11 +41,12 @@ def place_order(symbol, qty, side, order_type='market', time_in_force='day'):
 
 
 def handle_order_execution(order, symbol):
-    # Monitor the order status and calculate the outcome
     if order:
         status = order.status
         filled_qty = float(order.filled_qty)
         symbol_price = api.get_latest_trade(symbol).price
+
+        realized_pnl = 0  # Initialize realized_pnl to zero or a default value
 
         if status == 'filled':
             if order.side == 'sell':
@@ -53,5 +54,8 @@ def handle_order_execution(order, symbol):
                 if not risk_manager.update_daily_loss(realized_pnl):
                     log_message("Daily loss limit exceeded, halting trading.")
                     return False
+            # Update capital only if the order is filled
+            risk_manager.update_capital(realized_pnl)
+
         log_message(f"Order executed: {status} for {symbol}")
     return True
