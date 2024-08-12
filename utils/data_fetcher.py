@@ -32,17 +32,25 @@ def get_historical_data(symbol, timeframe, start=None, end=None):
         if isinstance(timeframe, str):
             timeframe = convert_timeframe(timeframe)
 
-        # Now `timeframe` is guaranteed to be a TimeFrame object
+        all_bars = []
+        # Fetch data in chunks if necessary
         if start and end:
-            barset = api.get_bars(symbol, timeframe, start=start, end=end)
+            while True:
+                barset = api.get_bars(symbol, timeframe, start=start, end=end)
+                if not barset:
+                    break
+                all_bars.extend(barset)
+                # Break if less than 1000 bars are returned, indicating the end of data
+                if len(barset) < 1000:
+                    break
+                # Update the start date for the next batch
+                start = barset[-1].t.strftime('%Y-%m-%d')
         else:
-            barset = api.get_bars(symbol, timeframe, limit=1)  # Fetch the latest bar for live data
+            barset = api.get_bars(symbol, timeframe, limit=1000)
+            all_bars.extend(barset)
 
-        log_message(
-            f"Fetched historical data for {symbol} from {start} to {end}" if start and end else f"Fetched latest "
-                                                                                                f"historical data for "
-                                                                                                f"{symbol}")
-        return barset
+        log_message(f"Fetched {len(all_bars)} historical data points for {symbol} from {start} to {end}")
+        return all_bars
     except Exception as e:
         log_message(f"Error fetching historical data for {symbol}: {str(e)}", level=logging.ERROR)
         return []
@@ -51,8 +59,13 @@ def get_historical_data(symbol, timeframe, start=None, end=None):
 def fetch_data_for_all_symbols(timeframe, start=None, end=None):
     all_data = {}
     for symbol in symbol_list:
-        if start and end:
-            all_data[symbol] = get_historical_data(symbol, timeframe, start, end)
-        else:
-            all_data[symbol] = get_historical_data(symbol, timeframe)
+        try:
+            data = get_historical_data(symbol, timeframe, start, end)
+            if not data:
+                log_message(f"{symbol}: No data fetched. Check symbol validity, timeframe, and data availability.",
+                            level=logging.WARNING)
+            all_data[symbol] = data
+        except Exception as e:
+            log_message(f"Error fetching data for {symbol}: {str(e)}", level=logging.ERROR)
+            all_data[symbol] = None
     return all_data

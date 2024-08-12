@@ -1,7 +1,7 @@
-from utils.data_fetcher import fetch_data_for_all_symbols
-from utils.logger import log_message
 from config.symbols import symbol_list
 from strategies.moving_average_crossover import moving_average_crossover
+from utils.data_fetcher import fetch_data_for_all_symbols, convert_timeframe  # Import convert_timeframe
+from utils.logger import log_message
 
 
 def generate_signals(orders):
@@ -18,12 +18,15 @@ def generate_signals(orders):
 
 
 def backtest(strategy, symbol, start_date, end_date):
-    data = fetch_data_for_all_symbols('day', start=start_date, end=end_date).get(symbol)
+    # Convert 'day' string to TimeFrame object
+    timeframe = convert_timeframe('1Day')
+    data = fetch_data_for_all_symbols(timeframe, start=start_date, end=end_date).get(symbol)
     if not data:
         log_message(f"No data fetched for {symbol} from {start_date} to {end_date}")
         return 0
 
-    closing_prices = [bar.close for bar in data]
+    # Accessing the _raw attribute to retrieve the close price
+    closing_prices = [bar._raw['c'] for bar in data]  # Access the closing price through _raw
 
     # Generate detailed orders from the strategy
     orders = strategy(closing_prices)
@@ -52,8 +55,14 @@ def main():
     start_date = '2023-01-01'
     end_date = '2023-12-31'
 
+    # Define your short and long window lengths
+    short_window = 3
+    long_window = 7
+
+    # Modify the strategy function to pass the window lengths
     def strategy(prices):
-        return moving_average_crossover(prices)  # Define strategy with def
+        risk_manager = None  # Define your RiskManager here if needed
+        return moving_average_crossover(risk_manager, short_window=short_window, long_window=long_window)
 
     for symbol in symbol_list:
         final_portfolio_value = backtest(strategy, symbol, start_date, end_date)
