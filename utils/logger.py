@@ -15,5 +15,6 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
+
 def log_message(message, level=logging.INFO):
     logging.log(level, message)
