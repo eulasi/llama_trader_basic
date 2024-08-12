@@ -14,9 +14,9 @@ env/
 .venv/
 
 # Ignore data files
-data/historical_data/
-data/live_data/
-data/performance_data/
+# data/historical_data/
+# data/live_data/
+# data/performance_data/
 
 # Ignore system files
 .DS_Store
