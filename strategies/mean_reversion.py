@@ -19,11 +19,11 @@ def mean_reversion():
 
         if current_price < mean_price * 0.95:
             log_message(
-                f"{symbol}: Current price ({current_price}) is below mean price ({mean_price}). Generating a buy order.")
+                f"{symbol}: Current ({current_price}) is below mean price ({mean_price}). Generating a buy order.")
             orders.append({'symbol': symbol, 'qty': 1, 'side': 'buy'})
         elif current_price > mean_price * 1.05:
             log_message(
-                f"{symbol}: Current price ({current_price}) is above mean price ({mean_price}). Generating a sell order.")
+                f"{symbol}: Current ({current_price}) is above mean price ({mean_price}). Generating a sell order.")
             orders.append({'symbol': symbol, 'qty': 1, 'side': 'sell'})
         else:
             log_message(f"{symbol}: Current price is near the mean price. No order generated.")
