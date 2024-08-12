@@ -3285,3 +3285,2764 @@
 2024-08-12 09:48:55:ERROR:Error fetching historical data for BDX: invalid timeframe: minute
 2024-08-12 09:48:55:INFO:No live data fetched for BDX
 2024-08-12 09:48:55:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/HCA/bars 3 more time(s)...
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AAPL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MSFT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for GOOG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for GOOGL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AMZN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TSLA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for BRK.B: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for FB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for NVDA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for UNH: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for JNJ: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for V: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for WMT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for JPM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for XOM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CVX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for HD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for BAC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PFE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ABBV: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for LLY: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for KO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for COST: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for DIS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AVGO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PEP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TMO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CSCO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for VZ: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ACN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MRK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ABT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ORCL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CMCSA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for DHR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ADBE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for NKE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CRM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for INTC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MCD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for WFC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for T: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for BMY: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for NEE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TMUS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for UPS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AMD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for LIN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TXN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for NFLX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for QCOM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for SCHW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for UNP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MDT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for RTX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for SPGI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CVS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AXP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for LOW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AMGN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for COP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for INTU: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ANTM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for HON: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PYPL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for DE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PLD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for LMT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AMT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CAT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for IBM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for BLK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for GS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TGT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CHTR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AMAT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ISRG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for BA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for NOW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for SYK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for C: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ADP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for GE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for EL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ZTS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for SBUX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for BKNG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for DUK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MDLZ: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CME: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MMC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CCI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MMM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ADI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for SO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MU: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for BDX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for HCA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for GILD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for REGN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for USB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PNC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for EW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CSX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for EOG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AON: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ICE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TJX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for NOC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PSA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for D: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for VRTX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TFC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for FCX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for EQIX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PGR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for SHW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for LRCX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for WM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for GD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for NSC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for FISV: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for NEM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MRNA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for BSX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MCO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ITW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ATVI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for FIS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PXD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for SLB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for F: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MET: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for HUM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ETN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for OXY: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for GM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ILMN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for EMR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for DG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for APD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for COF: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for FTNT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MAR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for SRE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ADM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ECL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for FDX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AEP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CNC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for KLAC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ROP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AIG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PAYX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for KHC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for LHX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for DXCM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for EXC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for SNPS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ORLY: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MCK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MPC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for IQV: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CTSH: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for HSY: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for STZ: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for IDXX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for DOW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for JCI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TRV: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for KR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for KMI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for WELL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for NXPI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ADSK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CTAS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for APH: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PRU: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for SYY: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CDNS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AZO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CTVA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CMG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MNST: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for O: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for RSG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AFL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for DLR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for KMB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for VLO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for GIS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for SPG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for WMB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for DVN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MSCI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for XEL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TEL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for HPQ: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for HLT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PSX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for NUE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for A: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ANET: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for SBAC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for BAX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MSI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ALL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for WBA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for BK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for BKR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AJG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for GPN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TWTR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for CARR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for MCHP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for DLTR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for RMD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PEG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for HAL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TDG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for VRSK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for DD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for PH: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for HES: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AVB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for EA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ED: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ABC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for EQR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for YUM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ROST: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TSN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for LYB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for TROW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for FAST: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ALGN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for ARE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for WEC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for OTIS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:18:ERROR:Error fetching historical data for AMP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:Starting live data fetching process
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AAPL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AAPL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MSFT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MSFT
+2024-08-12 10:14:44:ERROR:Error fetching historical data for GOOG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for GOOG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for GOOGL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for GOOGL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AMZN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AMZN
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TSLA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TSLA
+2024-08-12 10:14:44:ERROR:Error fetching historical data for BRK.B: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for BRK.B
+2024-08-12 10:14:44:ERROR:Error fetching historical data for FB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for FB
+2024-08-12 10:14:44:ERROR:Error fetching historical data for NVDA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for NVDA
+2024-08-12 10:14:44:ERROR:Error fetching historical data for UNH: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for UNH
+2024-08-12 10:14:44:ERROR:Error fetching historical data for JNJ: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for JNJ
+2024-08-12 10:14:44:ERROR:Error fetching historical data for V: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for V
+2024-08-12 10:14:44:ERROR:Error fetching historical data for WMT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for WMT
+2024-08-12 10:14:44:ERROR:Error fetching historical data for JPM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for JPM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for XOM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for XOM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MA
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CVX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CVX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for HD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for HD
+2024-08-12 10:14:44:ERROR:Error fetching historical data for BAC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for BAC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PFE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PFE
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ABBV: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ABBV
+2024-08-12 10:14:44:ERROR:Error fetching historical data for LLY: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for LLY
+2024-08-12 10:14:44:ERROR:Error fetching historical data for KO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for KO
+2024-08-12 10:14:44:ERROR:Error fetching historical data for COST: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for COST
+2024-08-12 10:14:44:ERROR:Error fetching historical data for DIS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for DIS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AVGO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AVGO
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PEP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PEP
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TMO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TMO
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CSCO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CSCO
+2024-08-12 10:14:44:ERROR:Error fetching historical data for VZ: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for VZ
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ACN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ACN
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MRK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MRK
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ABT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ABT
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ORCL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ORCL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CMCSA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CMCSA
+2024-08-12 10:14:44:ERROR:Error fetching historical data for DHR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for DHR
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ADBE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ADBE
+2024-08-12 10:14:44:ERROR:Error fetching historical data for NKE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for NKE
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CRM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CRM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for INTC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for INTC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MCD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MCD
+2024-08-12 10:14:44:ERROR:Error fetching historical data for WFC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for WFC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for T: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for T
+2024-08-12 10:14:44:ERROR:Error fetching historical data for BMY: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for BMY
+2024-08-12 10:14:44:ERROR:Error fetching historical data for NEE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for NEE
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TMUS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TMUS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for UPS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for UPS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AMD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AMD
+2024-08-12 10:14:44:ERROR:Error fetching historical data for LIN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for LIN
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TXN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TXN
+2024-08-12 10:14:44:ERROR:Error fetching historical data for NFLX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for NFLX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for QCOM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for QCOM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for SCHW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for SCHW
+2024-08-12 10:14:44:ERROR:Error fetching historical data for UNP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for UNP
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MDT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MDT
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for RTX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for RTX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for SPGI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for SPGI
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CVS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CVS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AXP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AXP
+2024-08-12 10:14:44:ERROR:Error fetching historical data for LOW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for LOW
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AMGN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AMGN
+2024-08-12 10:14:44:ERROR:Error fetching historical data for COP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for COP
+2024-08-12 10:14:44:ERROR:Error fetching historical data for INTU: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for INTU
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ANTM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ANTM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for HON: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for HON
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PYPL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PYPL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for DE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for DE
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PLD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PLD
+2024-08-12 10:14:44:ERROR:Error fetching historical data for LMT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for LMT
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AMT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AMT
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CAT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CAT
+2024-08-12 10:14:44:ERROR:Error fetching historical data for IBM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for IBM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for BLK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for BLK
+2024-08-12 10:14:44:ERROR:Error fetching historical data for GS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for GS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TGT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TGT
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CHTR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CHTR
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AMAT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AMAT
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ISRG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ISRG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for BA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for BA
+2024-08-12 10:14:44:ERROR:Error fetching historical data for NOW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for NOW
+2024-08-12 10:14:44:ERROR:Error fetching historical data for SYK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for SYK
+2024-08-12 10:14:44:ERROR:Error fetching historical data for C: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for C
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ADP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ADP
+2024-08-12 10:14:44:ERROR:Error fetching historical data for GE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for GE
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MO
+2024-08-12 10:14:44:ERROR:Error fetching historical data for EL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for EL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ZTS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ZTS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for SBUX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for SBUX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CB
+2024-08-12 10:14:44:ERROR:Error fetching historical data for BKNG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for BKNG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for DUK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for DUK
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MDLZ: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MDLZ
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CME: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CME
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MMC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MMC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CCI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CCI
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MMM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MMM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ADI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ADI
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CI
+2024-08-12 10:14:44:ERROR:Error fetching historical data for SO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for SO
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MU: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MU
+2024-08-12 10:14:44:ERROR:Error fetching historical data for BDX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for BDX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for HCA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for HCA
+2024-08-12 10:14:44:ERROR:Error fetching historical data for GILD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for GILD
+2024-08-12 10:14:44:ERROR:Error fetching historical data for REGN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for REGN
+2024-08-12 10:14:44:ERROR:Error fetching historical data for USB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for USB
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PNC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PNC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for EW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for EW
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CSX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CSX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for EOG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for EOG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AON: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AON
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ICE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ICE
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TJX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TJX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for NOC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for NOC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PSA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PSA
+2024-08-12 10:14:44:ERROR:Error fetching historical data for D: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for D
+2024-08-12 10:14:44:ERROR:Error fetching historical data for VRTX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for VRTX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TFC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TFC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for FCX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for FCX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for EQIX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for EQIX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PGR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PGR
+2024-08-12 10:14:44:ERROR:Error fetching historical data for SHW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for SHW
+2024-08-12 10:14:44:ERROR:Error fetching historical data for LRCX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for LRCX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for WM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for WM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for GD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for GD
+2024-08-12 10:14:44:ERROR:Error fetching historical data for NSC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for NSC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for FISV: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for FISV
+2024-08-12 10:14:44:ERROR:Error fetching historical data for NEM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for NEM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MRNA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MRNA
+2024-08-12 10:14:44:ERROR:Error fetching historical data for BSX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for BSX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MCO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MCO
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ITW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ITW
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ATVI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ATVI
+2024-08-12 10:14:44:ERROR:Error fetching historical data for FIS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for FIS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PXD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PXD
+2024-08-12 10:14:44:ERROR:Error fetching historical data for SLB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for SLB
+2024-08-12 10:14:44:ERROR:Error fetching historical data for F: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for F
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MET: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MET
+2024-08-12 10:14:44:ERROR:Error fetching historical data for HUM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for HUM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ETN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ETN
+2024-08-12 10:14:44:ERROR:Error fetching historical data for OXY: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for OXY
+2024-08-12 10:14:44:ERROR:Error fetching historical data for GM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for GM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ILMN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ILMN
+2024-08-12 10:14:44:ERROR:Error fetching historical data for EMR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for EMR
+2024-08-12 10:14:44:ERROR:Error fetching historical data for DG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for DG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for APD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for APD
+2024-08-12 10:14:44:ERROR:Error fetching historical data for COF: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for COF
+2024-08-12 10:14:44:ERROR:Error fetching historical data for FTNT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for FTNT
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MAR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MAR
+2024-08-12 10:14:44:ERROR:Error fetching historical data for SRE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for SRE
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ADM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ADM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ECL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ECL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for FDX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for FDX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AEP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AEP
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CNC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CNC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for KLAC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for KLAC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ROP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ROP
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AIG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AIG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PAYX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PAYX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for KHC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for KHC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for LHX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for LHX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for DXCM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for DXCM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for EXC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for EXC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for SNPS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for SNPS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ORLY: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ORLY
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MCK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MCK
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MPC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MPC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for IQV: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for IQV
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CTSH: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CTSH
+2024-08-12 10:14:44:ERROR:Error fetching historical data for HSY: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for HSY
+2024-08-12 10:14:44:ERROR:Error fetching historical data for STZ: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for STZ
+2024-08-12 10:14:44:ERROR:Error fetching historical data for IDXX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for IDXX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for DOW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for DOW
+2024-08-12 10:14:44:ERROR:Error fetching historical data for JCI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for JCI
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TRV: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TRV
+2024-08-12 10:14:44:ERROR:Error fetching historical data for KR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for KR
+2024-08-12 10:14:44:ERROR:Error fetching historical data for KMI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for KMI
+2024-08-12 10:14:44:ERROR:Error fetching historical data for WELL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for WELL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for NXPI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for NXPI
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ADSK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ADSK
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CTAS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CTAS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for APH: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for APH
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PRU: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PRU
+2024-08-12 10:14:44:ERROR:Error fetching historical data for SYY: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for SYY
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CDNS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CDNS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AZO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AZO
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CTVA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CTVA
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CMG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CMG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MNST: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MNST
+2024-08-12 10:14:44:ERROR:Error fetching historical data for O: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for O
+2024-08-12 10:14:44:ERROR:Error fetching historical data for RSG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for RSG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AFL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AFL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for DLR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for DLR
+2024-08-12 10:14:44:ERROR:Error fetching historical data for KMB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for KMB
+2024-08-12 10:14:44:ERROR:Error fetching historical data for VLO: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for VLO
+2024-08-12 10:14:44:ERROR:Error fetching historical data for GIS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for GIS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for SPG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for SPG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for WMB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for WMB
+2024-08-12 10:14:44:ERROR:Error fetching historical data for DVN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for DVN
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MSCI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MSCI
+2024-08-12 10:14:44:ERROR:Error fetching historical data for XEL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for XEL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TEL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TEL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for HPQ: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for HPQ
+2024-08-12 10:14:44:ERROR:Error fetching historical data for HLT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for HLT
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PSX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PSX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for NUE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for NUE
+2024-08-12 10:14:44:ERROR:Error fetching historical data for A: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for A
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ANET: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ANET
+2024-08-12 10:14:44:ERROR:Error fetching historical data for SBAC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for SBAC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for BAX: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for BAX
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MSI: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MSI
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ALL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ALL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for WBA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for WBA
+2024-08-12 10:14:44:ERROR:Error fetching historical data for BK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for BK
+2024-08-12 10:14:44:ERROR:Error fetching historical data for BKR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for BKR
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AJG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AJG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for GPN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for GPN
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TWTR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TWTR
+2024-08-12 10:14:44:ERROR:Error fetching historical data for CARR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for CARR
+2024-08-12 10:14:44:ERROR:Error fetching historical data for MCHP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for MCHP
+2024-08-12 10:14:44:ERROR:Error fetching historical data for DLTR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for DLTR
+2024-08-12 10:14:44:ERROR:Error fetching historical data for RMD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for RMD
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PEG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PEG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for HAL: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for HAL
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TDG: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TDG
+2024-08-12 10:14:44:ERROR:Error fetching historical data for VRSK: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for VRSK
+2024-08-12 10:14:44:ERROR:Error fetching historical data for DD: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for DD
+2024-08-12 10:14:44:ERROR:Error fetching historical data for PH: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for PH
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TT: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TT
+2024-08-12 10:14:44:ERROR:Error fetching historical data for HES: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for HES
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AVB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AVB
+2024-08-12 10:14:44:ERROR:Error fetching historical data for EA: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for EA
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ED: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ED
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ABC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ABC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for EQR: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for EQR
+2024-08-12 10:14:44:ERROR:Error fetching historical data for YUM: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for YUM
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ROST: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ROST
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TSN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TSN
+2024-08-12 10:14:44:ERROR:Error fetching historical data for LYB: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for LYB
+2024-08-12 10:14:44:ERROR:Error fetching historical data for TROW: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for TROW
+2024-08-12 10:14:44:ERROR:Error fetching historical data for FAST: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for FAST
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ALGN: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ALGN
+2024-08-12 10:14:44:ERROR:Error fetching historical data for ARE: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for ARE
+2024-08-12 10:14:44:ERROR:Error fetching historical data for WEC: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for WEC
+2024-08-12 10:14:44:ERROR:Error fetching historical data for OTIS: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for OTIS
+2024-08-12 10:14:44:ERROR:Error fetching historical data for AMP: argument of type 'TimeFrame' is not iterable
+2024-08-12 10:14:44:INFO:No live data fetched for AMP
+2024-08-12 10:23:04:INFO:Fetched latest historical data for AAPL
+2024-08-12 10:23:04:INFO:Fetched latest historical data for MSFT
+2024-08-12 10:23:04:INFO:Fetched latest historical data for GOOG
+2024-08-12 10:23:04:INFO:Fetched latest historical data for GOOGL
+2024-08-12 10:23:04:INFO:Fetched latest historical data for AMZN
+2024-08-12 10:23:04:INFO:Fetched latest historical data for TSLA
+2024-08-12 10:23:04:INFO:Fetched latest historical data for BRK.B
+2024-08-12 10:23:04:INFO:Fetched latest historical data for FB
+2024-08-12 10:23:04:INFO:Fetched latest historical data for NVDA
+2024-08-12 10:23:04:INFO:Fetched latest historical data for UNH
+2024-08-12 10:23:04:INFO:Fetched latest historical data for JNJ
+2024-08-12 10:23:04:INFO:Fetched latest historical data for V
+2024-08-12 10:23:04:INFO:Fetched latest historical data for WMT
+2024-08-12 10:23:04:INFO:Fetched latest historical data for JPM
+2024-08-12 10:23:04:INFO:Fetched latest historical data for PG
+2024-08-12 10:23:04:INFO:Fetched latest historical data for XOM
+2024-08-12 10:23:04:INFO:Fetched latest historical data for MA
+2024-08-12 10:23:04:INFO:Fetched latest historical data for CVX
+2024-08-12 10:23:04:INFO:Fetched latest historical data for HD
+2024-08-12 10:23:04:INFO:Fetched latest historical data for BAC
+2024-08-12 10:23:04:INFO:Fetched latest historical data for PFE
+2024-08-12 10:23:04:INFO:Fetched latest historical data for ABBV
+2024-08-12 10:23:04:INFO:Fetched latest historical data for LLY
+2024-08-12 10:23:04:INFO:Fetched latest historical data for KO
+2024-08-12 10:23:05:INFO:Fetched latest historical data for COST
+2024-08-12 10:23:05:INFO:Fetched latest historical data for DIS
+2024-08-12 10:23:05:INFO:Fetched latest historical data for AVGO
+2024-08-12 10:23:05:INFO:Fetched latest historical data for PEP
+2024-08-12 10:23:05:INFO:Fetched latest historical data for TMO
+2024-08-12 10:23:05:INFO:Fetched latest historical data for CSCO
+2024-08-12 10:23:05:INFO:Fetched latest historical data for VZ
+2024-08-12 10:23:05:INFO:Fetched latest historical data for ACN
+2024-08-12 10:23:05:INFO:Fetched latest historical data for MRK
+2024-08-12 10:23:05:INFO:Fetched latest historical data for ABT
+2024-08-12 10:23:05:INFO:Fetched latest historical data for ORCL
+2024-08-12 10:23:05:INFO:Fetched latest historical data for CMCSA
+2024-08-12 10:23:05:INFO:Fetched latest historical data for DHR
+2024-08-12 10:23:05:INFO:Fetched latest historical data for ADBE
+2024-08-12 10:23:05:INFO:Fetched latest historical data for NKE
+2024-08-12 10:23:05:INFO:Fetched latest historical data for CRM
+2024-08-12 10:23:05:INFO:Fetched latest historical data for INTC
+2024-08-12 10:23:05:INFO:Fetched latest historical data for MCD
+2024-08-12 10:23:05:INFO:Fetched latest historical data for WFC
+2024-08-12 10:23:05:INFO:Fetched latest historical data for T
+2024-08-12 10:23:05:INFO:Fetched latest historical data for BMY
+2024-08-12 10:23:05:INFO:Fetched latest historical data for NEE
+2024-08-12 10:23:05:INFO:Fetched latest historical data for TMUS
+2024-08-12 10:23:05:INFO:Fetched latest historical data for UPS
+2024-08-12 10:23:05:INFO:Fetched latest historical data for AMD
+2024-08-12 10:23:05:INFO:Fetched latest historical data for LIN
+2024-08-12 10:23:05:INFO:Fetched latest historical data for TXN
+2024-08-12 10:23:05:INFO:Fetched latest historical data for NFLX
+2024-08-12 10:23:05:INFO:Fetched latest historical data for PM
+2024-08-12 10:23:05:INFO:Fetched latest historical data for QCOM
+2024-08-12 10:23:05:INFO:Fetched latest historical data for SCHW
+2024-08-12 10:23:06:INFO:Fetched latest historical data for UNP
+2024-08-12 10:23:06:INFO:Fetched latest historical data for MDT
+2024-08-12 10:23:06:INFO:Fetched latest historical data for MS
+2024-08-12 10:23:06:INFO:Fetched latest historical data for RTX
+2024-08-12 10:23:06:INFO:Fetched latest historical data for SPGI
+2024-08-12 10:23:06:INFO:Fetched latest historical data for CVS
+2024-08-12 10:23:06:INFO:Fetched latest historical data for AXP
+2024-08-12 10:23:06:INFO:Fetched latest historical data for LOW
+2024-08-12 10:23:06:INFO:Fetched latest historical data for AMGN
+2024-08-12 10:23:06:INFO:Fetched latest historical data for COP
+2024-08-12 10:23:06:INFO:Fetched latest historical data for INTU
+2024-08-12 10:23:06:INFO:Fetched latest historical data for ANTM
+2024-08-12 10:23:06:INFO:Fetched latest historical data for HON
+2024-08-12 10:23:06:INFO:Fetched latest historical data for PYPL
+2024-08-12 10:23:06:INFO:Fetched latest historical data for DE
+2024-08-12 10:23:06:INFO:Fetched latest historical data for PLD
+2024-08-12 10:23:06:INFO:Fetched latest historical data for LMT
+2024-08-12 10:23:06:INFO:Fetched latest historical data for AMT
+2024-08-12 10:23:06:INFO:Fetched latest historical data for CAT
+2024-08-12 10:23:06:INFO:Fetched latest historical data for IBM
+2024-08-12 10:23:06:INFO:Fetched latest historical data for BLK
+2024-08-12 10:23:06:INFO:Fetched latest historical data for GS
+2024-08-12 10:23:06:INFO:Fetched latest historical data for TGT
+2024-08-12 10:23:06:INFO:Fetched latest historical data for CHTR
+2024-08-12 10:23:06:INFO:Fetched latest historical data for AMAT
+2024-08-12 10:23:06:INFO:Fetched latest historical data for ISRG
+2024-08-12 10:23:06:INFO:Fetched latest historical data for BA
+2024-08-12 10:23:06:INFO:Fetched latest historical data for NOW
+2024-08-12 10:23:06:INFO:Fetched latest historical data for SYK
+2024-08-12 10:23:06:INFO:Fetched latest historical data for C
+2024-08-12 10:23:06:INFO:Fetched latest historical data for ADP
+2024-08-12 10:23:07:INFO:Fetched latest historical data for GE
+2024-08-12 10:23:07:INFO:Fetched latest historical data for MO
+2024-08-12 10:23:07:INFO:Fetched latest historical data for EL
+2024-08-12 10:23:07:INFO:Fetched latest historical data for ZTS
+2024-08-12 10:23:07:INFO:Fetched latest historical data for SBUX
+2024-08-12 10:23:07:INFO:Fetched latest historical data for CB
+2024-08-12 10:23:07:INFO:Fetched latest historical data for BKNG
+2024-08-12 10:23:07:INFO:Fetched latest historical data for DUK
+2024-08-12 10:23:07:INFO:Fetched latest historical data for MDLZ
+2024-08-12 10:23:07:INFO:Fetched latest historical data for CME
+2024-08-12 10:23:07:INFO:Fetched latest historical data for MMC
+2024-08-12 10:23:07:INFO:Fetched latest historical data for CCI
+2024-08-12 10:23:07:INFO:Fetched latest historical data for MMM
+2024-08-12 10:23:07:INFO:Fetched latest historical data for ADI
+2024-08-12 10:23:07:INFO:Fetched latest historical data for CI
+2024-08-12 10:23:07:INFO:Fetched latest historical data for SO
+2024-08-12 10:23:07:INFO:Fetched latest historical data for MU
+2024-08-12 10:23:07:INFO:Fetched latest historical data for BDX
+2024-08-12 10:23:07:INFO:Fetched latest historical data for HCA
+2024-08-12 10:23:07:INFO:Fetched latest historical data for GILD
+2024-08-12 10:23:07:INFO:Fetched latest historical data for REGN
+2024-08-12 10:23:07:INFO:Fetched latest historical data for USB
+2024-08-12 10:23:07:INFO:Fetched latest historical data for PNC
+2024-08-12 10:23:07:INFO:Fetched latest historical data for EW
+2024-08-12 10:23:07:INFO:Fetched latest historical data for CSX
+2024-08-12 10:23:07:INFO:Fetched latest historical data for EOG
+2024-08-12 10:23:07:INFO:Fetched latest historical data for AON
+2024-08-12 10:23:07:INFO:Fetched latest historical data for ICE
+2024-08-12 10:23:07:INFO:Fetched latest historical data for TJX
+2024-08-12 10:23:08:INFO:Fetched latest historical data for NOC
+2024-08-12 10:23:08:INFO:Fetched latest historical data for PSA
+2024-08-12 10:23:08:INFO:Fetched latest historical data for D
+2024-08-12 10:23:08:INFO:Fetched latest historical data for VRTX
+2024-08-12 10:23:08:INFO:Fetched latest historical data for TFC
+2024-08-12 10:23:08:INFO:Fetched latest historical data for FCX
+2024-08-12 10:23:08:INFO:Fetched latest historical data for EQIX
+2024-08-12 10:23:08:INFO:Fetched latest historical data for PGR
+2024-08-12 10:23:08:INFO:Fetched latest historical data for SHW
+2024-08-12 10:23:08:INFO:Fetched latest historical data for LRCX
+2024-08-12 10:23:08:INFO:Fetched latest historical data for WM
+2024-08-12 10:23:08:INFO:Fetched latest historical data for CL
+2024-08-12 10:23:08:INFO:Fetched latest historical data for GD
+2024-08-12 10:23:08:INFO:Fetched latest historical data for NSC
+2024-08-12 10:23:08:INFO:Fetched latest historical data for FISV
+2024-08-12 10:23:08:INFO:Fetched latest historical data for NEM
+2024-08-12 10:23:08:INFO:Fetched latest historical data for MRNA
+2024-08-12 10:23:08:INFO:Fetched latest historical data for BSX
+2024-08-12 10:23:08:INFO:Fetched latest historical data for MCO
+2024-08-12 10:23:08:INFO:Fetched latest historical data for ITW
+2024-08-12 10:23:08:INFO:Fetched latest historical data for ATVI
+2024-08-12 10:23:08:INFO:Fetched latest historical data for FIS
+2024-08-12 10:23:08:INFO:Fetched latest historical data for PXD
+2024-08-12 10:23:08:INFO:Fetched latest historical data for SLB
+2024-08-12 10:23:08:INFO:Fetched latest historical data for F
+2024-08-12 10:23:08:INFO:Fetched latest historical data for MET
+2024-08-12 10:23:08:INFO:Fetched latest historical data for HUM
+2024-08-12 10:23:09:INFO:Fetched latest historical data for ETN
+2024-08-12 10:23:09:INFO:Fetched latest historical data for OXY
+2024-08-12 10:23:09:INFO:Fetched latest historical data for GM
+2024-08-12 10:23:09:INFO:Fetched latest historical data for ILMN
+2024-08-12 10:23:09:INFO:Fetched latest historical data for EMR
+2024-08-12 10:23:09:INFO:Fetched latest historical data for DG
+2024-08-12 10:23:09:INFO:Fetched latest historical data for APD
+2024-08-12 10:23:09:INFO:Fetched latest historical data for COF
+2024-08-12 10:23:09:INFO:Fetched latest historical data for FTNT
+2024-08-12 10:23:09:INFO:Fetched latest historical data for MAR
+2024-08-12 10:23:09:INFO:Fetched latest historical data for SRE
+2024-08-12 10:23:09:INFO:Fetched latest historical data for ADM
+2024-08-12 10:23:09:INFO:Fetched latest historical data for ECL
+2024-08-12 10:23:09:INFO:Fetched latest historical data for FDX
+2024-08-12 10:23:09:INFO:Fetched latest historical data for AEP
+2024-08-12 10:23:09:INFO:Fetched latest historical data for CNC
+2024-08-12 10:23:09:INFO:Fetched latest historical data for KLAC
+2024-08-12 10:23:09:INFO:Fetched latest historical data for ROP
+2024-08-12 10:23:09:INFO:Fetched latest historical data for AIG
+2024-08-12 10:23:09:INFO:Fetched latest historical data for PAYX
+2024-08-12 10:23:09:INFO:Fetched latest historical data for KHC
+2024-08-12 10:23:09:INFO:Fetched latest historical data for LHX
+2024-08-12 10:23:09:INFO:Fetched latest historical data for DXCM
+2024-08-12 10:23:09:INFO:Fetched latest historical data for EXC
+2024-08-12 10:23:09:INFO:Fetched latest historical data for SNPS
+2024-08-12 10:23:09:INFO:Fetched latest historical data for ORLY
+2024-08-12 10:23:09:INFO:Fetched latest historical data for MCK
+2024-08-12 10:23:09:INFO:Fetched latest historical data for MPC
+2024-08-12 10:23:09:INFO:Fetched latest historical data for IQV
+2024-08-12 10:23:09:INFO:Fetched latest historical data for CTSH
+2024-08-12 10:23:10:INFO:Fetched latest historical data for HSY
+2024-08-12 10:23:10:INFO:Fetched latest historical data for STZ
+2024-08-12 10:23:10:INFO:Fetched latest historical data for IDXX
+2024-08-12 10:23:10:INFO:Fetched latest historical data for DOW
+2024-08-12 10:23:10:INFO:Fetched latest historical data for JCI
+2024-08-12 10:23:10:INFO:Fetched latest historical data for TRV
+2024-08-12 10:23:10:INFO:Fetched latest historical data for KR
+2024-08-12 10:23:10:INFO:Fetched latest historical data for KMI
+2024-08-12 10:23:10:INFO:Fetched latest historical data for WELL
+2024-08-12 10:23:10:INFO:Fetched latest historical data for NXPI
+2024-08-12 10:23:10:INFO:Fetched latest historical data for ADSK
+2024-08-12 10:23:10:INFO:Fetched latest historical data for CTAS
+2024-08-12 10:23:10:INFO:Fetched latest historical data for APH
+2024-08-12 10:23:10:INFO:Fetched latest historical data for PRU
+2024-08-12 10:23:10:INFO:Fetched latest historical data for SYY
+2024-08-12 10:23:10:INFO:Fetched latest historical data for CDNS
+2024-08-12 10:23:10:INFO:Fetched latest historical data for AZO
+2024-08-12 10:23:10:INFO:Fetched latest historical data for CTVA
+2024-08-12 10:23:10:INFO:Fetched latest historical data for CMG
+2024-08-12 10:23:10:INFO:Fetched latest historical data for MNST
+2024-08-12 10:23:10:INFO:Fetched latest historical data for O
+2024-08-12 10:23:10:INFO:Fetched latest historical data for RSG
+2024-08-12 10:23:10:INFO:Fetched latest historical data for AFL
+2024-08-12 10:23:10:INFO:Fetched latest historical data for DLR
+2024-08-12 10:23:10:INFO:Fetched latest historical data for KMB
+2024-08-12 10:23:10:INFO:Fetched latest historical data for VLO
+2024-08-12 10:23:10:INFO:Fetched latest historical data for GIS
+2024-08-12 10:23:10:INFO:Fetched latest historical data for SPG
+2024-08-12 10:23:10:INFO:Fetched latest historical data for WMB
+2024-08-12 10:23:11:INFO:Fetched latest historical data for DVN
+2024-08-12 10:23:11:INFO:Fetched latest historical data for MSCI
+2024-08-12 10:23:11:INFO:Fetched latest historical data for XEL
+2024-08-12 10:23:11:INFO:Fetched latest historical data for TEL
+2024-08-12 10:23:11:INFO:Fetched latest historical data for HPQ
+2024-08-12 10:23:11:INFO:Fetched latest historical data for HLT
+2024-08-12 10:23:11:INFO:Fetched latest historical data for PSX
+2024-08-12 10:23:11:INFO:Fetched latest historical data for NUE
+2024-08-12 10:23:11:INFO:Fetched latest historical data for A
+2024-08-12 10:23:11:INFO:Fetched latest historical data for ANET
+2024-08-12 10:23:11:INFO:Fetched latest historical data for SBAC
+2024-08-12 10:23:11:INFO:Fetched latest historical data for BAX
+2024-08-12 10:23:11:INFO:Fetched latest historical data for MSI
+2024-08-12 10:23:11:INFO:Fetched latest historical data for ALL
+2024-08-12 10:23:11:INFO:Fetched latest historical data for WBA
+2024-08-12 10:23:11:INFO:Fetched latest historical data for BK
+2024-08-12 10:23:11:INFO:Fetched latest historical data for BKR
+2024-08-12 10:23:11:INFO:Fetched latest historical data for AJG
+2024-08-12 10:23:11:INFO:Fetched latest historical data for GPN
+2024-08-12 10:23:11:INFO:Fetched latest historical data for TWTR
+2024-08-12 10:23:11:INFO:Fetched latest historical data for CARR
+2024-08-12 10:23:11:INFO:Fetched latest historical data for MCHP
+2024-08-12 10:23:11:INFO:Fetched latest historical data for DLTR
+2024-08-12 10:23:11:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/RMD/bars 3 more time(s)...
+2024-08-12 10:23:14:INFO:Fetched latest historical data for RMD
+2024-08-12 10:23:14:INFO:Fetched latest historical data for PEG
+2024-08-12 10:23:14:INFO:Fetched latest historical data for HAL
+2024-08-12 10:23:14:INFO:Fetched latest historical data for TDG
+2024-08-12 10:23:14:INFO:Fetched latest historical data for VRSK
+2024-08-12 10:23:15:INFO:Fetched latest historical data for DD
+2024-08-12 10:23:15:INFO:Fetched latest historical data for PH
+2024-08-12 10:23:15:INFO:Fetched latest historical data for TT
+2024-08-12 10:23:15:INFO:Fetched latest historical data for HES
+2024-08-12 10:23:15:INFO:Fetched latest historical data for AVB
+2024-08-12 10:23:15:INFO:Fetched latest historical data for EA
+2024-08-12 10:23:15:INFO:Fetched latest historical data for ED
+2024-08-12 10:23:15:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/ABC/bars 3 more time(s)...
+2024-08-12 10:23:18:INFO:Fetched latest historical data for ABC
+2024-08-12 10:23:18:INFO:Fetched latest historical data for EQR
+2024-08-12 10:23:18:INFO:Fetched latest historical data for YUM
+2024-08-12 10:23:18:INFO:Fetched latest historical data for ROST
+2024-08-12 10:23:18:INFO:Fetched latest historical data for TSN
+2024-08-12 10:23:18:INFO:Fetched latest historical data for LYB
+2024-08-12 10:23:18:INFO:Fetched latest historical data for TROW
+2024-08-12 10:23:18:INFO:Fetched latest historical data for FAST
+2024-08-12 10:23:18:INFO:Fetched latest historical data for ALGN
+2024-08-12 10:23:18:INFO:Fetched latest historical data for ARE
+2024-08-12 10:23:18:INFO:Fetched latest historical data for WEC
+2024-08-12 10:23:18:INFO:Fetched latest historical data for OTIS
+2024-08-12 10:23:18:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/AMP/bars 3 more time(s)...
+2024-08-12 10:23:21:INFO:Fetched latest historical data for AMP
+2024-08-12 10:23:51:INFO:Starting live data fetching process
+2024-08-12 10:23:51:INFO:Fetched latest historical data for AAPL
+2024-08-12 10:23:51:INFO:Appended live data for AAPL
+2024-08-12 10:23:51:INFO:Fetched latest historical data for MSFT
+2024-08-12 10:23:51:INFO:Appended live data for MSFT
+2024-08-12 10:23:51:INFO:Fetched latest historical data for GOOG
+2024-08-12 10:23:51:INFO:Appended live data for GOOG
+2024-08-12 10:23:51:INFO:Fetched latest historical data for GOOGL
+2024-08-12 10:23:51:INFO:Appended live data for GOOGL
+2024-08-12 10:23:51:INFO:Fetched latest historical data for AMZN
+2024-08-12 10:23:51:INFO:Appended live data for AMZN
+2024-08-12 10:23:51:INFO:Fetched latest historical data for TSLA
+2024-08-12 10:23:51:INFO:Appended live data for TSLA
+2024-08-12 10:23:51:INFO:Fetched latest historical data for BRK.B
+2024-08-12 10:23:51:INFO:Appended live data for BRK.B
+2024-08-12 10:23:51:INFO:Fetched latest historical data for FB
+2024-08-12 10:23:51:INFO:No live data fetched for FB
+2024-08-12 10:23:51:INFO:Fetched latest historical data for NVDA
+2024-08-12 10:23:51:INFO:Appended live data for NVDA
+2024-08-12 10:23:51:INFO:Fetched latest historical data for UNH
+2024-08-12 10:23:51:INFO:Appended live data for UNH
+2024-08-12 10:23:51:INFO:Fetched latest historical data for JNJ
+2024-08-12 10:23:51:INFO:Appended live data for JNJ
+2024-08-12 10:23:51:INFO:Fetched latest historical data for V
+2024-08-12 10:23:51:INFO:Appended live data for V
+2024-08-12 10:23:51:INFO:Fetched latest historical data for WMT
+2024-08-12 10:23:51:INFO:Appended live data for WMT
+2024-08-12 10:23:51:INFO:Fetched latest historical data for JPM
+2024-08-12 10:23:51:INFO:Appended live data for JPM
+2024-08-12 10:23:51:INFO:Fetched latest historical data for PG
+2024-08-12 10:23:51:INFO:Appended live data for PG
+2024-08-12 10:23:51:INFO:Fetched latest historical data for XOM
+2024-08-12 10:23:51:INFO:Appended live data for XOM
+2024-08-12 10:23:51:INFO:Fetched latest historical data for MA
+2024-08-12 10:23:51:INFO:Appended live data for MA
+2024-08-12 10:23:52:INFO:Fetched latest historical data for CVX
+2024-08-12 10:23:52:INFO:Appended live data for CVX
+2024-08-12 10:23:52:INFO:Fetched latest historical data for HD
+2024-08-12 10:23:52:INFO:Appended live data for HD
+2024-08-12 10:23:52:INFO:Fetched latest historical data for BAC
+2024-08-12 10:23:52:INFO:Appended live data for BAC
+2024-08-12 10:23:52:INFO:Fetched latest historical data for PFE
+2024-08-12 10:23:52:INFO:Appended live data for PFE
+2024-08-12 10:23:52:INFO:Fetched latest historical data for ABBV
+2024-08-12 10:23:52:INFO:Appended live data for ABBV
+2024-08-12 10:23:52:INFO:Fetched latest historical data for LLY
+2024-08-12 10:23:52:INFO:Appended live data for LLY
+2024-08-12 10:23:52:INFO:Fetched latest historical data for KO
+2024-08-12 10:23:52:INFO:Appended live data for KO
+2024-08-12 10:23:52:INFO:Fetched latest historical data for COST
+2024-08-12 10:23:52:INFO:Appended live data for COST
+2024-08-12 10:23:52:INFO:Fetched latest historical data for DIS
+2024-08-12 10:23:52:INFO:Appended live data for DIS
+2024-08-12 10:23:52:INFO:Fetched latest historical data for AVGO
+2024-08-12 10:23:52:INFO:Appended live data for AVGO
+2024-08-12 10:23:52:INFO:Fetched latest historical data for PEP
+2024-08-12 10:23:52:INFO:Appended live data for PEP
+2024-08-12 10:23:52:INFO:Fetched latest historical data for TMO
+2024-08-12 10:23:52:INFO:Appended live data for TMO
+2024-08-12 10:23:52:INFO:Fetched latest historical data for CSCO
+2024-08-12 10:23:52:INFO:Appended live data for CSCO
+2024-08-12 10:23:52:INFO:Fetched latest historical data for VZ
+2024-08-12 10:23:52:INFO:Appended live data for VZ
+2024-08-12 10:23:52:INFO:Fetched latest historical data for ACN
+2024-08-12 10:23:52:INFO:Appended live data for ACN
+2024-08-12 10:23:52:INFO:Fetched latest historical data for MRK
+2024-08-12 10:23:52:INFO:Appended live data for MRK
+2024-08-12 10:23:52:INFO:Fetched latest historical data for ABT
+2024-08-12 10:23:52:INFO:Appended live data for ABT
+2024-08-12 10:23:52:INFO:Fetched latest historical data for ORCL
+2024-08-12 10:23:52:INFO:Appended live data for ORCL
+2024-08-12 10:23:52:INFO:Fetched latest historical data for CMCSA
+2024-08-12 10:23:52:INFO:Appended live data for CMCSA
+2024-08-12 10:23:52:INFO:Fetched latest historical data for DHR
+2024-08-12 10:23:52:INFO:Appended live data for DHR
+2024-08-12 10:23:52:INFO:Fetched latest historical data for ADBE
+2024-08-12 10:23:52:INFO:Appended live data for ADBE
+2024-08-12 10:23:52:INFO:Fetched latest historical data for NKE
+2024-08-12 10:23:52:INFO:Appended live data for NKE
+2024-08-12 10:23:52:INFO:Fetched latest historical data for CRM
+2024-08-12 10:23:52:INFO:Appended live data for CRM
+2024-08-12 10:23:52:INFO:Fetched latest historical data for INTC
+2024-08-12 10:23:52:INFO:Appended live data for INTC
+2024-08-12 10:23:52:INFO:Fetched latest historical data for MCD
+2024-08-12 10:23:52:INFO:Appended live data for MCD
+2024-08-12 10:23:52:INFO:Fetched latest historical data for WFC
+2024-08-12 10:23:52:INFO:Appended live data for WFC
+2024-08-12 10:23:52:INFO:Fetched latest historical data for T
+2024-08-12 10:23:52:INFO:Appended live data for T
+2024-08-12 10:23:52:INFO:Fetched latest historical data for BMY
+2024-08-12 10:23:52:INFO:Appended live data for BMY
+2024-08-12 10:23:53:INFO:Fetched latest historical data for NEE
+2024-08-12 10:23:53:INFO:Appended live data for NEE
+2024-08-12 10:23:53:INFO:Fetched latest historical data for TMUS
+2024-08-12 10:23:53:INFO:Appended live data for TMUS
+2024-08-12 10:23:53:INFO:Fetched latest historical data for UPS
+2024-08-12 10:23:53:INFO:Appended live data for UPS
+2024-08-12 10:23:53:INFO:Fetched latest historical data for AMD
+2024-08-12 10:23:53:INFO:Appended live data for AMD
+2024-08-12 10:23:53:INFO:Fetched latest historical data for LIN
+2024-08-12 10:23:53:INFO:Appended live data for LIN
+2024-08-12 10:23:53:INFO:Fetched latest historical data for TXN
+2024-08-12 10:23:53:INFO:Appended live data for TXN
+2024-08-12 10:23:53:INFO:Fetched latest historical data for NFLX
+2024-08-12 10:23:53:INFO:Appended live data for NFLX
+2024-08-12 10:23:53:INFO:Fetched latest historical data for PM
+2024-08-12 10:23:53:INFO:Appended live data for PM
+2024-08-12 10:23:53:INFO:Fetched latest historical data for QCOM
+2024-08-12 10:23:53:INFO:Appended live data for QCOM
+2024-08-12 10:23:53:INFO:Fetched latest historical data for SCHW
+2024-08-12 10:23:53:INFO:Appended live data for SCHW
+2024-08-12 10:23:53:INFO:Fetched latest historical data for UNP
+2024-08-12 10:23:53:INFO:Appended live data for UNP
+2024-08-12 10:23:53:INFO:Fetched latest historical data for MDT
+2024-08-12 10:23:53:INFO:Appended live data for MDT
+2024-08-12 10:23:53:INFO:Fetched latest historical data for MS
+2024-08-12 10:23:53:INFO:Appended live data for MS
+2024-08-12 10:23:53:INFO:Fetched latest historical data for RTX
+2024-08-12 10:23:53:INFO:Appended live data for RTX
+2024-08-12 10:23:53:INFO:Fetched latest historical data for SPGI
+2024-08-12 10:23:53:INFO:Appended live data for SPGI
+2024-08-12 10:23:53:INFO:Fetched latest historical data for CVS
+2024-08-12 10:23:53:INFO:Appended live data for CVS
+2024-08-12 10:23:53:INFO:Fetched latest historical data for AXP
+2024-08-12 10:23:53:INFO:Appended live data for AXP
+2024-08-12 10:23:53:INFO:Fetched latest historical data for LOW
+2024-08-12 10:23:53:INFO:Appended live data for LOW
+2024-08-12 10:23:53:INFO:Fetched latest historical data for AMGN
+2024-08-12 10:23:53:INFO:Appended live data for AMGN
+2024-08-12 10:23:53:INFO:Fetched latest historical data for COP
+2024-08-12 10:23:53:INFO:Appended live data for COP
+2024-08-12 10:23:53:INFO:Fetched latest historical data for INTU
+2024-08-12 10:23:53:INFO:Appended live data for INTU
+2024-08-12 10:23:53:INFO:Fetched latest historical data for ANTM
+2024-08-12 10:23:53:INFO:No live data fetched for ANTM
+2024-08-12 10:23:53:INFO:Fetched latest historical data for HON
+2024-08-12 10:23:53:INFO:Appended live data for HON
+2024-08-12 10:23:53:INFO:Fetched latest historical data for PYPL
+2024-08-12 10:23:53:INFO:Appended live data for PYPL
+2024-08-12 10:23:53:INFO:Fetched latest historical data for DE
+2024-08-12 10:23:53:INFO:Appended live data for DE
+2024-08-12 10:23:53:INFO:Fetched latest historical data for PLD
+2024-08-12 10:23:53:INFO:Appended live data for PLD
+2024-08-12 10:23:53:INFO:Fetched latest historical data for LMT
+2024-08-12 10:23:53:INFO:Appended live data for LMT
+2024-08-12 10:23:54:INFO:Fetched latest historical data for AMT
+2024-08-12 10:23:54:INFO:Appended live data for AMT
+2024-08-12 10:23:54:INFO:Fetched latest historical data for CAT
+2024-08-12 10:23:54:INFO:Appended live data for CAT
+2024-08-12 10:23:54:INFO:Fetched latest historical data for IBM
+2024-08-12 10:23:54:INFO:Appended live data for IBM
+2024-08-12 10:23:54:INFO:Fetched latest historical data for BLK
+2024-08-12 10:23:54:INFO:Appended live data for BLK
+2024-08-12 10:23:54:INFO:Fetched latest historical data for GS
+2024-08-12 10:23:54:INFO:Appended live data for GS
+2024-08-12 10:23:54:INFO:Fetched latest historical data for TGT
+2024-08-12 10:23:54:INFO:Appended live data for TGT
+2024-08-12 10:23:54:INFO:Fetched latest historical data for CHTR
+2024-08-12 10:23:54:INFO:Appended live data for CHTR
+2024-08-12 10:23:54:INFO:Fetched latest historical data for AMAT
+2024-08-12 10:23:54:INFO:Appended live data for AMAT
+2024-08-12 10:23:54:INFO:Fetched latest historical data for ISRG
+2024-08-12 10:23:54:INFO:Appended live data for ISRG
+2024-08-12 10:23:54:INFO:Fetched latest historical data for BA
+2024-08-12 10:23:54:INFO:Appended live data for BA
+2024-08-12 10:23:54:INFO:Fetched latest historical data for NOW
+2024-08-12 10:23:54:INFO:Appended live data for NOW
+2024-08-12 10:23:54:INFO:Fetched latest historical data for SYK
+2024-08-12 10:23:54:INFO:Appended live data for SYK
+2024-08-12 10:23:54:INFO:Fetched latest historical data for C
+2024-08-12 10:23:54:INFO:Appended live data for C
+2024-08-12 10:23:54:INFO:Fetched latest historical data for ADP
+2024-08-12 10:23:54:INFO:Appended live data for ADP
+2024-08-12 10:23:54:INFO:Fetched latest historical data for GE
+2024-08-12 10:23:54:INFO:Appended live data for GE
+2024-08-12 10:23:54:INFO:Fetched latest historical data for MO
+2024-08-12 10:23:54:INFO:Appended live data for MO
+2024-08-12 10:23:54:INFO:Fetched latest historical data for EL
+2024-08-12 10:23:54:INFO:Appended live data for EL
+2024-08-12 10:23:54:INFO:Fetched latest historical data for ZTS
+2024-08-12 10:23:54:INFO:Appended live data for ZTS
+2024-08-12 10:23:54:INFO:Fetched latest historical data for SBUX
+2024-08-12 10:23:54:INFO:Appended live data for SBUX
+2024-08-12 10:23:54:INFO:Fetched latest historical data for CB
+2024-08-12 10:23:54:INFO:Appended live data for CB
+2024-08-12 10:23:54:INFO:Fetched latest historical data for BKNG
+2024-08-12 10:23:54:INFO:Appended live data for BKNG
+2024-08-12 10:23:54:INFO:Fetched latest historical data for DUK
+2024-08-12 10:23:54:INFO:Appended live data for DUK
+2024-08-12 10:23:54:INFO:Fetched latest historical data for MDLZ
+2024-08-12 10:23:54:INFO:Appended live data for MDLZ
+2024-08-12 10:23:54:INFO:Fetched latest historical data for CME
+2024-08-12 10:23:54:INFO:Appended live data for CME
+2024-08-12 10:23:54:INFO:Fetched latest historical data for MMC
+2024-08-12 10:23:54:INFO:Appended live data for MMC
+2024-08-12 10:23:54:INFO:Fetched latest historical data for CCI
+2024-08-12 10:23:54:INFO:Appended live data for CCI
+2024-08-12 10:23:54:INFO:Fetched latest historical data for MMM
+2024-08-12 10:23:54:INFO:Appended live data for MMM
+2024-08-12 10:23:55:INFO:Fetched latest historical data for ADI
+2024-08-12 10:23:55:INFO:Appended live data for ADI
+2024-08-12 10:23:55:INFO:Fetched latest historical data for CI
+2024-08-12 10:23:55:INFO:Appended live data for CI
+2024-08-12 10:23:55:INFO:Fetched latest historical data for SO
+2024-08-12 10:23:55:INFO:Appended live data for SO
+2024-08-12 10:23:55:INFO:Fetched latest historical data for MU
+2024-08-12 10:23:55:INFO:Appended live data for MU
+2024-08-12 10:23:55:INFO:Fetched latest historical data for BDX
+2024-08-12 10:23:55:INFO:Appended live data for BDX
+2024-08-12 10:23:55:INFO:Fetched latest historical data for HCA
+2024-08-12 10:23:55:INFO:Appended live data for HCA
+2024-08-12 10:23:55:INFO:Fetched latest historical data for GILD
+2024-08-12 10:23:55:INFO:Appended live data for GILD
+2024-08-12 10:23:55:INFO:Fetched latest historical data for REGN
+2024-08-12 10:23:55:INFO:Appended live data for REGN
+2024-08-12 10:23:55:INFO:Fetched latest historical data for USB
+2024-08-12 10:23:55:INFO:Appended live data for USB
+2024-08-12 10:23:55:INFO:Fetched latest historical data for PNC
+2024-08-12 10:23:55:INFO:Appended live data for PNC
+2024-08-12 10:23:55:INFO:Fetched latest historical data for EW
+2024-08-12 10:23:55:INFO:Appended live data for EW
+2024-08-12 10:23:55:INFO:Fetched latest historical data for CSX
+2024-08-12 10:23:55:INFO:Appended live data for CSX
+2024-08-12 10:23:55:INFO:Fetched latest historical data for EOG
+2024-08-12 10:23:55:INFO:Appended live data for EOG
+2024-08-12 10:23:55:INFO:Fetched latest historical data for AON
+2024-08-12 10:23:55:INFO:Appended live data for AON
+2024-08-12 10:23:55:INFO:Fetched latest historical data for ICE
+2024-08-12 10:23:55:INFO:Appended live data for ICE
+2024-08-12 10:23:55:INFO:Fetched latest historical data for TJX
+2024-08-12 10:23:55:INFO:Appended live data for TJX
+2024-08-12 10:23:55:INFO:Fetched latest historical data for NOC
+2024-08-12 10:23:55:INFO:Appended live data for NOC
+2024-08-12 10:23:55:INFO:Fetched latest historical data for PSA
+2024-08-12 10:23:55:INFO:Appended live data for PSA
+2024-08-12 10:23:55:INFO:Fetched latest historical data for D
+2024-08-12 10:23:55:INFO:Appended live data for D
+2024-08-12 10:23:55:INFO:Fetched latest historical data for VRTX
+2024-08-12 10:23:55:INFO:Appended live data for VRTX
+2024-08-12 10:23:55:INFO:Fetched latest historical data for TFC
+2024-08-12 10:23:55:INFO:Appended live data for TFC
+2024-08-12 10:23:55:INFO:Fetched latest historical data for FCX
+2024-08-12 10:23:55:INFO:Appended live data for FCX
+2024-08-12 10:23:55:INFO:Fetched latest historical data for EQIX
+2024-08-12 10:23:55:INFO:Appended live data for EQIX
+2024-08-12 10:23:55:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/PGR/bars 3 more time(s)...
+2024-08-12 10:23:58:INFO:Fetched latest historical data for PGR
+2024-08-12 10:23:58:INFO:Appended live data for PGR
+2024-08-12 10:23:58:INFO:Fetched latest historical data for SHW
+2024-08-12 10:23:58:INFO:Appended live data for SHW
+2024-08-12 10:23:58:INFO:Fetched latest historical data for LRCX
+2024-08-12 10:23:58:INFO:Appended live data for LRCX
+2024-08-12 10:23:58:INFO:Fetched latest historical data for WM
+2024-08-12 10:23:58:INFO:Appended live data for WM
+2024-08-12 10:23:59:INFO:Fetched latest historical data for CL
+2024-08-12 10:23:59:INFO:Appended live data for CL
+2024-08-12 10:23:59:INFO:Fetched latest historical data for GD
+2024-08-12 10:23:59:INFO:Appended live data for GD
+2024-08-12 10:23:59:INFO:Fetched latest historical data for NSC
+2024-08-12 10:23:59:INFO:Appended live data for NSC
+2024-08-12 10:23:59:INFO:Fetched latest historical data for FISV
+2024-08-12 10:23:59:INFO:No live data fetched for FISV
+2024-08-12 10:23:59:INFO:Fetched latest historical data for NEM
+2024-08-12 10:23:59:INFO:Appended live data for NEM
+2024-08-12 10:23:59:INFO:Fetched latest historical data for MRNA
+2024-08-12 10:23:59:INFO:Appended live data for MRNA
+2024-08-12 10:23:59:INFO:Fetched latest historical data for BSX
+2024-08-12 10:23:59:INFO:Appended live data for BSX
+2024-08-12 10:23:59:INFO:Fetched latest historical data for MCO
+2024-08-12 10:23:59:INFO:Appended live data for MCO
+2024-08-12 10:23:59:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/ITW/bars 3 more time(s)...
+2024-08-12 10:24:02:INFO:Fetched latest historical data for ITW
+2024-08-12 10:24:02:INFO:Appended live data for ITW
+2024-08-12 10:24:02:INFO:Fetched latest historical data for ATVI
+2024-08-12 10:24:02:INFO:No live data fetched for ATVI
+2024-08-12 10:24:02:INFO:Fetched latest historical data for FIS
+2024-08-12 10:24:02:INFO:Appended live data for FIS
+2024-08-12 10:24:02:INFO:Fetched latest historical data for PXD
+2024-08-12 10:24:02:INFO:No live data fetched for PXD
+2024-08-12 10:24:02:INFO:Fetched latest historical data for SLB
+2024-08-12 10:24:02:INFO:Appended live data for SLB
+2024-08-12 10:24:02:INFO:Fetched latest historical data for F
+2024-08-12 10:24:02:INFO:Appended live data for F
+2024-08-12 10:24:02:INFO:Fetched latest historical data for MET
+2024-08-12 10:24:02:INFO:Appended live data for MET
+2024-08-12 10:24:02:INFO:Fetched latest historical data for HUM
+2024-08-12 10:24:02:INFO:Appended live data for HUM
+2024-08-12 10:24:02:INFO:Fetched latest historical data for ETN
+2024-08-12 10:24:02:INFO:Appended live data for ETN
+2024-08-12 10:24:02:INFO:Fetched latest historical data for OXY
+2024-08-12 10:24:02:INFO:Appended live data for OXY
+2024-08-12 10:24:02:INFO:Fetched latest historical data for GM
+2024-08-12 10:24:02:INFO:Appended live data for GM
+2024-08-12 10:24:02:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/ILMN/bars 3 more time(s)...
+2024-08-12 10:24:05:INFO:Fetched latest historical data for ILMN
+2024-08-12 10:24:05:INFO:Appended live data for ILMN
+2024-08-12 10:24:05:INFO:Fetched latest historical data for EMR
+2024-08-12 10:24:05:INFO:Appended live data for EMR
+2024-08-12 10:24:05:INFO:Fetched latest historical data for DG
+2024-08-12 10:24:05:INFO:Appended live data for DG
+2024-08-12 10:24:05:INFO:Fetched latest historical data for APD
+2024-08-12 10:24:05:INFO:Appended live data for APD
+2024-08-12 10:24:05:INFO:Fetched latest historical data for COF
+2024-08-12 10:24:05:INFO:Appended live data for COF
+2024-08-12 10:24:05:INFO:Fetched latest historical data for FTNT
+2024-08-12 10:24:05:INFO:Appended live data for FTNT
+2024-08-12 10:24:06:INFO:Fetched latest historical data for MAR
+2024-08-12 10:24:06:INFO:Appended live data for MAR
+2024-08-12 10:24:06:INFO:Fetched latest historical data for SRE
+2024-08-12 10:24:06:INFO:Appended live data for SRE
+2024-08-12 10:24:06:INFO:Fetched latest historical data for ADM
+2024-08-12 10:24:06:INFO:Appended live data for ADM
+2024-08-12 10:24:06:INFO:Fetched latest historical data for ECL
+2024-08-12 10:24:06:INFO:Appended live data for ECL
+2024-08-12 10:24:06:INFO:Fetched latest historical data for FDX
+2024-08-12 10:24:06:INFO:Appended live data for FDX
+2024-08-12 10:24:06:INFO:Fetched latest historical data for AEP
+2024-08-12 10:24:06:INFO:Appended live data for AEP
+2024-08-12 10:24:06:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/CNC/bars 3 more time(s)...
+2024-08-12 10:24:09:INFO:Fetched latest historical data for CNC
+2024-08-12 10:24:09:INFO:Appended live data for CNC
+2024-08-12 10:24:09:INFO:Fetched latest historical data for KLAC
+2024-08-12 10:24:09:INFO:Appended live data for KLAC
+2024-08-12 10:24:09:INFO:Fetched latest historical data for ROP
+2024-08-12 10:24:09:INFO:Appended live data for ROP
+2024-08-12 10:24:09:INFO:Fetched latest historical data for AIG
+2024-08-12 10:24:09:INFO:Appended live data for AIG
+2024-08-12 10:24:09:INFO:Fetched latest historical data for PAYX
+2024-08-12 10:24:09:INFO:Appended live data for PAYX
+2024-08-12 10:24:09:INFO:Fetched latest historical data for KHC
+2024-08-12 10:24:09:INFO:Appended live data for KHC
+2024-08-12 10:24:09:INFO:Fetched latest historical data for LHX
+2024-08-12 10:24:09:INFO:Appended live data for LHX
+2024-08-12 10:24:09:INFO:Fetched latest historical data for DXCM
+2024-08-12 10:24:09:INFO:Appended live data for DXCM
+2024-08-12 10:24:09:INFO:Fetched latest historical data for EXC
+2024-08-12 10:24:09:INFO:Appended live data for EXC
+2024-08-12 10:24:09:INFO:Fetched latest historical data for SNPS
+2024-08-12 10:24:09:INFO:Appended live data for SNPS
+2024-08-12 10:24:09:INFO:Fetched latest historical data for ORLY
+2024-08-12 10:24:09:INFO:Appended live data for ORLY
+2024-08-12 10:24:09:INFO:Fetched latest historical data for MCK
+2024-08-12 10:24:09:INFO:Appended live data for MCK
+2024-08-12 10:24:09:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/MPC/bars 3 more time(s)...
+2024-08-12 10:24:12:INFO:Fetched latest historical data for MPC
+2024-08-12 10:24:12:INFO:Appended live data for MPC
+2024-08-12 10:24:12:INFO:Fetched latest historical data for IQV
+2024-08-12 10:24:12:INFO:Appended live data for IQV
+2024-08-12 10:24:12:INFO:Fetched latest historical data for CTSH
+2024-08-12 10:24:12:INFO:Appended live data for CTSH
+2024-08-12 10:24:12:INFO:Fetched latest historical data for HSY
+2024-08-12 10:24:12:INFO:Appended live data for HSY
+2024-08-12 10:24:12:INFO:Fetched latest historical data for STZ
+2024-08-12 10:24:12:INFO:Appended live data for STZ
+2024-08-12 10:24:12:INFO:Fetched latest historical data for IDXX
+2024-08-12 10:24:12:INFO:Appended live data for IDXX
+2024-08-12 10:24:12:INFO:Fetched latest historical data for DOW
+2024-08-12 10:24:12:INFO:Appended live data for DOW
+2024-08-12 10:24:13:INFO:Fetched latest historical data for JCI
+2024-08-12 10:24:13:INFO:Appended live data for JCI
+2024-08-12 10:24:13:INFO:Fetched latest historical data for TRV
+2024-08-12 10:24:13:INFO:Appended live data for TRV
+2024-08-12 10:24:13:INFO:Fetched latest historical data for KR
+2024-08-12 10:24:13:INFO:Appended live data for KR
+2024-08-12 10:24:13:INFO:Fetched latest historical data for KMI
+2024-08-12 10:24:13:INFO:Appended live data for KMI
+2024-08-12 10:24:13:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/WELL/bars 3 more time(s)...
+2024-08-12 10:24:16:INFO:Fetched latest historical data for WELL
+2024-08-12 10:24:16:INFO:Appended live data for WELL
+2024-08-12 10:24:16:INFO:Fetched latest historical data for NXPI
+2024-08-12 10:24:16:INFO:Appended live data for NXPI
+2024-08-12 10:24:16:INFO:Fetched latest historical data for ADSK
+2024-08-12 10:24:16:INFO:Appended live data for ADSK
+2024-08-12 10:24:16:INFO:Fetched latest historical data for CTAS
+2024-08-12 10:24:16:INFO:Appended live data for CTAS
+2024-08-12 10:24:16:INFO:Fetched latest historical data for APH
+2024-08-12 10:24:16:INFO:Appended live data for APH
+2024-08-12 10:24:16:INFO:Fetched latest historical data for PRU
+2024-08-12 10:24:16:INFO:Appended live data for PRU
+2024-08-12 10:24:16:INFO:Fetched latest historical data for SYY
+2024-08-12 10:24:16:INFO:Appended live data for SYY
+2024-08-12 10:24:16:INFO:Fetched latest historical data for CDNS
+2024-08-12 10:24:16:INFO:Appended live data for CDNS
+2024-08-12 10:24:16:INFO:Fetched latest historical data for AZO
+2024-08-12 10:24:16:INFO:Appended live data for AZO
+2024-08-12 10:24:16:INFO:Fetched latest historical data for CTVA
+2024-08-12 10:24:16:INFO:Appended live data for CTVA
+2024-08-12 10:24:16:INFO:Fetched latest historical data for CMG
+2024-08-12 10:24:16:INFO:Appended live data for CMG
+2024-08-12 10:24:16:INFO:Fetched latest historical data for MNST
+2024-08-12 10:24:16:INFO:Appended live data for MNST
+2024-08-12 10:24:16:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/O/bars 3 more time(s)...
+2024-08-12 10:24:19:INFO:Fetched latest historical data for O
+2024-08-12 10:24:19:INFO:Appended live data for O
+2024-08-12 10:24:19:INFO:Fetched latest historical data for RSG
+2024-08-12 10:24:19:INFO:Appended live data for RSG
+2024-08-12 10:24:19:INFO:Fetched latest historical data for AFL
+2024-08-12 10:24:19:INFO:Appended live data for AFL
+2024-08-12 10:24:19:INFO:Fetched latest historical data for DLR
+2024-08-12 10:24:19:INFO:Appended live data for DLR
+2024-08-12 10:24:19:INFO:Fetched latest historical data for KMB
+2024-08-12 10:24:19:INFO:Appended live data for KMB
+2024-08-12 10:24:19:INFO:Fetched latest historical data for VLO
+2024-08-12 10:24:19:INFO:Appended live data for VLO
+2024-08-12 10:24:19:INFO:Fetched latest historical data for GIS
+2024-08-12 10:24:19:INFO:Appended live data for GIS
+2024-08-12 10:24:19:INFO:Fetched latest historical data for SPG
+2024-08-12 10:24:19:INFO:Appended live data for SPG
+2024-08-12 10:24:19:INFO:Fetched latest historical data for WMB
+2024-08-12 10:24:19:INFO:Appended live data for WMB
+2024-08-12 10:24:20:INFO:Fetched latest historical data for DVN
+2024-08-12 10:24:20:INFO:Appended live data for DVN
+2024-08-12 10:24:20:INFO:Fetched latest historical data for MSCI
+2024-08-12 10:24:20:INFO:Appended live data for MSCI
+2024-08-12 10:24:20:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/XEL/bars 3 more time(s)...
+2024-08-12 10:24:23:INFO:Fetched latest historical data for XEL
+2024-08-12 10:24:23:INFO:Appended live data for XEL
+2024-08-12 10:24:23:INFO:Fetched latest historical data for TEL
+2024-08-12 10:24:23:INFO:Appended live data for TEL
+2024-08-12 10:24:23:INFO:Fetched latest historical data for HPQ
+2024-08-12 10:24:23:INFO:Appended live data for HPQ
+2024-08-12 10:24:23:INFO:Fetched latest historical data for HLT
+2024-08-12 10:24:23:INFO:Appended live data for HLT
+2024-08-12 10:24:23:INFO:Fetched latest historical data for PSX
+2024-08-12 10:24:23:INFO:Appended live data for PSX
+2024-08-12 10:24:23:INFO:Fetched latest historical data for NUE
+2024-08-12 10:24:23:INFO:Appended live data for NUE
+2024-08-12 10:24:23:INFO:Fetched latest historical data for A
+2024-08-12 10:24:23:INFO:Appended live data for A
+2024-08-12 10:24:23:INFO:Fetched latest historical data for ANET
+2024-08-12 10:24:23:INFO:Appended live data for ANET
+2024-08-12 10:24:23:INFO:Fetched latest historical data for SBAC
+2024-08-12 10:24:23:INFO:Appended live data for SBAC
+2024-08-12 10:24:23:INFO:Fetched latest historical data for BAX
+2024-08-12 10:24:23:INFO:Appended live data for BAX
+2024-08-12 10:24:23:INFO:Fetched latest historical data for MSI
+2024-08-12 10:24:23:INFO:Appended live data for MSI
+2024-08-12 10:24:23:INFO:Fetched latest historical data for ALL
+2024-08-12 10:24:23:INFO:Appended live data for ALL
+2024-08-12 10:24:23:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/WBA/bars 3 more time(s)...
+2024-08-12 10:24:26:INFO:Fetched latest historical data for WBA
+2024-08-12 10:24:26:INFO:Appended live data for WBA
+2024-08-12 10:24:26:INFO:Fetched latest historical data for BK
+2024-08-12 10:24:26:INFO:Appended live data for BK
+2024-08-12 10:24:26:INFO:Fetched latest historical data for BKR
+2024-08-12 10:24:26:INFO:Appended live data for BKR
+2024-08-12 10:24:26:INFO:Fetched latest historical data for AJG
+2024-08-12 10:24:26:INFO:Appended live data for AJG
+2024-08-12 10:24:26:INFO:Fetched latest historical data for GPN
+2024-08-12 10:24:26:INFO:Appended live data for GPN
+2024-08-12 10:24:26:INFO:Fetched latest historical data for TWTR
+2024-08-12 10:24:26:INFO:No live data fetched for TWTR
+2024-08-12 10:24:26:INFO:Fetched latest historical data for CARR
+2024-08-12 10:24:26:INFO:Appended live data for CARR
+2024-08-12 10:24:26:INFO:Fetched latest historical data for MCHP
+2024-08-12 10:24:26:INFO:Appended live data for MCHP
+2024-08-12 10:24:26:INFO:Fetched latest historical data for DLTR
+2024-08-12 10:24:26:INFO:Appended live data for DLTR
+2024-08-12 10:24:27:INFO:Fetched latest historical data for RMD
+2024-08-12 10:24:27:INFO:Appended live data for RMD
+2024-08-12 10:24:27:INFO:Fetched latest historical data for PEG
+2024-08-12 10:24:27:INFO:Appended live data for PEG
+2024-08-12 10:24:27:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/HAL/bars 3 more time(s)...
+2024-08-12 10:24:30:INFO:Fetched latest historical data for HAL
+2024-08-12 10:24:30:INFO:Appended live data for HAL
+2024-08-12 10:24:30:INFO:Fetched latest historical data for TDG
+2024-08-12 10:24:30:INFO:Appended live data for TDG
+2024-08-12 10:24:30:INFO:Fetched latest historical data for VRSK
+2024-08-12 10:24:30:INFO:Appended live data for VRSK
+2024-08-12 10:24:30:INFO:Fetched latest historical data for DD
+2024-08-12 10:24:30:INFO:Appended live data for DD
+2024-08-12 10:24:30:INFO:Fetched latest historical data for PH
+2024-08-12 10:24:30:INFO:Appended live data for PH
+2024-08-12 10:24:30:INFO:Fetched latest historical data for TT
+2024-08-12 10:24:30:INFO:Appended live data for TT
+2024-08-12 10:24:30:INFO:Fetched latest historical data for HES
+2024-08-12 10:24:30:INFO:Appended live data for HES
+2024-08-12 10:24:30:INFO:Fetched latest historical data for AVB
+2024-08-12 10:24:30:INFO:Appended live data for AVB
+2024-08-12 10:24:30:INFO:Fetched latest historical data for EA
+2024-08-12 10:24:30:INFO:Appended live data for EA
+2024-08-12 10:24:30:INFO:Fetched latest historical data for ED
+2024-08-12 10:24:30:INFO:Appended live data for ED
+2024-08-12 10:24:30:INFO:Fetched latest historical data for ABC
+2024-08-12 10:24:30:INFO:No live data fetched for ABC
+2024-08-12 10:24:30:INFO:Fetched latest historical data for EQR
+2024-08-12 10:24:30:INFO:Appended live data for EQR
+2024-08-12 10:24:30:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/YUM/bars 3 more time(s)...
+2024-08-12 10:24:33:INFO:Fetched latest historical data for YUM
+2024-08-12 10:24:33:INFO:Appended live data for YUM
+2024-08-12 10:24:33:INFO:Fetched latest historical data for ROST
+2024-08-12 10:24:33:INFO:Appended live data for ROST
+2024-08-12 10:24:33:INFO:Fetched latest historical data for TSN
+2024-08-12 10:24:33:INFO:Appended live data for TSN
+2024-08-12 10:24:33:INFO:Fetched latest historical data for LYB
+2024-08-12 10:24:33:INFO:Appended live data for LYB
+2024-08-12 10:24:33:INFO:Fetched latest historical data for TROW
+2024-08-12 10:24:33:INFO:Appended live data for TROW
+2024-08-12 10:24:33:INFO:Fetched latest historical data for FAST
+2024-08-12 10:24:33:INFO:Appended live data for FAST
+2024-08-12 10:24:33:INFO:Fetched latest historical data for ALGN
+2024-08-12 10:24:33:INFO:Appended live data for ALGN
+2024-08-12 10:24:33:INFO:Fetched latest historical data for ARE
+2024-08-12 10:24:33:INFO:Appended live data for ARE
+2024-08-12 10:24:33:INFO:Fetched latest historical data for WEC
+2024-08-12 10:24:33:INFO:Appended live data for WEC
+2024-08-12 10:24:33:INFO:Fetched latest historical data for OTIS
+2024-08-12 10:24:33:INFO:Appended live data for OTIS
+2024-08-12 10:24:33:INFO:Fetched latest historical data for AMP
+2024-08-12 10:24:33:INFO:Appended live data for AMP
+2024-08-12 10:25:34:INFO:Fetched latest historical data for AAPL
+2024-08-12 10:25:34:INFO:Appended live data for AAPL
+2024-08-12 10:25:34:INFO:Fetched latest historical data for MSFT
+2024-08-12 10:25:34:INFO:Appended live data for MSFT
+2024-08-12 10:25:34:INFO:Fetched latest historical data for GOOG
+2024-08-12 10:25:34:INFO:Appended live data for GOOG
+2024-08-12 10:25:34:INFO:Fetched latest historical data for GOOGL
+2024-08-12 10:25:34:INFO:Appended live data for GOOGL
+2024-08-12 10:25:34:INFO:Fetched latest historical data for AMZN
+2024-08-12 10:25:34:INFO:Appended live data for AMZN
+2024-08-12 10:25:34:INFO:Fetched latest historical data for TSLA
+2024-08-12 10:25:34:INFO:Appended live data for TSLA
+2024-08-12 10:25:34:INFO:Fetched latest historical data for BRK.B
+2024-08-12 10:25:34:INFO:Appended live data for BRK.B
+2024-08-12 10:25:34:INFO:Fetched latest historical data for FB
+2024-08-12 10:25:34:INFO:No live data fetched for FB
+2024-08-12 10:25:34:INFO:Fetched latest historical data for NVDA
+2024-08-12 10:25:34:INFO:Appended live data for NVDA
+2024-08-12 10:25:34:INFO:Fetched latest historical data for UNH
+2024-08-12 10:25:34:INFO:Appended live data for UNH
+2024-08-12 10:25:34:INFO:Fetched latest historical data for JNJ
+2024-08-12 10:25:34:INFO:Appended live data for JNJ
+2024-08-12 10:25:34:INFO:Fetched latest historical data for V
+2024-08-12 10:25:34:INFO:Appended live data for V
+2024-08-12 10:25:34:INFO:Fetched latest historical data for WMT
+2024-08-12 10:25:34:INFO:Appended live data for WMT
+2024-08-12 10:25:34:INFO:Fetched latest historical data for JPM
+2024-08-12 10:25:34:INFO:Appended live data for JPM
+2024-08-12 10:25:34:INFO:Fetched latest historical data for PG
+2024-08-12 10:25:34:INFO:Appended live data for PG
+2024-08-12 10:25:34:INFO:Fetched latest historical data for XOM
+2024-08-12 10:25:34:INFO:Appended live data for XOM
+2024-08-12 10:25:34:INFO:Fetched latest historical data for MA
+2024-08-12 10:25:34:INFO:Appended live data for MA
+2024-08-12 10:25:34:INFO:Fetched latest historical data for CVX
+2024-08-12 10:25:34:INFO:Appended live data for CVX
+2024-08-12 10:25:34:INFO:Fetched latest historical data for HD
+2024-08-12 10:25:34:INFO:Appended live data for HD
+2024-08-12 10:25:34:INFO:Fetched latest historical data for BAC
+2024-08-12 10:25:34:INFO:Appended live data for BAC
+2024-08-12 10:25:34:INFO:Fetched latest historical data for PFE
+2024-08-12 10:25:34:INFO:Appended live data for PFE
+2024-08-12 10:25:34:INFO:Fetched latest historical data for ABBV
+2024-08-12 10:25:34:INFO:Appended live data for ABBV
+2024-08-12 10:25:34:INFO:Fetched latest historical data for LLY
+2024-08-12 10:25:34:INFO:Appended live data for LLY
+2024-08-12 10:25:34:INFO:Fetched latest historical data for KO
+2024-08-12 10:25:34:INFO:Appended live data for KO
+2024-08-12 10:25:34:INFO:Fetched latest historical data for COST
+2024-08-12 10:25:34:INFO:Appended live data for COST
+2024-08-12 10:25:34:INFO:Fetched latest historical data for DIS
+2024-08-12 10:25:34:INFO:Appended live data for DIS
+2024-08-12 10:25:34:INFO:Fetched latest historical data for AVGO
+2024-08-12 10:25:34:INFO:Appended live data for AVGO
+2024-08-12 10:25:35:INFO:Fetched latest historical data for PEP
+2024-08-12 10:25:35:INFO:Appended live data for PEP
+2024-08-12 10:25:35:INFO:Fetched latest historical data for TMO
+2024-08-12 10:25:35:INFO:Appended live data for TMO
+2024-08-12 10:25:35:INFO:Fetched latest historical data for CSCO
+2024-08-12 10:25:35:INFO:Appended live data for CSCO
+2024-08-12 10:25:35:INFO:Fetched latest historical data for VZ
+2024-08-12 10:25:35:INFO:Appended live data for VZ
+2024-08-12 10:25:35:INFO:Fetched latest historical data for ACN
+2024-08-12 10:25:35:INFO:Appended live data for ACN
+2024-08-12 10:25:35:INFO:Fetched latest historical data for MRK
+2024-08-12 10:25:35:INFO:Appended live data for MRK
+2024-08-12 10:25:35:INFO:Fetched latest historical data for ABT
+2024-08-12 10:25:35:INFO:Appended live data for ABT
+2024-08-12 10:25:35:INFO:Fetched latest historical data for ORCL
+2024-08-12 10:25:35:INFO:Appended live data for ORCL
+2024-08-12 10:25:35:INFO:Fetched latest historical data for CMCSA
+2024-08-12 10:25:35:INFO:Appended live data for CMCSA
+2024-08-12 10:25:35:INFO:Fetched latest historical data for DHR
+2024-08-12 10:25:35:INFO:Appended live data for DHR
+2024-08-12 10:25:35:INFO:Fetched latest historical data for ADBE
+2024-08-12 10:25:35:INFO:Appended live data for ADBE
+2024-08-12 10:25:35:INFO:Fetched latest historical data for NKE
+2024-08-12 10:25:35:INFO:Appended live data for NKE
+2024-08-12 10:25:35:INFO:Fetched latest historical data for CRM
+2024-08-12 10:25:35:INFO:Appended live data for CRM
+2024-08-12 10:25:35:INFO:Fetched latest historical data for INTC
+2024-08-12 10:25:35:INFO:Appended live data for INTC
+2024-08-12 10:25:35:INFO:Fetched latest historical data for MCD
+2024-08-12 10:25:35:INFO:Appended live data for MCD
+2024-08-12 10:25:35:INFO:Fetched latest historical data for WFC
+2024-08-12 10:25:35:INFO:Appended live data for WFC
+2024-08-12 10:25:35:INFO:Fetched latest historical data for T
+2024-08-12 10:25:35:INFO:Appended live data for T
+2024-08-12 10:25:35:INFO:Fetched latest historical data for BMY
+2024-08-12 10:25:35:INFO:Appended live data for BMY
+2024-08-12 10:25:35:INFO:Fetched latest historical data for NEE
+2024-08-12 10:25:35:INFO:Appended live data for NEE
+2024-08-12 10:25:35:INFO:Fetched latest historical data for TMUS
+2024-08-12 10:25:35:INFO:Appended live data for TMUS
+2024-08-12 10:25:35:INFO:Fetched latest historical data for UPS
+2024-08-12 10:25:35:INFO:Appended live data for UPS
+2024-08-12 10:25:35:INFO:Fetched latest historical data for AMD
+2024-08-12 10:25:35:INFO:Appended live data for AMD
+2024-08-12 10:25:35:INFO:Fetched latest historical data for LIN
+2024-08-12 10:25:35:INFO:Appended live data for LIN
+2024-08-12 10:25:35:INFO:Fetched latest historical data for TXN
+2024-08-12 10:25:35:INFO:Appended live data for TXN
+2024-08-12 10:25:35:INFO:Fetched latest historical data for NFLX
+2024-08-12 10:25:35:INFO:Appended live data for NFLX
+2024-08-12 10:25:35:INFO:Fetched latest historical data for PM
+2024-08-12 10:25:35:INFO:Appended live data for PM
+2024-08-12 10:25:35:INFO:Fetched latest historical data for QCOM
+2024-08-12 10:25:35:INFO:Appended live data for QCOM
+2024-08-12 10:25:35:INFO:Fetched latest historical data for SCHW
+2024-08-12 10:25:35:INFO:Appended live data for SCHW
+2024-08-12 10:25:36:INFO:Fetched latest historical data for UNP
+2024-08-12 10:25:36:INFO:Appended live data for UNP
+2024-08-12 10:25:36:INFO:Fetched latest historical data for MDT
+2024-08-12 10:25:36:INFO:Appended live data for MDT
+2024-08-12 10:25:36:INFO:Fetched latest historical data for MS
+2024-08-12 10:25:36:INFO:Appended live data for MS
+2024-08-12 10:25:36:INFO:Fetched latest historical data for RTX
+2024-08-12 10:25:36:INFO:Appended live data for RTX
+2024-08-12 10:25:36:INFO:Fetched latest historical data for SPGI
+2024-08-12 10:25:36:INFO:Appended live data for SPGI
+2024-08-12 10:25:36:INFO:Fetched latest historical data for CVS
+2024-08-12 10:25:36:INFO:Appended live data for CVS
+2024-08-12 10:25:36:INFO:Fetched latest historical data for AXP
+2024-08-12 10:25:36:INFO:Appended live data for AXP
+2024-08-12 10:25:36:INFO:Fetched latest historical data for LOW
+2024-08-12 10:25:36:INFO:Appended live data for LOW
+2024-08-12 10:25:36:INFO:Fetched latest historical data for AMGN
+2024-08-12 10:25:36:INFO:Appended live data for AMGN
+2024-08-12 10:25:36:INFO:Fetched latest historical data for COP
+2024-08-12 10:25:36:INFO:Appended live data for COP
+2024-08-12 10:25:36:INFO:Fetched latest historical data for INTU
+2024-08-12 10:25:36:INFO:Appended live data for INTU
+2024-08-12 10:25:36:INFO:Fetched latest historical data for ANTM
+2024-08-12 10:25:36:INFO:No live data fetched for ANTM
+2024-08-12 10:25:36:INFO:Fetched latest historical data for HON
+2024-08-12 10:25:36:INFO:Appended live data for HON
+2024-08-12 10:25:36:INFO:Fetched latest historical data for PYPL
+2024-08-12 10:25:36:INFO:Appended live data for PYPL
+2024-08-12 10:25:36:INFO:Fetched latest historical data for DE
+2024-08-12 10:25:36:INFO:Appended live data for DE
+2024-08-12 10:25:36:INFO:Fetched latest historical data for PLD
+2024-08-12 10:25:36:INFO:Appended live data for PLD
+2024-08-12 10:25:36:INFO:Fetched latest historical data for LMT
+2024-08-12 10:25:36:INFO:Appended live data for LMT
+2024-08-12 10:25:36:INFO:Fetched latest historical data for AMT
+2024-08-12 10:25:36:INFO:Appended live data for AMT
+2024-08-12 10:25:36:INFO:Fetched latest historical data for CAT
+2024-08-12 10:25:36:INFO:Appended live data for CAT
+2024-08-12 10:25:36:INFO:Fetched latest historical data for IBM
+2024-08-12 10:25:36:INFO:Appended live data for IBM
+2024-08-12 10:25:36:INFO:Fetched latest historical data for BLK
+2024-08-12 10:25:36:INFO:Appended live data for BLK
+2024-08-12 10:25:36:INFO:Fetched latest historical data for GS
+2024-08-12 10:25:36:INFO:Appended live data for GS
+2024-08-12 10:25:36:INFO:Fetched latest historical data for TGT
+2024-08-12 10:25:36:INFO:Appended live data for TGT
+2024-08-12 10:25:36:INFO:Fetched latest historical data for CHTR
+2024-08-12 10:25:36:INFO:Appended live data for CHTR
+2024-08-12 10:25:36:INFO:Fetched latest historical data for AMAT
+2024-08-12 10:25:36:INFO:Appended live data for AMAT
+2024-08-12 10:25:36:INFO:Fetched latest historical data for ISRG
+2024-08-12 10:25:37:INFO:Appended live data for ISRG
+2024-08-12 10:25:37:INFO:Fetched latest historical data for BA
+2024-08-12 10:25:37:INFO:Appended live data for BA
+2024-08-12 10:25:37:INFO:Fetched latest historical data for NOW
+2024-08-12 10:25:37:INFO:Appended live data for NOW
+2024-08-12 10:25:37:INFO:Fetched latest historical data for SYK
+2024-08-12 10:25:37:INFO:Appended live data for SYK
+2024-08-12 10:25:37:INFO:Fetched latest historical data for C
+2024-08-12 10:25:37:INFO:Appended live data for C
+2024-08-12 10:25:37:INFO:Fetched latest historical data for ADP
+2024-08-12 10:25:37:INFO:Appended live data for ADP
+2024-08-12 10:25:37:INFO:Fetched latest historical data for GE
+2024-08-12 10:25:37:INFO:Appended live data for GE
+2024-08-12 10:25:37:INFO:Fetched latest historical data for MO
+2024-08-12 10:25:37:INFO:Appended live data for MO
+2024-08-12 10:25:37:INFO:Fetched latest historical data for EL
+2024-08-12 10:25:37:INFO:Appended live data for EL
+2024-08-12 10:25:37:INFO:Fetched latest historical data for ZTS
+2024-08-12 10:25:37:INFO:Appended live data for ZTS
+2024-08-12 10:25:37:INFO:Fetched latest historical data for SBUX
+2024-08-12 10:25:37:INFO:Appended live data for SBUX
+2024-08-12 10:25:37:INFO:Fetched latest historical data for CB
+2024-08-12 10:25:37:INFO:Appended live data for CB
+2024-08-12 10:25:37:INFO:Fetched latest historical data for BKNG
+2024-08-12 10:25:37:INFO:Appended live data for BKNG
+2024-08-12 10:25:37:INFO:Fetched latest historical data for DUK
+2024-08-12 10:25:37:INFO:Appended live data for DUK
+2024-08-12 10:25:37:INFO:Fetched latest historical data for MDLZ
+2024-08-12 10:25:37:INFO:Appended live data for MDLZ
+2024-08-12 10:25:37:INFO:Fetched latest historical data for CME
+2024-08-12 10:25:37:INFO:Appended live data for CME
+2024-08-12 10:25:37:INFO:Fetched latest historical data for MMC
+2024-08-12 10:25:37:INFO:Appended live data for MMC
+2024-08-12 10:25:37:INFO:Fetched latest historical data for CCI
+2024-08-12 10:25:37:INFO:Appended live data for CCI
+2024-08-12 10:25:37:INFO:Fetched latest historical data for MMM
+2024-08-12 10:25:37:INFO:Appended live data for MMM
+2024-08-12 10:25:37:INFO:Fetched latest historical data for ADI
+2024-08-12 10:25:37:INFO:Appended live data for ADI
+2024-08-12 10:25:37:INFO:Fetched latest historical data for CI
+2024-08-12 10:25:37:INFO:Appended live data for CI
+2024-08-12 10:25:37:INFO:Fetched latest historical data for SO
+2024-08-12 10:25:37:INFO:Appended live data for SO
+2024-08-12 10:25:37:INFO:Fetched latest historical data for MU
+2024-08-12 10:25:37:INFO:Appended live data for MU
+2024-08-12 10:25:37:INFO:Fetched latest historical data for BDX
+2024-08-12 10:25:37:INFO:Appended live data for BDX
+2024-08-12 10:25:37:INFO:Fetched latest historical data for HCA
+2024-08-12 10:25:37:INFO:Appended live data for HCA
+2024-08-12 10:25:37:INFO:Fetched latest historical data for GILD
+2024-08-12 10:25:37:INFO:Appended live data for GILD
+2024-08-12 10:25:37:INFO:Fetched latest historical data for REGN
+2024-08-12 10:25:37:INFO:Appended live data for REGN
+2024-08-12 10:25:37:INFO:Fetched latest historical data for USB
+2024-08-12 10:25:37:INFO:Appended live data for USB
+2024-08-12 10:25:38:INFO:Fetched latest historical data for PNC
+2024-08-12 10:25:38:INFO:Appended live data for PNC
+2024-08-12 10:25:38:INFO:Fetched latest historical data for EW
+2024-08-12 10:25:38:INFO:Appended live data for EW
+2024-08-12 10:25:38:INFO:Fetched latest historical data for CSX
+2024-08-12 10:25:38:INFO:Appended live data for CSX
+2024-08-12 10:25:38:INFO:Fetched latest historical data for EOG
+2024-08-12 10:25:38:INFO:Appended live data for EOG
+2024-08-12 10:25:38:INFO:Fetched latest historical data for AON
+2024-08-12 10:25:38:INFO:Appended live data for AON
+2024-08-12 10:25:38:INFO:Fetched latest historical data for ICE
+2024-08-12 10:25:38:INFO:Appended live data for ICE
+2024-08-12 10:25:38:INFO:Fetched latest historical data for TJX
+2024-08-12 10:25:38:INFO:Appended live data for TJX
+2024-08-12 10:25:38:INFO:Fetched latest historical data for NOC
+2024-08-12 10:25:38:INFO:Appended live data for NOC
+2024-08-12 10:25:38:INFO:Fetched latest historical data for PSA
+2024-08-12 10:25:38:INFO:Appended live data for PSA
+2024-08-12 10:25:38:INFO:Fetched latest historical data for D
+2024-08-12 10:25:38:INFO:Appended live data for D
+2024-08-12 10:25:38:INFO:Fetched latest historical data for VRTX
+2024-08-12 10:25:38:INFO:Appended live data for VRTX
+2024-08-12 10:25:38:INFO:Fetched latest historical data for TFC
+2024-08-12 10:25:38:INFO:Appended live data for TFC
+2024-08-12 10:25:38:INFO:Fetched latest historical data for FCX
+2024-08-12 10:25:38:INFO:Appended live data for FCX
+2024-08-12 10:25:38:INFO:Fetched latest historical data for EQIX
+2024-08-12 10:25:38:INFO:Appended live data for EQIX
+2024-08-12 10:25:38:INFO:Fetched latest historical data for PGR
+2024-08-12 10:25:38:INFO:Appended live data for PGR
+2024-08-12 10:25:38:INFO:Fetched latest historical data for SHW
+2024-08-12 10:25:38:INFO:Appended live data for SHW
+2024-08-12 10:25:38:INFO:Fetched latest historical data for LRCX
+2024-08-12 10:25:38:INFO:Appended live data for LRCX
+2024-08-12 10:25:38:INFO:Fetched latest historical data for WM
+2024-08-12 10:25:38:INFO:Appended live data for WM
+2024-08-12 10:25:38:INFO:Fetched latest historical data for CL
+2024-08-12 10:25:38:INFO:Appended live data for CL
+2024-08-12 10:25:38:INFO:Fetched latest historical data for GD
+2024-08-12 10:25:38:INFO:Appended live data for GD
+2024-08-12 10:25:38:INFO:Fetched latest historical data for NSC
+2024-08-12 10:25:38:INFO:Appended live data for NSC
+2024-08-12 10:25:38:INFO:Fetched latest historical data for FISV
+2024-08-12 10:25:38:INFO:No live data fetched for FISV
+2024-08-12 10:25:38:INFO:Fetched latest historical data for NEM
+2024-08-12 10:25:38:INFO:Appended live data for NEM
+2024-08-12 10:25:38:INFO:Fetched latest historical data for MRNA
+2024-08-12 10:25:38:INFO:Appended live data for MRNA
+2024-08-12 10:25:38:INFO:Fetched latest historical data for BSX
+2024-08-12 10:25:38:INFO:Appended live data for BSX
+2024-08-12 10:25:38:INFO:Fetched latest historical data for MCO
+2024-08-12 10:25:38:INFO:Appended live data for MCO
+2024-08-12 10:25:38:INFO:Fetched latest historical data for ITW
+2024-08-12 10:25:38:INFO:Appended live data for ITW
+2024-08-12 10:25:39:INFO:Fetched latest historical data for ATVI
+2024-08-12 10:25:39:INFO:No live data fetched for ATVI
+2024-08-12 10:25:39:INFO:Fetched latest historical data for FIS
+2024-08-12 10:25:39:INFO:Appended live data for FIS
+2024-08-12 10:25:39:INFO:Fetched latest historical data for PXD
+2024-08-12 10:25:39:INFO:No live data fetched for PXD
+2024-08-12 10:25:39:INFO:Fetched latest historical data for SLB
+2024-08-12 10:25:39:INFO:Appended live data for SLB
+2024-08-12 10:25:39:INFO:Fetched latest historical data for F
+2024-08-12 10:25:39:INFO:Appended live data for F
+2024-08-12 10:25:39:INFO:Fetched latest historical data for MET
+2024-08-12 10:25:39:INFO:Appended live data for MET
+2024-08-12 10:25:39:INFO:Fetched latest historical data for HUM
+2024-08-12 10:25:39:INFO:Appended live data for HUM
+2024-08-12 10:25:39:INFO:Fetched latest historical data for ETN
+2024-08-12 10:25:39:INFO:Appended live data for ETN
+2024-08-12 10:25:39:INFO:Fetched latest historical data for OXY
+2024-08-12 10:25:39:INFO:Appended live data for OXY
+2024-08-12 10:25:39:INFO:Fetched latest historical data for GM
+2024-08-12 10:25:39:INFO:Appended live data for GM
+2024-08-12 10:25:39:INFO:Fetched latest historical data for ILMN
+2024-08-12 10:25:39:INFO:Appended live data for ILMN
+2024-08-12 10:25:39:INFO:Fetched latest historical data for EMR
+2024-08-12 10:25:39:INFO:Appended live data for EMR
+2024-08-12 10:25:39:INFO:Fetched latest historical data for DG
+2024-08-12 10:25:39:INFO:Appended live data for DG
+2024-08-12 10:25:39:INFO:Fetched latest historical data for APD
+2024-08-12 10:25:39:INFO:Appended live data for APD
+2024-08-12 10:25:39:INFO:Fetched latest historical data for COF
+2024-08-12 10:25:39:INFO:Appended live data for COF
+2024-08-12 10:25:39:INFO:Fetched latest historical data for FTNT
+2024-08-12 10:25:39:INFO:Appended live data for FTNT
+2024-08-12 10:25:39:INFO:Fetched latest historical data for MAR
+2024-08-12 10:25:39:INFO:Appended live data for MAR
+2024-08-12 10:25:39:INFO:Fetched latest historical data for SRE
+2024-08-12 10:25:39:INFO:Appended live data for SRE
+2024-08-12 10:25:39:INFO:Fetched latest historical data for ADM
+2024-08-12 10:25:39:INFO:Appended live data for ADM
+2024-08-12 10:25:39:INFO:Fetched latest historical data for ECL
+2024-08-12 10:25:39:INFO:Appended live data for ECL
+2024-08-12 10:25:39:INFO:Fetched latest historical data for FDX
+2024-08-12 10:25:39:INFO:Appended live data for FDX
+2024-08-12 10:25:39:INFO:Fetched latest historical data for AEP
+2024-08-12 10:25:39:INFO:Appended live data for AEP
+2024-08-12 10:25:39:INFO:Fetched latest historical data for CNC
+2024-08-12 10:25:39:INFO:Appended live data for CNC
+2024-08-12 10:25:39:INFO:Fetched latest historical data for KLAC
+2024-08-12 10:25:39:INFO:Appended live data for KLAC
+2024-08-12 10:25:39:INFO:Fetched latest historical data for ROP
+2024-08-12 10:25:39:INFO:Appended live data for ROP
+2024-08-12 10:25:39:INFO:Fetched latest historical data for AIG
+2024-08-12 10:25:39:INFO:Appended live data for AIG
+2024-08-12 10:25:39:INFO:Fetched latest historical data for PAYX
+2024-08-12 10:25:40:INFO:Appended live data for PAYX
+2024-08-12 10:25:40:INFO:Fetched latest historical data for KHC
+2024-08-12 10:25:40:INFO:Appended live data for KHC
+2024-08-12 10:25:40:INFO:Fetched latest historical data for LHX
+2024-08-12 10:25:40:INFO:Appended live data for LHX
+2024-08-12 10:25:40:INFO:Fetched latest historical data for DXCM
+2024-08-12 10:25:40:INFO:Appended live data for DXCM
+2024-08-12 10:25:40:INFO:Fetched latest historical data for EXC
+2024-08-12 10:25:40:INFO:Appended live data for EXC
+2024-08-12 10:25:40:INFO:Fetched latest historical data for SNPS
+2024-08-12 10:25:40:INFO:Appended live data for SNPS
+2024-08-12 10:25:40:INFO:Fetched latest historical data for ORLY
+2024-08-12 10:25:40:INFO:Appended live data for ORLY
+2024-08-12 10:25:40:INFO:Fetched latest historical data for MCK
+2024-08-12 10:25:40:INFO:Appended live data for MCK
+2024-08-12 10:25:40:INFO:Fetched latest historical data for MPC
+2024-08-12 10:25:40:INFO:Appended live data for MPC
+2024-08-12 10:25:40:INFO:Fetched latest historical data for IQV
+2024-08-12 10:25:40:INFO:Appended live data for IQV
+2024-08-12 10:25:40:INFO:Fetched latest historical data for CTSH
+2024-08-12 10:25:40:INFO:Appended live data for CTSH
+2024-08-12 10:25:40:INFO:Fetched latest historical data for HSY
+2024-08-12 10:25:40:INFO:Appended live data for HSY
+2024-08-12 10:25:40:INFO:Fetched latest historical data for STZ
+2024-08-12 10:25:40:INFO:Appended live data for STZ
+2024-08-12 10:25:40:INFO:Fetched latest historical data for IDXX
+2024-08-12 10:25:40:INFO:Appended live data for IDXX
+2024-08-12 10:25:40:INFO:Fetched latest historical data for DOW
+2024-08-12 10:25:40:INFO:Appended live data for DOW
+2024-08-12 10:25:40:INFO:Fetched latest historical data for JCI
+2024-08-12 10:25:40:INFO:Appended live data for JCI
+2024-08-12 10:25:40:INFO:Fetched latest historical data for TRV
+2024-08-12 10:25:40:INFO:Appended live data for TRV
+2024-08-12 10:25:40:INFO:Fetched latest historical data for KR
+2024-08-12 10:25:40:INFO:Appended live data for KR
+2024-08-12 10:25:40:INFO:Fetched latest historical data for KMI
+2024-08-12 10:25:40:INFO:Appended live data for KMI
+2024-08-12 10:25:40:INFO:Fetched latest historical data for WELL
+2024-08-12 10:25:40:INFO:Appended live data for WELL
+2024-08-12 10:25:40:INFO:Fetched latest historical data for NXPI
+2024-08-12 10:25:40:INFO:Appended live data for NXPI
+2024-08-12 10:25:40:INFO:Fetched latest historical data for ADSK
+2024-08-12 10:25:40:INFO:Appended live data for ADSK
+2024-08-12 10:25:40:INFO:Fetched latest historical data for CTAS
+2024-08-12 10:25:40:INFO:Appended live data for CTAS
+2024-08-12 10:25:40:INFO:Fetched latest historical data for APH
+2024-08-12 10:25:40:INFO:Appended live data for APH
+2024-08-12 10:25:40:INFO:Fetched latest historical data for PRU
+2024-08-12 10:25:40:INFO:Appended live data for PRU
+2024-08-12 10:25:40:INFO:Fetched latest historical data for SYY
+2024-08-12 10:25:40:INFO:Appended live data for SYY
+2024-08-12 10:25:40:INFO:Fetched latest historical data for CDNS
+2024-08-12 10:25:40:INFO:Appended live data for CDNS
+2024-08-12 10:25:41:INFO:Fetched latest historical data for AZO
+2024-08-12 10:25:41:INFO:Appended live data for AZO
+2024-08-12 10:25:41:INFO:Fetched latest historical data for CTVA
+2024-08-12 10:25:41:INFO:Appended live data for CTVA
+2024-08-12 10:25:41:INFO:Fetched latest historical data for CMG
+2024-08-12 10:25:41:INFO:Appended live data for CMG
+2024-08-12 10:25:41:INFO:Fetched latest historical data for MNST
+2024-08-12 10:25:41:INFO:Appended live data for MNST
+2024-08-12 10:25:41:INFO:Fetched latest historical data for O
+2024-08-12 10:25:41:INFO:Appended live data for O
+2024-08-12 10:25:41:INFO:Fetched latest historical data for RSG
+2024-08-12 10:25:41:INFO:Appended live data for RSG
+2024-08-12 10:25:41:INFO:Fetched latest historical data for AFL
+2024-08-12 10:25:41:INFO:Appended live data for AFL
+2024-08-12 10:25:41:INFO:Fetched latest historical data for DLR
+2024-08-12 10:25:41:INFO:Appended live data for DLR
+2024-08-12 10:25:41:INFO:Fetched latest historical data for KMB
+2024-08-12 10:25:41:INFO:Appended live data for KMB
+2024-08-12 10:25:41:INFO:Fetched latest historical data for VLO
+2024-08-12 10:25:41:INFO:Appended live data for VLO
+2024-08-12 10:25:41:INFO:Fetched latest historical data for GIS
+2024-08-12 10:25:41:INFO:Appended live data for GIS
+2024-08-12 10:25:41:INFO:Fetched latest historical data for SPG
+2024-08-12 10:25:41:INFO:Appended live data for SPG
+2024-08-12 10:25:41:INFO:Fetched latest historical data for WMB
+2024-08-12 10:25:41:INFO:Appended live data for WMB
+2024-08-12 10:25:41:INFO:Fetched latest historical data for DVN
+2024-08-12 10:25:41:INFO:Appended live data for DVN
+2024-08-12 10:25:41:INFO:Fetched latest historical data for MSCI
+2024-08-12 10:25:41:INFO:Appended live data for MSCI
+2024-08-12 10:25:41:INFO:Fetched latest historical data for XEL
+2024-08-12 10:25:41:INFO:Appended live data for XEL
+2024-08-12 10:25:41:INFO:Fetched latest historical data for TEL
+2024-08-12 10:25:41:INFO:Appended live data for TEL
+2024-08-12 10:25:41:INFO:Fetched latest historical data for HPQ
+2024-08-12 10:25:41:INFO:Appended live data for HPQ
+2024-08-12 10:25:41:INFO:Fetched latest historical data for HLT
+2024-08-12 10:25:41:INFO:Appended live data for HLT
+2024-08-12 10:25:41:INFO:Fetched latest historical data for PSX
+2024-08-12 10:25:41:INFO:Appended live data for PSX
+2024-08-12 10:25:41:INFO:Fetched latest historical data for NUE
+2024-08-12 10:25:41:INFO:Appended live data for NUE
+2024-08-12 10:25:41:INFO:Fetched latest historical data for A
+2024-08-12 10:25:41:INFO:Appended live data for A
+2024-08-12 10:25:41:INFO:Fetched latest historical data for ANET
+2024-08-12 10:25:41:INFO:Appended live data for ANET
+2024-08-12 10:25:41:INFO:Fetched latest historical data for SBAC
+2024-08-12 10:25:41:INFO:Appended live data for SBAC
+2024-08-12 10:25:41:INFO:Fetched latest historical data for BAX
+2024-08-12 10:25:41:INFO:Appended live data for BAX
+2024-08-12 10:25:41:INFO:Fetched latest historical data for MSI
+2024-08-12 10:25:41:INFO:Appended live data for MSI
+2024-08-12 10:25:41:INFO:Fetched latest historical data for ALL
+2024-08-12 10:25:41:INFO:Appended live data for ALL
+2024-08-12 10:25:42:INFO:Fetched latest historical data for WBA
+2024-08-12 10:25:42:INFO:Appended live data for WBA
+2024-08-12 10:25:42:INFO:Fetched latest historical data for BK
+2024-08-12 10:25:42:INFO:Appended live data for BK
+2024-08-12 10:25:42:INFO:Fetched latest historical data for BKR
+2024-08-12 10:25:42:INFO:Appended live data for BKR
+2024-08-12 10:25:42:INFO:Fetched latest historical data for AJG
+2024-08-12 10:25:42:INFO:Appended live data for AJG
+2024-08-12 10:25:42:INFO:Fetched latest historical data for GPN
+2024-08-12 10:25:42:INFO:Appended live data for GPN
+2024-08-12 10:25:42:INFO:Fetched latest historical data for TWTR
+2024-08-12 10:25:42:INFO:No live data fetched for TWTR
+2024-08-12 10:25:42:INFO:Fetched latest historical data for CARR
+2024-08-12 10:25:42:INFO:Appended live data for CARR
+2024-08-12 10:25:42:INFO:Fetched latest historical data for MCHP
+2024-08-12 10:25:42:INFO:Appended live data for MCHP
+2024-08-12 10:25:42:INFO:Fetched latest historical data for DLTR
+2024-08-12 10:25:42:INFO:Appended live data for DLTR
+2024-08-12 10:25:42:INFO:Fetched latest historical data for RMD
+2024-08-12 10:25:42:INFO:Appended live data for RMD
+2024-08-12 10:25:42:INFO:Fetched latest historical data for PEG
+2024-08-12 10:25:42:INFO:Appended live data for PEG
+2024-08-12 10:25:42:INFO:Fetched latest historical data for HAL
+2024-08-12 10:25:42:INFO:Appended live data for HAL
+2024-08-12 10:25:42:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/TDG/bars 3 more time(s)...
+2024-08-12 10:25:45:INFO:Fetched latest historical data for TDG
+2024-08-12 10:25:45:INFO:Appended live data for TDG
+2024-08-12 10:25:45:INFO:Fetched latest historical data for VRSK
+2024-08-12 10:25:45:INFO:Appended live data for VRSK
+2024-08-12 10:25:45:INFO:Fetched latest historical data for DD
+2024-08-12 10:25:45:INFO:Appended live data for DD
+2024-08-12 10:25:45:INFO:Fetched latest historical data for PH
+2024-08-12 10:25:45:INFO:Appended live data for PH
+2024-08-12 10:25:45:INFO:Fetched latest historical data for TT
+2024-08-12 10:25:45:INFO:Appended live data for TT
+2024-08-12 10:25:45:INFO:Fetched latest historical data for HES
+2024-08-12 10:25:45:INFO:Appended live data for HES
+2024-08-12 10:25:45:INFO:Fetched latest historical data for AVB
+2024-08-12 10:25:45:INFO:Appended live data for AVB
+2024-08-12 10:25:45:INFO:Fetched latest historical data for EA
+2024-08-12 10:25:45:INFO:Appended live data for EA
+2024-08-12 10:25:45:INFO:Fetched latest historical data for ED
+2024-08-12 10:25:45:INFO:Appended live data for ED
+2024-08-12 10:25:45:INFO:Fetched latest historical data for ABC
+2024-08-12 10:25:45:INFO:No live data fetched for ABC
+2024-08-12 10:25:45:INFO:Fetched latest historical data for EQR
+2024-08-12 10:25:45:INFO:Appended live data for EQR
+2024-08-12 10:25:45:INFO:Fetched latest historical data for YUM
+2024-08-12 10:25:45:INFO:Appended live data for YUM
+2024-08-12 10:25:45:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/ROST/bars 3 more time(s)...
+2024-08-12 10:25:49:INFO:Fetched latest historical data for ROST
+2024-08-12 10:25:49:INFO:Appended live data for ROST
+2024-08-12 10:25:49:INFO:Fetched latest historical data for TSN
+2024-08-12 10:25:49:INFO:Appended live data for TSN
+2024-08-12 10:25:49:INFO:Fetched latest historical data for LYB
+2024-08-12 10:25:49:INFO:Appended live data for LYB
+2024-08-12 10:25:49:INFO:Fetched latest historical data for TROW
+2024-08-12 10:25:49:INFO:Appended live data for TROW
+2024-08-12 10:25:49:INFO:Fetched latest historical data for FAST
+2024-08-12 10:25:49:INFO:Appended live data for FAST
+2024-08-12 10:25:49:INFO:Fetched latest historical data for ALGN
+2024-08-12 10:25:49:INFO:Appended live data for ALGN
+2024-08-12 10:25:49:INFO:Fetched latest historical data for ARE
+2024-08-12 10:25:49:INFO:Appended live data for ARE
+2024-08-12 10:25:49:INFO:Fetched latest historical data for WEC
+2024-08-12 10:25:49:INFO:Appended live data for WEC
+2024-08-12 10:25:49:INFO:Fetched latest historical data for OTIS
+2024-08-12 10:25:49:INFO:Appended live data for OTIS
+2024-08-12 10:25:49:INFO:Fetched latest historical data for AMP
+2024-08-12 10:25:49:INFO:Appended live data for AMP
+2024-08-12 10:34:59:INFO:Starting live data fetching process
+2024-08-12 10:34:59:INFO:Fetched latest historical data for AAPL
+2024-08-12 10:34:59:INFO:Appended live data for AAPL
+2024-08-12 10:34:59:INFO:Fetched latest historical data for MSFT
+2024-08-12 10:34:59:INFO:Appended live data for MSFT
+2024-08-12 10:34:59:INFO:Fetched latest historical data for GOOG
+2024-08-12 10:34:59:INFO:Appended live data for GOOG
+2024-08-12 10:34:59:INFO:Fetched latest historical data for GOOGL
+2024-08-12 10:34:59:INFO:Appended live data for GOOGL
+2024-08-12 10:34:59:INFO:Fetched latest historical data for AMZN
+2024-08-12 10:34:59:INFO:Appended live data for AMZN
+2024-08-12 10:34:59:INFO:Fetched latest historical data for TSLA
+2024-08-12 10:34:59:INFO:Appended live data for TSLA
+2024-08-12 10:34:59:INFO:Fetched latest historical data for BRK.B
+2024-08-12 10:34:59:INFO:Appended live data for BRK.B
+2024-08-12 10:34:59:INFO:Fetched latest historical data for FB
+2024-08-12 10:34:59:INFO:No live data fetched for FB
+2024-08-12 10:34:59:INFO:Fetched latest historical data for NVDA
+2024-08-12 10:34:59:INFO:Appended live data for NVDA
+2024-08-12 10:34:59:INFO:Fetched latest historical data for UNH
+2024-08-12 10:34:59:INFO:Appended live data for UNH
+2024-08-12 10:34:59:INFO:Fetched latest historical data for JNJ
+2024-08-12 10:34:59:INFO:Appended live data for JNJ
+2024-08-12 10:34:59:INFO:Fetched latest historical data for V
+2024-08-12 10:34:59:INFO:Appended live data for V
+2024-08-12 10:34:59:INFO:Fetched latest historical data for WMT
+2024-08-12 10:34:59:INFO:Appended live data for WMT
+2024-08-12 10:34:59:INFO:Fetched latest historical data for JPM
+2024-08-12 10:34:59:INFO:Appended live data for JPM
+2024-08-12 10:34:59:INFO:Fetched latest historical data for PG
+2024-08-12 10:34:59:INFO:Appended live data for PG
+2024-08-12 10:34:59:INFO:Fetched latest historical data for XOM
+2024-08-12 10:34:59:INFO:Appended live data for XOM
+2024-08-12 10:34:59:INFO:Fetched latest historical data for MA
+2024-08-12 10:34:59:INFO:Appended live data for MA
+2024-08-12 10:35:00:INFO:Fetched latest historical data for CVX
+2024-08-12 10:35:00:INFO:Appended live data for CVX
+2024-08-12 10:35:00:INFO:Fetched latest historical data for HD
+2024-08-12 10:35:00:INFO:Appended live data for HD
+2024-08-12 10:35:00:INFO:Fetched latest historical data for BAC
+2024-08-12 10:35:00:INFO:Appended live data for BAC
+2024-08-12 10:35:00:INFO:Fetched latest historical data for PFE
+2024-08-12 10:35:00:INFO:Appended live data for PFE
+2024-08-12 10:35:00:INFO:Fetched latest historical data for ABBV
+2024-08-12 10:35:00:INFO:Appended live data for ABBV
+2024-08-12 10:35:00:INFO:Fetched latest historical data for LLY
+2024-08-12 10:35:00:INFO:Appended live data for LLY
+2024-08-12 10:35:00:INFO:Fetched latest historical data for KO
+2024-08-12 10:35:00:INFO:Appended live data for KO
+2024-08-12 10:35:00:INFO:Fetched latest historical data for COST
+2024-08-12 10:35:00:INFO:Appended live data for COST
+2024-08-12 10:35:00:INFO:Fetched latest historical data for DIS
+2024-08-12 10:35:00:INFO:Appended live data for DIS
+2024-08-12 10:35:00:INFO:Fetched latest historical data for AVGO
+2024-08-12 10:35:00:INFO:Appended live data for AVGO
+2024-08-12 10:35:00:INFO:Fetched latest historical data for PEP
+2024-08-12 10:35:00:INFO:Appended live data for PEP
+2024-08-12 10:35:00:INFO:Fetched latest historical data for TMO
+2024-08-12 10:35:00:INFO:Appended live data for TMO
+2024-08-12 10:35:00:INFO:Fetched latest historical data for CSCO
+2024-08-12 10:35:00:INFO:Appended live data for CSCO
+2024-08-12 10:35:00:INFO:Fetched latest historical data for VZ
+2024-08-12 10:35:00:INFO:Appended live data for VZ
+2024-08-12 10:35:00:INFO:Fetched latest historical data for ACN
+2024-08-12 10:35:00:INFO:Appended live data for ACN
+2024-08-12 10:35:00:INFO:Fetched latest historical data for MRK
+2024-08-12 10:35:00:INFO:Appended live data for MRK
+2024-08-12 10:35:00:INFO:Fetched latest historical data for ABT
+2024-08-12 10:35:00:INFO:Appended live data for ABT
+2024-08-12 10:35:00:INFO:Fetched latest historical data for ORCL
+2024-08-12 10:35:00:INFO:Appended live data for ORCL
+2024-08-12 10:35:00:INFO:Fetched latest historical data for CMCSA
+2024-08-12 10:35:00:INFO:Appended live data for CMCSA
+2024-08-12 10:35:00:INFO:Fetched latest historical data for DHR
+2024-08-12 10:35:00:INFO:Appended live data for DHR
+2024-08-12 10:35:00:INFO:Fetched latest historical data for ADBE
+2024-08-12 10:35:00:INFO:Appended live data for ADBE
+2024-08-12 10:35:00:INFO:Fetched latest historical data for NKE
+2024-08-12 10:35:00:INFO:Appended live data for NKE
+2024-08-12 10:35:00:INFO:Fetched latest historical data for CRM
+2024-08-12 10:35:00:INFO:Appended live data for CRM
+2024-08-12 10:35:00:INFO:Fetched latest historical data for INTC
+2024-08-12 10:35:00:INFO:Appended live data for INTC
+2024-08-12 10:35:00:INFO:Fetched latest historical data for MCD
+2024-08-12 10:35:00:INFO:Appended live data for MCD
+2024-08-12 10:35:00:INFO:Fetched latest historical data for WFC
+2024-08-12 10:35:00:INFO:Appended live data for WFC
+2024-08-12 10:35:01:INFO:Fetched latest historical data for T
+2024-08-12 10:35:01:INFO:Appended live data for T
+2024-08-12 10:35:01:INFO:Fetched latest historical data for BMY
+2024-08-12 10:35:01:INFO:Appended live data for BMY
+2024-08-12 10:35:01:INFO:Fetched latest historical data for NEE
+2024-08-12 10:35:01:INFO:Appended live data for NEE
+2024-08-12 10:35:01:INFO:Fetched latest historical data for TMUS
+2024-08-12 10:35:01:INFO:Appended live data for TMUS
+2024-08-12 10:35:01:INFO:Fetched latest historical data for UPS
+2024-08-12 10:35:01:INFO:Appended live data for UPS
+2024-08-12 10:35:01:INFO:Fetched latest historical data for AMD
+2024-08-12 10:35:01:INFO:Appended live data for AMD
+2024-08-12 10:35:01:INFO:Fetched latest historical data for LIN
+2024-08-12 10:35:01:INFO:Appended live data for LIN
+2024-08-12 10:35:01:INFO:Fetched latest historical data for TXN
+2024-08-12 10:35:01:INFO:Appended live data for TXN
+2024-08-12 10:35:01:INFO:Fetched latest historical data for NFLX
+2024-08-12 10:35:01:INFO:Appended live data for NFLX
+2024-08-12 10:35:01:INFO:Fetched latest historical data for PM
+2024-08-12 10:35:01:INFO:Appended live data for PM
+2024-08-12 10:35:01:INFO:Fetched latest historical data for QCOM
+2024-08-12 10:35:01:INFO:Appended live data for QCOM
+2024-08-12 10:35:01:INFO:Fetched latest historical data for SCHW
+2024-08-12 10:35:01:INFO:Appended live data for SCHW
+2024-08-12 10:35:01:INFO:Fetched latest historical data for UNP
+2024-08-12 10:35:01:INFO:Appended live data for UNP
+2024-08-12 10:35:01:INFO:Fetched latest historical data for MDT
+2024-08-12 10:35:01:INFO:Appended live data for MDT
+2024-08-12 10:35:01:INFO:Fetched latest historical data for MS
+2024-08-12 10:35:01:INFO:Appended live data for MS
+2024-08-12 10:35:01:INFO:Fetched latest historical data for RTX
+2024-08-12 10:35:01:INFO:Appended live data for RTX
+2024-08-12 10:35:01:INFO:Fetched latest historical data for SPGI
+2024-08-12 10:35:01:INFO:Appended live data for SPGI
+2024-08-12 10:35:01:INFO:Fetched latest historical data for CVS
+2024-08-12 10:35:01:INFO:Appended live data for CVS
+2024-08-12 10:35:01:INFO:Fetched latest historical data for AXP
+2024-08-12 10:35:01:INFO:Appended live data for AXP
+2024-08-12 10:35:01:INFO:Fetched latest historical data for LOW
+2024-08-12 10:35:01:INFO:Appended live data for LOW
+2024-08-12 10:35:01:INFO:Fetched latest historical data for AMGN
+2024-08-12 10:35:01:INFO:Appended live data for AMGN
+2024-08-12 10:35:01:INFO:Fetched latest historical data for COP
+2024-08-12 10:35:01:INFO:Appended live data for COP
+2024-08-12 10:35:01:INFO:Fetched latest historical data for INTU
+2024-08-12 10:35:01:INFO:Appended live data for INTU
+2024-08-12 10:35:01:INFO:Fetched latest historical data for ANTM
+2024-08-12 10:35:01:INFO:No live data fetched for ANTM
+2024-08-12 10:35:01:INFO:Fetched latest historical data for HON
+2024-08-12 10:35:01:INFO:Appended live data for HON
+2024-08-12 10:35:01:INFO:Fetched latest historical data for PYPL
+2024-08-12 10:35:01:INFO:Appended live data for PYPL
+2024-08-12 10:35:01:INFO:Fetched latest historical data for DE
+2024-08-12 10:35:02:INFO:Appended live data for DE
+2024-08-12 10:35:02:INFO:Fetched latest historical data for PLD
+2024-08-12 10:35:02:INFO:Appended live data for PLD
+2024-08-12 10:35:02:INFO:Fetched latest historical data for LMT
+2024-08-12 10:35:02:INFO:Appended live data for LMT
+2024-08-12 10:35:02:INFO:Fetched latest historical data for AMT
+2024-08-12 10:35:02:INFO:Appended live data for AMT
+2024-08-12 10:35:02:INFO:Fetched latest historical data for CAT
+2024-08-12 10:35:02:INFO:Appended live data for CAT
+2024-08-12 10:35:02:INFO:Fetched latest historical data for IBM
+2024-08-12 10:35:02:INFO:Appended live data for IBM
+2024-08-12 10:35:02:INFO:Fetched latest historical data for BLK
+2024-08-12 10:35:02:INFO:Appended live data for BLK
+2024-08-12 10:35:02:INFO:Fetched latest historical data for GS
+2024-08-12 10:35:02:INFO:Appended live data for GS
+2024-08-12 10:35:02:INFO:Fetched latest historical data for TGT
+2024-08-12 10:35:02:INFO:Appended live data for TGT
+2024-08-12 10:35:02:INFO:Fetched latest historical data for CHTR
+2024-08-12 10:35:02:INFO:Appended live data for CHTR
+2024-08-12 10:35:02:INFO:Fetched latest historical data for AMAT
+2024-08-12 10:35:02:INFO:Appended live data for AMAT
+2024-08-12 10:35:02:INFO:Fetched latest historical data for ISRG
+2024-08-12 10:35:02:INFO:Appended live data for ISRG
+2024-08-12 10:35:02:INFO:Fetched latest historical data for BA
+2024-08-12 10:35:02:INFO:Appended live data for BA
+2024-08-12 10:35:02:INFO:Fetched latest historical data for NOW
+2024-08-12 10:35:02:INFO:Appended live data for NOW
+2024-08-12 10:35:02:INFO:Fetched latest historical data for SYK
+2024-08-12 10:35:02:INFO:Appended live data for SYK
+2024-08-12 10:35:02:INFO:Fetched latest historical data for C
+2024-08-12 10:35:02:INFO:Appended live data for C
+2024-08-12 10:35:02:INFO:Fetched latest historical data for ADP
+2024-08-12 10:35:02:INFO:Appended live data for ADP
+2024-08-12 10:35:02:INFO:Fetched latest historical data for GE
+2024-08-12 10:35:02:INFO:Appended live data for GE
+2024-08-12 10:35:02:INFO:Fetched latest historical data for MO
+2024-08-12 10:35:02:INFO:Appended live data for MO
+2024-08-12 10:35:02:INFO:Fetched latest historical data for EL
+2024-08-12 10:35:02:INFO:Appended live data for EL
+2024-08-12 10:35:02:INFO:Fetched latest historical data for ZTS
+2024-08-12 10:35:02:INFO:Appended live data for ZTS
+2024-08-12 10:35:02:INFO:Fetched latest historical data for SBUX
+2024-08-12 10:35:02:INFO:Appended live data for SBUX
+2024-08-12 10:35:02:INFO:Fetched latest historical data for CB
+2024-08-12 10:35:02:INFO:Appended live data for CB
+2024-08-12 10:35:02:INFO:Fetched latest historical data for BKNG
+2024-08-12 10:35:02:INFO:Appended live data for BKNG
+2024-08-12 10:35:02:INFO:Fetched latest historical data for DUK
+2024-08-12 10:35:02:INFO:Appended live data for DUK
+2024-08-12 10:35:02:INFO:Fetched latest historical data for MDLZ
+2024-08-12 10:35:02:INFO:Appended live data for MDLZ
+2024-08-12 10:35:03:INFO:Fetched latest historical data for CME
+2024-08-12 10:35:03:INFO:Appended live data for CME
+2024-08-12 10:35:03:INFO:Fetched latest historical data for MMC
+2024-08-12 10:35:03:INFO:Appended live data for MMC
+2024-08-12 10:35:03:INFO:Fetched latest historical data for CCI
+2024-08-12 10:35:03:INFO:Appended live data for CCI
+2024-08-12 10:35:03:INFO:Fetched latest historical data for MMM
+2024-08-12 10:35:03:INFO:Appended live data for MMM
+2024-08-12 10:35:03:INFO:Fetched latest historical data for ADI
+2024-08-12 10:35:03:INFO:Appended live data for ADI
+2024-08-12 10:35:03:INFO:Fetched latest historical data for CI
+2024-08-12 10:35:03:INFO:Appended live data for CI
+2024-08-12 10:35:03:INFO:Fetched latest historical data for SO
+2024-08-12 10:35:03:INFO:Appended live data for SO
+2024-08-12 10:35:03:INFO:Fetched latest historical data for MU
+2024-08-12 10:35:03:INFO:Appended live data for MU
+2024-08-12 10:35:03:INFO:Fetched latest historical data for BDX
+2024-08-12 10:35:03:INFO:Appended live data for BDX
+2024-08-12 10:35:03:INFO:Fetched latest historical data for HCA
+2024-08-12 10:35:03:INFO:Appended live data for HCA
+2024-08-12 10:35:03:INFO:Fetched latest historical data for GILD
+2024-08-12 10:35:03:INFO:Appended live data for GILD
+2024-08-12 10:35:03:INFO:Fetched latest historical data for REGN
+2024-08-12 10:35:03:INFO:Appended live data for REGN
+2024-08-12 10:35:03:INFO:Fetched latest historical data for USB
+2024-08-12 10:35:03:INFO:Appended live data for USB
+2024-08-12 10:35:03:INFO:Fetched latest historical data for PNC
+2024-08-12 10:35:03:INFO:Appended live data for PNC
+2024-08-12 10:35:03:INFO:Fetched latest historical data for EW
+2024-08-12 10:35:03:INFO:Appended live data for EW
+2024-08-12 10:35:03:INFO:Fetched latest historical data for CSX
+2024-08-12 10:35:03:INFO:Appended live data for CSX
+2024-08-12 10:35:03:INFO:Fetched latest historical data for EOG
+2024-08-12 10:35:03:INFO:Appended live data for EOG
+2024-08-12 10:35:03:INFO:Fetched latest historical data for AON
+2024-08-12 10:35:03:INFO:Appended live data for AON
+2024-08-12 10:35:03:INFO:Fetched latest historical data for ICE
+2024-08-12 10:35:03:INFO:Appended live data for ICE
+2024-08-12 10:35:03:INFO:Fetched latest historical data for TJX
+2024-08-12 10:35:03:INFO:Appended live data for TJX
+2024-08-12 10:35:03:INFO:Fetched latest historical data for NOC
+2024-08-12 10:35:03:INFO:Appended live data for NOC
+2024-08-12 10:35:03:INFO:Fetched latest historical data for PSA
+2024-08-12 10:35:03:INFO:Appended live data for PSA
+2024-08-12 10:35:03:INFO:Fetched latest historical data for D
+2024-08-12 10:35:03:INFO:Appended live data for D
+2024-08-12 10:35:04:INFO:Fetched latest historical data for VRTX
+2024-08-12 10:35:04:INFO:Appended live data for VRTX
+2024-08-12 10:35:04:INFO:Fetched latest historical data for TFC
+2024-08-12 10:35:04:INFO:Appended live data for TFC
+2024-08-12 10:35:04:INFO:Fetched latest historical data for FCX
+2024-08-12 10:35:04:INFO:Appended live data for FCX
+2024-08-12 10:35:04:INFO:Fetched latest historical data for EQIX
+2024-08-12 10:35:04:INFO:Appended live data for EQIX
+2024-08-12 10:35:04:INFO:Fetched latest historical data for PGR
+2024-08-12 10:35:04:INFO:Appended live data for PGR
+2024-08-12 10:35:04:INFO:Fetched latest historical data for SHW
+2024-08-12 10:35:04:INFO:Appended live data for SHW
+2024-08-12 10:35:04:INFO:Fetched latest historical data for LRCX
+2024-08-12 10:35:04:INFO:Appended live data for LRCX
+2024-08-12 10:35:04:INFO:Fetched latest historical data for WM
+2024-08-12 10:35:04:INFO:Appended live data for WM
+2024-08-12 10:35:04:INFO:Fetched latest historical data for CL
+2024-08-12 10:35:04:INFO:Appended live data for CL
+2024-08-12 10:35:04:INFO:Fetched latest historical data for GD
+2024-08-12 10:35:04:INFO:Appended live data for GD
+2024-08-12 10:35:04:INFO:Fetched latest historical data for NSC
+2024-08-12 10:35:04:INFO:Appended live data for NSC
+2024-08-12 10:35:04:INFO:Fetched latest historical data for FISV
+2024-08-12 10:35:04:INFO:No live data fetched for FISV
+2024-08-12 10:35:04:INFO:Fetched latest historical data for NEM
+2024-08-12 10:35:04:INFO:Appended live data for NEM
+2024-08-12 10:35:04:INFO:Fetched latest historical data for MRNA
+2024-08-12 10:35:04:INFO:Appended live data for MRNA
+2024-08-12 10:35:04:INFO:Fetched latest historical data for BSX
+2024-08-12 10:35:04:INFO:Appended live data for BSX
+2024-08-12 10:35:04:INFO:Fetched latest historical data for MCO
+2024-08-12 10:35:04:INFO:Appended live data for MCO
+2024-08-12 10:35:04:INFO:Fetched latest historical data for ITW
+2024-08-12 10:35:04:INFO:Appended live data for ITW
+2024-08-12 10:35:04:INFO:Fetched latest historical data for ATVI
+2024-08-12 10:35:04:INFO:No live data fetched for ATVI
+2024-08-12 10:35:04:INFO:Fetched latest historical data for FIS
+2024-08-12 10:35:04:INFO:Appended live data for FIS
+2024-08-12 10:35:04:INFO:Fetched latest historical data for PXD
+2024-08-12 10:35:04:INFO:No live data fetched for PXD
+2024-08-12 10:35:04:INFO:Fetched latest historical data for SLB
+2024-08-12 10:35:04:INFO:Appended live data for SLB
+2024-08-12 10:35:04:INFO:Fetched latest historical data for F
+2024-08-12 10:35:04:INFO:Appended live data for F
+2024-08-12 10:35:04:INFO:Fetched latest historical data for MET
+2024-08-12 10:35:04:INFO:Appended live data for MET
+2024-08-12 10:35:04:INFO:Fetched latest historical data for HUM
+2024-08-12 10:35:04:INFO:Appended live data for HUM
+2024-08-12 10:35:04:INFO:Fetched latest historical data for ETN
+2024-08-12 10:35:04:INFO:Appended live data for ETN
+2024-08-12 10:35:04:INFO:Fetched latest historical data for OXY
+2024-08-12 10:35:04:INFO:Appended live data for OXY
+2024-08-12 10:35:04:INFO:Fetched latest historical data for GM
+2024-08-12 10:35:04:INFO:Appended live data for GM
+2024-08-12 10:35:05:INFO:Fetched latest historical data for ILMN
+2024-08-12 10:35:05:INFO:Appended live data for ILMN
+2024-08-12 10:35:05:INFO:Fetched latest historical data for EMR
+2024-08-12 10:35:05:INFO:Appended live data for EMR
+2024-08-12 10:35:05:INFO:Fetched latest historical data for DG
+2024-08-12 10:35:05:INFO:Appended live data for DG
+2024-08-12 10:35:05:INFO:Fetched latest historical data for APD
+2024-08-12 10:35:05:INFO:Appended live data for APD
+2024-08-12 10:35:05:INFO:Fetched latest historical data for COF
+2024-08-12 10:35:05:INFO:Appended live data for COF
+2024-08-12 10:35:05:INFO:Fetched latest historical data for FTNT
+2024-08-12 10:35:05:INFO:Appended live data for FTNT
+2024-08-12 10:35:05:INFO:Fetched latest historical data for MAR
+2024-08-12 10:35:05:INFO:Appended live data for MAR
+2024-08-12 10:35:05:INFO:Fetched latest historical data for SRE
+2024-08-12 10:35:05:INFO:Appended live data for SRE
+2024-08-12 10:35:05:INFO:Fetched latest historical data for ADM
+2024-08-12 10:35:05:INFO:Appended live data for ADM
+2024-08-12 10:35:05:INFO:Fetched latest historical data for ECL
+2024-08-12 10:35:05:INFO:Appended live data for ECL
+2024-08-12 10:35:05:INFO:Fetched latest historical data for FDX
+2024-08-12 10:35:05:INFO:Appended live data for FDX
+2024-08-12 10:35:05:INFO:Fetched latest historical data for AEP
+2024-08-12 10:35:05:INFO:Appended live data for AEP
+2024-08-12 10:35:05:INFO:Fetched latest historical data for CNC
+2024-08-12 10:35:05:INFO:Appended live data for CNC
+2024-08-12 10:35:05:INFO:Fetched latest historical data for KLAC
+2024-08-12 10:35:05:INFO:Appended live data for KLAC
+2024-08-12 10:35:05:INFO:Fetched latest historical data for ROP
+2024-08-12 10:35:05:INFO:Appended live data for ROP
+2024-08-12 10:35:05:INFO:Fetched latest historical data for AIG
+2024-08-12 10:35:05:INFO:Appended live data for AIG
+2024-08-12 10:35:05:INFO:Fetched latest historical data for PAYX
+2024-08-12 10:35:05:INFO:Appended live data for PAYX
+2024-08-12 10:35:05:INFO:Fetched latest historical data for KHC
+2024-08-12 10:35:05:INFO:Appended live data for KHC
+2024-08-12 10:35:05:INFO:Fetched latest historical data for LHX
+2024-08-12 10:35:05:INFO:Appended live data for LHX
+2024-08-12 10:35:05:INFO:Fetched latest historical data for DXCM
+2024-08-12 10:35:05:INFO:Appended live data for DXCM
+2024-08-12 10:35:05:INFO:Fetched latest historical data for EXC
+2024-08-12 10:35:05:INFO:Appended live data for EXC
+2024-08-12 10:35:05:INFO:Fetched latest historical data for SNPS
+2024-08-12 10:35:05:INFO:Appended live data for SNPS
+2024-08-12 10:35:05:INFO:Fetched latest historical data for ORLY
+2024-08-12 10:35:05:INFO:Appended live data for ORLY
+2024-08-12 10:35:05:INFO:Fetched latest historical data for MCK
+2024-08-12 10:35:05:INFO:Appended live data for MCK
+2024-08-12 10:35:05:INFO:Fetched latest historical data for MPC
+2024-08-12 10:35:05:INFO:Appended live data for MPC
+2024-08-12 10:35:05:INFO:Fetched latest historical data for IQV
+2024-08-12 10:35:05:INFO:Appended live data for IQV
+2024-08-12 10:35:06:INFO:Fetched latest historical data for CTSH
+2024-08-12 10:35:06:INFO:Appended live data for CTSH
+2024-08-12 10:35:06:INFO:Fetched latest historical data for HSY
+2024-08-12 10:35:06:INFO:Appended live data for HSY
+2024-08-12 10:35:06:INFO:Fetched latest historical data for STZ
+2024-08-12 10:35:06:INFO:Appended live data for STZ
+2024-08-12 10:35:06:INFO:Fetched latest historical data for IDXX
+2024-08-12 10:35:06:INFO:Appended live data for IDXX
+2024-08-12 10:35:06:INFO:Fetched latest historical data for DOW
+2024-08-12 10:35:06:INFO:Appended live data for DOW
+2024-08-12 10:35:06:INFO:Fetched latest historical data for JCI
+2024-08-12 10:35:06:INFO:Appended live data for JCI
+2024-08-12 10:35:06:INFO:Fetched latest historical data for TRV
+2024-08-12 10:35:06:INFO:Appended live data for TRV
+2024-08-12 10:35:06:INFO:Fetched latest historical data for KR
+2024-08-12 10:35:06:INFO:Appended live data for KR
+2024-08-12 10:35:06:INFO:Fetched latest historical data for KMI
+2024-08-12 10:35:06:INFO:Appended live data for KMI
+2024-08-12 10:35:06:INFO:Fetched latest historical data for WELL
+2024-08-12 10:35:06:INFO:Appended live data for WELL
+2024-08-12 10:35:06:INFO:Fetched latest historical data for NXPI
+2024-08-12 10:35:06:INFO:Appended live data for NXPI
+2024-08-12 10:35:06:INFO:Fetched latest historical data for ADSK
+2024-08-12 10:35:06:INFO:Appended live data for ADSK
+2024-08-12 10:35:06:INFO:Fetched latest historical data for CTAS
+2024-08-12 10:35:06:INFO:Appended live data for CTAS
+2024-08-12 10:35:06:INFO:Fetched latest historical data for APH
+2024-08-12 10:35:06:INFO:Appended live data for APH
+2024-08-12 10:35:06:INFO:Fetched latest historical data for PRU
+2024-08-12 10:35:06:INFO:Appended live data for PRU
+2024-08-12 10:35:06:INFO:Fetched latest historical data for SYY
+2024-08-12 10:35:06:INFO:Appended live data for SYY
+2024-08-12 10:35:06:INFO:Fetched latest historical data for CDNS
+2024-08-12 10:35:06:INFO:Appended live data for CDNS
+2024-08-12 10:35:06:INFO:Fetched latest historical data for AZO
+2024-08-12 10:35:06:INFO:Appended live data for AZO
+2024-08-12 10:35:06:INFO:Fetched latest historical data for CTVA
+2024-08-12 10:35:06:INFO:Appended live data for CTVA
+2024-08-12 10:35:06:INFO:Fetched latest historical data for CMG
+2024-08-12 10:35:06:INFO:Appended live data for CMG
+2024-08-12 10:35:06:INFO:Fetched latest historical data for MNST
+2024-08-12 10:35:06:INFO:Appended live data for MNST
+2024-08-12 10:35:06:INFO:Fetched latest historical data for O
+2024-08-12 10:35:06:INFO:Appended live data for O
+2024-08-12 10:35:06:INFO:Fetched latest historical data for RSG
+2024-08-12 10:35:06:INFO:Appended live data for RSG
+2024-08-12 10:35:06:INFO:Fetched latest historical data for AFL
+2024-08-12 10:35:06:INFO:Appended live data for AFL
+2024-08-12 10:35:06:INFO:Fetched latest historical data for DLR
+2024-08-12 10:35:06:INFO:Appended live data for DLR
+2024-08-12 10:35:06:INFO:Fetched latest historical data for KMB
+2024-08-12 10:35:06:INFO:Appended live data for KMB
+2024-08-12 10:35:06:INFO:Fetched latest historical data for VLO
+2024-08-12 10:35:06:INFO:Appended live data for VLO
+2024-08-12 10:35:07:INFO:Fetched latest historical data for GIS
+2024-08-12 10:35:07:INFO:Appended live data for GIS
+2024-08-12 10:35:07:INFO:Fetched latest historical data for SPG
+2024-08-12 10:35:07:INFO:Appended live data for SPG
+2024-08-12 10:35:07:INFO:Fetched latest historical data for WMB
+2024-08-12 10:35:07:INFO:Appended live data for WMB
+2024-08-12 10:35:07:INFO:Fetched latest historical data for DVN
+2024-08-12 10:35:07:INFO:Appended live data for DVN
+2024-08-12 10:35:07:INFO:Fetched latest historical data for MSCI
+2024-08-12 10:35:07:INFO:Appended live data for MSCI
+2024-08-12 10:35:07:INFO:Fetched latest historical data for XEL
+2024-08-12 10:35:07:INFO:Appended live data for XEL
+2024-08-12 10:35:07:INFO:Fetched latest historical data for TEL
+2024-08-12 10:35:07:INFO:Appended live data for TEL
+2024-08-12 10:35:07:INFO:Fetched latest historical data for HPQ
+2024-08-12 10:35:07:INFO:Appended live data for HPQ
+2024-08-12 10:35:07:INFO:Fetched latest historical data for HLT
+2024-08-12 10:35:07:INFO:Appended live data for HLT
+2024-08-12 10:35:07:INFO:Fetched latest historical data for PSX
+2024-08-12 10:35:07:INFO:Appended live data for PSX
+2024-08-12 10:35:07:INFO:Fetched latest historical data for NUE
+2024-08-12 10:35:07:INFO:Appended live data for NUE
+2024-08-12 10:35:07:INFO:Fetched latest historical data for A
+2024-08-12 10:35:07:INFO:Appended live data for A
+2024-08-12 10:35:07:INFO:Fetched latest historical data for ANET
+2024-08-12 10:35:07:INFO:Appended live data for ANET
+2024-08-12 10:35:07:INFO:Fetched latest historical data for SBAC
+2024-08-12 10:35:07:INFO:Appended live data for SBAC
+2024-08-12 10:35:07:INFO:Fetched latest historical data for BAX
+2024-08-12 10:35:07:INFO:Appended live data for BAX
+2024-08-12 10:35:07:INFO:Fetched latest historical data for MSI
+2024-08-12 10:35:07:INFO:Appended live data for MSI
+2024-08-12 10:35:07:INFO:Fetched latest historical data for ALL
+2024-08-12 10:35:07:INFO:Appended live data for ALL
+2024-08-12 10:35:07:INFO:Fetched latest historical data for WBA
+2024-08-12 10:35:07:INFO:Appended live data for WBA
+2024-08-12 10:35:07:INFO:Fetched latest historical data for BK
+2024-08-12 10:35:07:INFO:Appended live data for BK
+2024-08-12 10:35:07:INFO:Fetched latest historical data for BKR
+2024-08-12 10:35:07:INFO:Appended live data for BKR
+2024-08-12 10:35:07:INFO:Fetched latest historical data for AJG
+2024-08-12 10:35:07:INFO:Appended live data for AJG
+2024-08-12 10:35:07:INFO:Fetched latest historical data for GPN
+2024-08-12 10:35:07:INFO:Appended live data for GPN
+2024-08-12 10:35:07:INFO:Fetched latest historical data for TWTR
+2024-08-12 10:35:07:INFO:No live data fetched for TWTR
+2024-08-12 10:35:07:INFO:Fetched latest historical data for CARR
+2024-08-12 10:35:07:INFO:Appended live data for CARR
+2024-08-12 10:35:07:INFO:Fetched latest historical data for MCHP
+2024-08-12 10:35:07:INFO:Appended live data for MCHP
+2024-08-12 10:35:07:INFO:Fetched latest historical data for DLTR
+2024-08-12 10:35:07:INFO:Appended live data for DLTR
+2024-08-12 10:35:07:INFO:Fetched latest historical data for RMD
+2024-08-12 10:35:07:INFO:Appended live data for RMD
+2024-08-12 10:35:08:INFO:Fetched latest historical data for PEG
+2024-08-12 10:35:08:INFO:Appended live data for PEG
+2024-08-12 10:35:08:INFO:Fetched latest historical data for HAL
+2024-08-12 10:35:08:INFO:Appended live data for HAL
+2024-08-12 10:35:08:INFO:Fetched latest historical data for TDG
+2024-08-12 10:35:08:INFO:Appended live data for TDG
+2024-08-12 10:35:08:INFO:Fetched latest historical data for VRSK
+2024-08-12 10:35:08:INFO:Appended live data for VRSK
+2024-08-12 10:35:08:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/DD/bars 3 more time(s)...
+2024-08-12 10:35:11:INFO:Fetched latest historical data for DD
+2024-08-12 10:35:11:INFO:Appended live data for DD
+2024-08-12 10:35:11:INFO:Fetched latest historical data for PH
+2024-08-12 10:35:11:INFO:Appended live data for PH
+2024-08-12 10:35:11:INFO:Fetched latest historical data for TT
+2024-08-12 10:35:11:INFO:Appended live data for TT
+2024-08-12 10:35:11:INFO:Fetched latest historical data for HES
+2024-08-12 10:35:11:INFO:Appended live data for HES
+2024-08-12 10:35:11:INFO:Fetched latest historical data for AVB
+2024-08-12 10:35:11:INFO:Appended live data for AVB
+2024-08-12 10:35:11:INFO:Fetched latest historical data for EA
+2024-08-12 10:35:11:INFO:Appended live data for EA
+2024-08-12 10:35:11:INFO:Fetched latest historical data for ED
+2024-08-12 10:35:11:INFO:Appended live data for ED
+2024-08-12 10:35:11:INFO:Fetched latest historical data for ABC
+2024-08-12 10:35:11:INFO:No live data fetched for ABC
+2024-08-12 10:35:11:INFO:Fetched latest historical data for EQR
+2024-08-12 10:35:11:INFO:Appended live data for EQR
+2024-08-12 10:35:11:INFO:Fetched latest historical data for YUM
+2024-08-12 10:35:11:INFO:Appended live data for YUM
+2024-08-12 10:35:11:INFO:Fetched latest historical data for ROST
+2024-08-12 10:35:11:INFO:Appended live data for ROST
+2024-08-12 10:35:11:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/TSN/bars 3 more time(s)...
+2024-08-12 10:35:14:INFO:Fetched latest historical data for TSN
+2024-08-12 10:35:14:INFO:Appended live data for TSN
+2024-08-12 10:35:14:INFO:Fetched latest historical data for LYB
+2024-08-12 10:35:14:INFO:Appended live data for LYB
+2024-08-12 10:35:14:INFO:Fetched latest historical data for TROW
+2024-08-12 10:35:14:INFO:Appended live data for TROW
+2024-08-12 10:35:14:INFO:Fetched latest historical data for FAST
+2024-08-12 10:35:14:INFO:Appended live data for FAST
+2024-08-12 10:35:14:INFO:Fetched latest historical data for ALGN
+2024-08-12 10:35:14:INFO:Appended live data for ALGN
+2024-08-12 10:35:14:INFO:Fetched latest historical data for ARE
+2024-08-12 10:35:14:INFO:Appended live data for ARE
+2024-08-12 10:35:14:INFO:Fetched latest historical data for WEC
+2024-08-12 10:35:14:INFO:Appended live data for WEC
+2024-08-12 10:35:14:INFO:Fetched latest historical data for OTIS
+2024-08-12 10:35:14:INFO:Appended live data for OTIS
+2024-08-12 10:35:14:INFO:Fetched latest historical data for AMP
+2024-08-12 10:35:14:INFO:Appended live data for AMP
+2024-08-12 10:36:57:INFO:Fetched latest historical data for AAPL
+2024-08-12 10:36:57:INFO:Fetched latest historical data for MSFT
+2024-08-12 10:36:57:INFO:Fetched latest historical data for GOOG
+2024-08-12 10:36:57:INFO:Fetched latest historical data for GOOGL
+2024-08-12 10:36:57:INFO:Fetched latest historical data for AMZN
+2024-08-12 10:36:57:INFO:Fetched latest historical data for TSLA
+2024-08-12 10:36:57:INFO:Fetched latest historical data for BRK.B
+2024-08-12 10:36:57:INFO:Fetched latest historical data for FB
+2024-08-12 10:36:57:INFO:Fetched latest historical data for NVDA
+2024-08-12 10:36:57:INFO:Fetched latest historical data for UNH
+2024-08-12 10:36:57:INFO:Fetched latest historical data for JNJ
+2024-08-12 10:36:57:INFO:Fetched latest historical data for V
+2024-08-12 10:36:57:INFO:Fetched latest historical data for WMT
+2024-08-12 10:36:57:INFO:Fetched latest historical data for JPM
+2024-08-12 10:36:57:INFO:Fetched latest historical data for PG
+2024-08-12 10:36:57:INFO:Fetched latest historical data for XOM
+2024-08-12 10:36:57:INFO:Fetched latest historical data for MA
+2024-08-12 10:36:57:INFO:Fetched latest historical data for CVX
+2024-08-12 10:36:57:INFO:Fetched latest historical data for HD
+2024-08-12 10:36:57:INFO:Fetched latest historical data for BAC
+2024-08-12 10:36:57:INFO:Fetched latest historical data for PFE
+2024-08-12 10:36:58:INFO:Fetched latest historical data for ABBV
+2024-08-12 10:36:58:INFO:Fetched latest historical data for LLY
+2024-08-12 10:36:58:INFO:Fetched latest historical data for KO
+2024-08-12 10:36:58:INFO:Fetched latest historical data for COST
+2024-08-12 10:36:58:INFO:Fetched latest historical data for DIS
+2024-08-12 10:36:58:INFO:Fetched latest historical data for AVGO
+2024-08-12 10:36:58:INFO:Fetched latest historical data for PEP
+2024-08-12 10:36:58:INFO:Fetched latest historical data for TMO
+2024-08-12 10:36:58:INFO:Fetched latest historical data for CSCO
+2024-08-12 10:36:58:INFO:Fetched latest historical data for VZ
+2024-08-12 10:36:58:INFO:Fetched latest historical data for ACN
+2024-08-12 10:36:58:INFO:Fetched latest historical data for MRK
+2024-08-12 10:36:58:INFO:Fetched latest historical data for ABT
+2024-08-12 10:36:58:INFO:Fetched latest historical data for ORCL
+2024-08-12 10:36:58:INFO:Fetched latest historical data for CMCSA
+2024-08-12 10:36:58:INFO:Fetched latest historical data for DHR
+2024-08-12 10:36:58:INFO:Fetched latest historical data for ADBE
+2024-08-12 10:36:58:INFO:Fetched latest historical data for NKE
+2024-08-12 10:36:58:INFO:Fetched latest historical data for CRM
+2024-08-12 10:36:58:INFO:Fetched latest historical data for INTC
+2024-08-12 10:36:58:INFO:Fetched latest historical data for MCD
+2024-08-12 10:36:59:INFO:Fetched latest historical data for WFC
+2024-08-12 10:36:59:INFO:Fetched latest historical data for T
+2024-08-12 10:36:59:INFO:Fetched latest historical data for BMY
+2024-08-12 10:36:59:INFO:Fetched latest historical data for NEE
+2024-08-12 10:36:59:INFO:Fetched latest historical data for TMUS
+2024-08-12 10:36:59:INFO:Fetched latest historical data for UPS
+2024-08-12 10:36:59:INFO:Fetched latest historical data for AMD
+2024-08-12 10:36:59:INFO:Fetched latest historical data for LIN
+2024-08-12 10:36:59:INFO:Fetched latest historical data for TXN
+2024-08-12 10:36:59:INFO:Fetched latest historical data for NFLX
+2024-08-12 10:36:59:INFO:Fetched latest historical data for PM
+2024-08-12 10:36:59:INFO:Fetched latest historical data for QCOM
+2024-08-12 10:36:59:INFO:Fetched latest historical data for SCHW
+2024-08-12 10:36:59:INFO:Fetched latest historical data for UNP
+2024-08-12 10:36:59:INFO:Fetched latest historical data for MDT
+2024-08-12 10:37:00:INFO:Fetched latest historical data for MS
+2024-08-12 10:37:00:INFO:Fetched latest historical data for RTX
+2024-08-12 10:37:00:INFO:Fetched latest historical data for SPGI
+2024-08-12 10:37:00:INFO:Fetched latest historical data for CVS
+2024-08-12 10:37:00:INFO:Fetched latest historical data for AXP
+2024-08-12 10:37:00:INFO:Fetched latest historical data for LOW
+2024-08-12 10:37:00:INFO:Fetched latest historical data for AMGN
+2024-08-12 10:37:00:INFO:Fetched latest historical data for COP
+2024-08-12 10:37:00:INFO:Fetched latest historical data for INTU
+2024-08-12 10:37:00:INFO:Fetched latest historical data for ANTM
+2024-08-12 10:37:00:INFO:Fetched latest historical data for HON
+2024-08-12 10:37:00:INFO:Fetched latest historical data for PYPL
+2024-08-12 10:37:00:INFO:Fetched latest historical data for DE
+2024-08-12 10:37:01:INFO:Fetched latest historical data for PLD
+2024-08-12 10:37:01:INFO:Fetched latest historical data for LMT
+2024-08-12 10:37:01:INFO:Fetched latest historical data for AMT
+2024-08-12 10:37:01:INFO:Fetched latest historical data for CAT
+2024-08-12 10:37:01:INFO:Fetched latest historical data for IBM
+2024-08-12 10:37:01:INFO:Fetched latest historical data for BLK
+2024-08-12 10:37:01:INFO:Fetched latest historical data for GS
+2024-08-12 10:37:01:INFO:Fetched latest historical data for TGT
+2024-08-12 10:37:01:INFO:Fetched latest historical data for CHTR
+2024-08-12 10:37:01:INFO:Fetched latest historical data for AMAT
+2024-08-12 10:37:01:INFO:Fetched latest historical data for ISRG
+2024-08-12 10:37:01:INFO:Fetched latest historical data for BA
+2024-08-12 10:37:01:INFO:Fetched latest historical data for NOW
+2024-08-12 10:37:01:INFO:Fetched latest historical data for SYK
+2024-08-12 10:37:01:INFO:Fetched latest historical data for C
+2024-08-12 10:37:01:INFO:Fetched latest historical data for ADP
+2024-08-12 10:37:01:INFO:Fetched latest historical data for GE
+2024-08-12 10:37:01:INFO:Fetched latest historical data for MO
+2024-08-12 10:37:01:INFO:Fetched latest historical data for EL
+2024-08-12 10:37:01:INFO:Fetched latest historical data for ZTS
+2024-08-12 10:37:01:INFO:Fetched latest historical data for SBUX
+2024-08-12 10:37:01:INFO:Fetched latest historical data for CB
+2024-08-12 10:37:02:INFO:Fetched latest historical data for BKNG
+2024-08-12 10:37:02:INFO:Fetched latest historical data for DUK
+2024-08-12 10:37:02:INFO:Fetched latest historical data for MDLZ
+2024-08-12 10:37:02:INFO:Fetched latest historical data for CME
+2024-08-12 10:37:02:INFO:Fetched latest historical data for MMC
+2024-08-12 10:37:02:INFO:Fetched latest historical data for CCI
+2024-08-12 10:37:02:INFO:Fetched latest historical data for MMM
+2024-08-12 10:37:02:INFO:Fetched latest historical data for ADI
+2024-08-12 10:37:02:INFO:Fetched latest historical data for CI
+2024-08-12 10:37:02:INFO:Fetched latest historical data for SO
+2024-08-12 10:37:02:INFO:Fetched latest historical data for MU
+2024-08-12 10:37:02:INFO:Fetched latest historical data for BDX
+2024-08-12 10:37:02:INFO:Fetched latest historical data for HCA
+2024-08-12 10:37:02:INFO:Fetched latest historical data for GILD
+2024-08-12 10:37:02:INFO:Fetched latest historical data for REGN
+2024-08-12 10:37:02:INFO:Fetched latest historical data for USB
+2024-08-12 10:37:02:INFO:Fetched latest historical data for PNC
+2024-08-12 10:37:02:INFO:Fetched latest historical data for EW
+2024-08-12 10:37:03:INFO:Fetched latest historical data for CSX
+2024-08-12 10:37:03:INFO:Fetched latest historical data for EOG
+2024-08-12 10:37:03:INFO:Fetched latest historical data for AON
+2024-08-12 10:37:03:INFO:Fetched latest historical data for ICE
+2024-08-12 10:37:03:INFO:Fetched latest historical data for TJX
+2024-08-12 10:37:03:INFO:Fetched latest historical data for NOC
+2024-08-12 10:37:03:INFO:Fetched latest historical data for PSA
+2024-08-12 10:37:03:INFO:Fetched latest historical data for D
+2024-08-12 10:37:03:INFO:Fetched latest historical data for VRTX
+2024-08-12 10:37:03:INFO:Fetched latest historical data for TFC
+2024-08-12 10:37:03:INFO:Fetched latest historical data for FCX
+2024-08-12 10:37:03:INFO:Fetched latest historical data for EQIX
+2024-08-12 10:37:03:INFO:Fetched latest historical data for PGR
+2024-08-12 10:37:03:INFO:Fetched latest historical data for SHW
+2024-08-12 10:37:04:INFO:Fetched latest historical data for LRCX
+2024-08-12 10:37:04:INFO:Fetched latest historical data for WM
+2024-08-12 10:37:04:INFO:Fetched latest historical data for CL
+2024-08-12 10:37:04:INFO:Fetched latest historical data for GD
+2024-08-12 10:37:04:INFO:Fetched latest historical data for NSC
+2024-08-12 10:37:04:INFO:Fetched latest historical data for FISV
+2024-08-12 10:37:04:INFO:Fetched latest historical data for NEM
+2024-08-12 10:37:04:INFO:Fetched latest historical data for MRNA
+2024-08-12 10:37:04:INFO:Fetched latest historical data for BSX
+2024-08-12 10:37:04:INFO:Fetched latest historical data for MCO
+2024-08-12 10:37:04:INFO:Fetched latest historical data for ITW
+2024-08-12 10:37:04:INFO:Fetched latest historical data for ATVI
+2024-08-12 10:37:04:INFO:Fetched latest historical data for FIS
+2024-08-12 10:37:04:INFO:Fetched latest historical data for PXD
+2024-08-12 10:37:04:INFO:Fetched latest historical data for SLB
+2024-08-12 10:37:04:INFO:Fetched latest historical data for F
+2024-08-12 10:37:05:INFO:Fetched latest historical data for MET
+2024-08-12 10:37:05:INFO:Fetched latest historical data for HUM
+2024-08-12 10:37:05:INFO:Fetched latest historical data for ETN
+2024-08-12 10:37:05:INFO:Fetched latest historical data for OXY
+2024-08-12 10:37:05:INFO:Fetched latest historical data for GM
+2024-08-12 10:37:05:INFO:Fetched latest historical data for ILMN
+2024-08-12 10:37:05:INFO:Fetched latest historical data for EMR
+2024-08-12 10:37:05:INFO:Fetched latest historical data for DG
+2024-08-12 10:37:05:INFO:Fetched latest historical data for APD
+2024-08-12 10:37:05:INFO:Fetched latest historical data for COF
+2024-08-12 10:37:05:INFO:Fetched latest historical data for FTNT
+2024-08-12 10:37:05:INFO:Fetched latest historical data for MAR
+2024-08-12 10:37:05:INFO:Fetched latest historical data for SRE
+2024-08-12 10:37:05:INFO:Fetched latest historical data for ADM
+2024-08-12 10:37:05:INFO:Fetched latest historical data for ECL
+2024-08-12 10:37:05:INFO:Fetched latest historical data for FDX
+2024-08-12 10:37:05:INFO:Fetched latest historical data for AEP
+2024-08-12 10:37:06:INFO:Fetched latest historical data for CNC
+2024-08-12 10:37:06:INFO:Fetched latest historical data for KLAC
+2024-08-12 10:37:06:INFO:Fetched latest historical data for ROP
+2024-08-12 10:37:06:INFO:Fetched latest historical data for AIG
+2024-08-12 10:37:06:INFO:Fetched latest historical data for PAYX
+2024-08-12 10:37:06:INFO:Fetched latest historical data for KHC
+2024-08-12 10:37:06:INFO:Fetched latest historical data for LHX
+2024-08-12 10:37:06:INFO:Fetched latest historical data for DXCM
+2024-08-12 10:37:06:INFO:Fetched latest historical data for EXC
+2024-08-12 10:37:06:INFO:Fetched latest historical data for SNPS
+2024-08-12 10:37:06:INFO:Fetched latest historical data for ORLY
+2024-08-12 10:37:06:INFO:Fetched latest historical data for MCK
+2024-08-12 10:37:06:INFO:Fetched latest historical data for MPC
+2024-08-12 10:37:06:INFO:Fetched latest historical data for IQV
+2024-08-12 10:37:06:INFO:Fetched latest historical data for CTSH
+2024-08-12 10:37:06:INFO:Fetched latest historical data for HSY
+2024-08-12 10:37:07:INFO:Fetched latest historical data for STZ
+2024-08-12 10:37:07:INFO:Fetched latest historical data for IDXX
+2024-08-12 10:37:07:INFO:Fetched latest historical data for DOW
+2024-08-12 10:37:07:INFO:Fetched latest historical data for JCI
+2024-08-12 10:37:07:INFO:Fetched latest historical data for TRV
+2024-08-12 10:37:07:INFO:Fetched latest historical data for KR
+2024-08-12 10:37:07:INFO:Fetched latest historical data for KMI
+2024-08-12 10:37:07:INFO:Fetched latest historical data for WELL
+2024-08-12 10:37:07:INFO:Fetched latest historical data for NXPI
+2024-08-12 10:37:07:INFO:Fetched latest historical data for ADSK
+2024-08-12 10:37:07:INFO:Fetched latest historical data for CTAS
+2024-08-12 10:37:07:INFO:Fetched latest historical data for APH
+2024-08-12 10:37:07:INFO:Fetched latest historical data for PRU
+2024-08-12 10:37:07:INFO:Fetched latest historical data for SYY
+2024-08-12 10:37:07:INFO:Fetched latest historical data for CDNS
+2024-08-12 10:37:07:INFO:Fetched latest historical data for AZO
+2024-08-12 10:37:07:INFO:Fetched latest historical data for CTVA
+2024-08-12 10:37:07:INFO:Fetched latest historical data for CMG
+2024-08-12 10:37:07:INFO:Fetched latest historical data for MNST
+2024-08-12 10:37:07:INFO:Fetched latest historical data for O
+2024-08-12 10:37:07:INFO:Fetched latest historical data for RSG
+2024-08-12 10:37:07:INFO:Fetched latest historical data for AFL
+2024-08-12 10:37:07:INFO:Fetched latest historical data for DLR
+2024-08-12 10:37:08:INFO:Fetched latest historical data for KMB
+2024-08-12 10:37:08:INFO:Fetched latest historical data for VLO
+2024-08-12 10:37:08:INFO:Fetched latest historical data for GIS
+2024-08-12 10:37:08:INFO:Fetched latest historical data for SPG
+2024-08-12 10:37:08:INFO:Fetched latest historical data for WMB
+2024-08-12 10:37:08:INFO:Fetched latest historical data for DVN
+2024-08-12 10:37:08:INFO:Fetched latest historical data for MSCI
+2024-08-12 10:37:08:INFO:Fetched latest historical data for XEL
+2024-08-12 10:37:08:INFO:Fetched latest historical data for TEL
+2024-08-12 10:37:08:INFO:Fetched latest historical data for HPQ
+2024-08-12 10:37:08:INFO:Fetched latest historical data for HLT
+2024-08-12 10:37:08:INFO:Fetched latest historical data for PSX
+2024-08-12 10:37:08:INFO:Fetched latest historical data for NUE
+2024-08-12 10:37:08:INFO:Fetched latest historical data for A
+2024-08-12 10:37:08:INFO:Fetched latest historical data for ANET
+2024-08-12 10:37:08:INFO:Fetched latest historical data for SBAC
+2024-08-12 10:37:08:INFO:Fetched latest historical data for BAX
+2024-08-12 10:37:08:INFO:Fetched latest historical data for MSI
+2024-08-12 10:37:08:INFO:Fetched latest historical data for ALL
+2024-08-12 10:37:08:INFO:Fetched latest historical data for WBA
+2024-08-12 10:37:08:INFO:Fetched latest historical data for BK
+2024-08-12 10:37:09:INFO:Fetched latest historical data for BKR
+2024-08-12 10:37:09:INFO:Fetched latest historical data for AJG
+2024-08-12 10:37:09:INFO:Fetched latest historical data for GPN
+2024-08-12 10:37:09:INFO:Fetched latest historical data for TWTR
+2024-08-12 10:37:09:INFO:Fetched latest historical data for CARR
+2024-08-12 10:37:09:INFO:Fetched latest historical data for MCHP
+2024-08-12 10:37:09:INFO:Fetched latest historical data for DLTR
+2024-08-12 10:37:09:INFO:Fetched latest historical data for RMD
+2024-08-12 10:37:09:INFO:Fetched latest historical data for PEG
+2024-08-12 10:37:09:INFO:Fetched latest historical data for HAL
+2024-08-12 10:37:09:INFO:Fetched latest historical data for TDG
+2024-08-12 10:37:09:INFO:Fetched latest historical data for VRSK
+2024-08-12 10:37:09:INFO:Fetched latest historical data for DD
+2024-08-12 10:37:09:INFO:Fetched latest historical data for PH
+2024-08-12 10:37:09:INFO:Fetched latest historical data for TT
+2024-08-12 10:37:09:INFO:Fetched latest historical data for HES
+2024-08-12 10:37:09:INFO:Fetched latest historical data for AVB
+2024-08-12 10:37:10:INFO:Fetched latest historical data for EA
+2024-08-12 10:37:10:INFO:Fetched latest historical data for ED
+2024-08-12 10:37:10:INFO:Fetched latest historical data for ABC
+2024-08-12 10:37:10:INFO:Fetched latest historical data for EQR
+2024-08-12 10:37:10:INFO:Fetched latest historical data for YUM
+2024-08-12 10:37:10:INFO:Fetched latest historical data for ROST
+2024-08-12 10:37:10:INFO:Fetched latest historical data for TSN
+2024-08-12 10:37:10:INFO:Fetched latest historical data for LYB
+2024-08-12 10:37:10:WARNING:sleep 3 seconds and retrying https://data.alpaca.markets/v2/stocks/TROW/bars 3 more time(s)...
+2024-08-12 10:37:13:INFO:Fetched latest historical data for TROW
+2024-08-12 10:37:13:INFO:Fetched latest historical data for FAST
+2024-08-12 10:37:13:INFO:Fetched latest historical data for ALGN
+2024-08-12 10:37:13:INFO:Fetched latest historical data for ARE
+2024-08-12 10:37:13:INFO:Fetched latest historical data for WEC
+2024-08-12 10:37:13:INFO:Fetched latest historical data for OTIS
+2024-08-12 10:37:13:INFO:Fetched latest historical data for AMP

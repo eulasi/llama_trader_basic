@@ -7,31 +7,36 @@ from config.symbols import symbol_list
 api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
 
 
+def convert_timeframe(timeframe):
+    """Convert a string-based timeframe to an Alpaca TimeFrame object."""
+    if timeframe == '1Day':
+        return tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Day)
+    elif timeframe == '1Hour':
+        return tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Hour)
+    elif timeframe == '1Min':
+        return tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Minute)
+    elif timeframe == '1Week':
+        return tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Week)
+    elif timeframe == '1Month':
+        return tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Month)
+    elif 'Min' in timeframe:
+        minutes = int(timeframe.replace('Min', ''))
+        return tradeapi.TimeFrame(minutes, tradeapi.TimeFrameUnit.Minute)
+    else:
+        raise ValueError(f"Invalid timeframe: {timeframe}")
+
+
 def get_historical_data(symbol, timeframe, start=None, end=None):
     try:
-        # Handle different timeframes according to API requirements
-        if timeframe == '1Day':
-            tf = tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Day)
-        elif timeframe == '1Hour':
-            tf = tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Hour)
-        elif timeframe == '1Min':
-            tf = tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Minute)
-        elif timeframe == '1Week':
-            tf = tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Week)
-        elif timeframe == '1Month':
-            tf = tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Month)
-        else:
-            # Handle custom minute intervals (e.g., '15Min')
-            if 'Min' in timeframe:
-                minutes = int(timeframe.replace('Min', ''))
-                tf = tradeapi.TimeFrame(minutes, tradeapi.TimeFrameUnit.Minute)
-            else:
-                raise ValueError(f"Invalid timeframe: {timeframe}")
+        # Convert timeframe if it's a string
+        if isinstance(timeframe, str):
+            timeframe = convert_timeframe(timeframe)
 
+        # Now `timeframe` is guaranteed to be a TimeFrame object
         if start and end:
-            barset = api.get_bars(symbol, tf, start=start, end=end)
+            barset = api.get_bars(symbol, timeframe, start=start, end=end)
         else:
-            barset = api.get_bars(symbol, tf, limit=1)  # Fetch the latest bar for live data
+            barset = api.get_bars(symbol, timeframe, limit=1)  # Fetch the latest bar for live data
 
         log_message(
             f"Fetched historical data for {symbol} from {start} to {end}" if start and end else f"Fetched latest "
