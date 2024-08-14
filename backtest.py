@@ -28,45 +28,42 @@ def backtest(strategy, symbol, symbol_data, initial_cash):
         max_loss_per_trade=50,  # Example value, adjust as needed
         max_daily_loss=100,  # Example value, adjust as needed
         initial_capital=initial_cash,  # Should match the initial cash used in the backtest
-        risk_percentage=50  # 1% risk per trade
+        risk_percentage=50  # Example: 50% risk per trade
     )
 
-    # Accessing the _raw attribute to retrieve the close price
-    closing_prices = [bar._raw['c'] for bar in symbol_data]  # Access the closing price through _raw
+    closing_prices = [bar._raw['c'] for bar in symbol_data]
 
     # Generate detailed orders from the strategy
     orders = strategy(symbol_data, symbol, risk_manager)
 
-    # Convert the detailed orders into simple signals
     signals = generate_signals(orders)
 
     shares = 0
     cash = initial_cash
+    trade_count = 0  # Track the number of trades
 
     for signal, price in zip(signals, closing_prices):
-        # Calculate position size for each trade
         position_size = risk_manager.calculate_position_size(price)
+        if position_size == 0:
+            continue  # Skip trade if position size is zero
+
         if signal == 'buy' and cash >= price * position_size:
             shares += position_size
             cash -= price * position_size
+            trade_count += 1
         elif signal == 'sell' and shares >= position_size:
             cash += price * position_size
             shares -= position_size
+            trade_count += 1
 
     final_portfolio_value = cash + shares * closing_prices[-1]
 
     # Calculate profit/loss
     profit_loss = final_portfolio_value - initial_cash
-    if profit_loss > 0:
-        log_message(
-            f"Backtest completed for {symbol}. Final portfolio value: ${final_portfolio_value:.2f} "
-            f"(Profit: ${profit_loss:.2f})")
-    elif profit_loss < 0:
-        log_message(
-            f"Backtest completed for {symbol}. Final portfolio value: ${final_portfolio_value:.2f} "
-            f"(Loss: ${profit_loss:.2f})")
-    else:
-        log_message(f"Backtest completed for {symbol}. Final portfolio value: ${final_portfolio_value:.2f} (Unchanged)")
+    log_message(f"Backtest completed for {symbol}. Trades executed: {trade_count}. "
+                f"Final portfolio value: ${final_portfolio_value:.2f} (Profit: ${profit_loss:.2f})"
+                if profit_loss > 0 else
+                f"Final portfolio value: ${final_portfolio_value:.2f} (Loss: ${profit_loss:.2f})")
 
     return final_portfolio_value
 

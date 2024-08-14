@@ -2,17 +2,12 @@ import logging
 import time
 from config.credentials import API_KEY, API_SECRET, BASE_URL
 import alpaca_trade_api as tradeapi
-from utils.risk_management import RiskManager
 from utils.logger import log_message
 
 api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
 
-# Initialize Risk Manager
-initial_capital = 10000  # This can be dynamically set based on your needs
-risk_manager = RiskManager(max_loss_per_trade=100, max_daily_loss=500, initial_capital=initial_capital)
 
-
-def place_order(symbol, qty, side, order_type='market', time_in_force='day'):
+def place_order(symbol, qty, side, risk_manager, order_type='market', time_in_force='day'):
     try:
         latest_trade = api.get_latest_trade(symbol)
         if latest_trade is None:
@@ -56,13 +51,18 @@ def place_order(symbol, qty, side, order_type='market', time_in_force='day'):
         return None
 
 
-def handle_order_execution(order, symbol):
+def handle_order_execution(order, symbol, risk_manager):
     if order is None:
         log_message(f"No order to execute for {symbol}.", level=logging.WARNING)
         return False
 
     try:
         status = order.status
+        if status != 'filled':
+            log_message(f"Order for {symbol} was not filled. Status: {status}", level=logging.WARNING)
+            return False
+
+        # Fetch the latest trade price and filled quantity
         filled_qty = float(order.filled_qty)
         latest_trade = api.get_latest_trade(symbol)
         if latest_trade is None:
@@ -72,17 +72,16 @@ def handle_order_execution(order, symbol):
         symbol_price = latest_trade.price
         realized_pnl = 0  # Initialize realized_pnl to zero
 
-        if status == 'filled':
-            if order.side == 'sell':
-                # PnL should consider the difference between buy price and sell price
-                average_buy_price = float(api.get_position(symbol).avg_entry_price)
-                realized_pnl = filled_qty * (symbol_price - average_buy_price)
-                if not risk_manager.update_daily_loss(realized_pnl):
-                    log_message("Daily loss limit exceeded, halting trading.")
-                    return False
+        if order.side == 'sell':
+            # Calculate the realized PnL based on the difference between sell price and average buy price
+            average_buy_price = float(api.get_position(symbol).avg_entry_price)
+            realized_pnl = filled_qty * (symbol_price - average_buy_price)
+            if not risk_manager.update_daily_loss(realized_pnl):
+                log_message("Daily loss limit exceeded, halting trading.")
+                return False
 
-            # Update capital only if the order is filled
-            risk_manager.update_capital(realized_pnl)
+        # Update capital after order execution
+        risk_manager.update_capital(realized_pnl)
 
         log_message(f"Order executed: {status} for {symbol}, Realized PnL: ${realized_pnl:.2f}")
         return True

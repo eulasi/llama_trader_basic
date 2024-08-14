@@ -1,5 +1,4 @@
 import logging
-
 from utils.logger import log_message
 
 
@@ -11,6 +10,8 @@ class RiskManager:
         self.risk_percentage = risk_percentage / 100
         self.daily_loss = 0
         self.current_capital = initial_capital
+        self.max_drawdown = 0
+        self.current_peak = initial_capital
 
     def calculate_position_size(self, symbol_price):
         if symbol_price <= 0:
@@ -19,6 +20,12 @@ class RiskManager:
 
         risk_per_trade = self.current_capital * self.risk_percentage
         position_size = risk_per_trade / symbol_price
+
+        if position_size < 1:  # Ensuring a minimum position size of 1 share
+            log_message(f"Calculated position size for {symbol_price} is less than 1. Adjusting to minimum size of 1.",
+                        level=logging.WARNING)
+            return 1
+
         return position_size
 
     def update_daily_loss(self, loss):
@@ -34,3 +41,16 @@ class RiskManager:
     def update_capital(self, realized_pnl):
         self.current_capital += realized_pnl
         log_message(f"Updated capital: {self.current_capital}")
+        self.update_drawdown()
+
+    def update_drawdown(self):
+        if self.current_capital > self.current_peak:
+            self.current_peak = self.current_capital
+        drawdown = self.current_peak - self.current_capital
+        if drawdown > self.max_drawdown:
+            self.max_drawdown = drawdown
+            log_message(f"New maximum drawdown: {self.max_drawdown}")
+
+    def reset_capital(self):
+        self.current_capital = self.initial_capital
+        log_message(f"Capital reset to initial value: {self.initial_capital}")

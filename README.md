@@ -1,24 +1,32 @@
 # Alpaca Trading Bot Vol.1
 
-This project contains a set of tools and scripts to automate trading using the Alpaca API.
+This project contains a set of tools and scripts designed to automate trading using the Alpaca API. The bot is equipped
+with a moving average crossover strategy, and it has been optimized for both live and paper trading. The bot also
+includes robust risk management, performance tracking, and scheduling features.
 
 ## Setup
 
-1. Clone the repository:
+1. **Clone the repository**
+   ```bash
    git clone https://github.com/eulasi/llama_trader_basic.git
    cd alpaca_trading_bot
+   ```
 
-2. Install the required dependencies:
+2. **Install the required dependencies**
+   ```bash
    pip install -r requirements.txt
+   ```
+#### 3. **Configure your Alpaca API keys**
+   - Update the config/credentials.py file with your API key and secret.
+   - Ensure you set the correct BASE_URL depending on whether you are using paper or live trading.
 
-3. Configure your Alpaca API keys:
-   Update the `config/credentials.py` file with your API key and secret.
+#### 4. **Run the trading bot**
+   - Execute the main.py file to start the bot for live or paper trading. The bot will execute based on the strategy and risk management settings configured.
 
-4. Run the trading bot
+#### 5. **Run back tests**
+   - Use the backtesting script to simulate trades based on historical data before deploying your strategy in a live environment.
 
-5. Run back tests
-
-### Streamlined Workflow
+## Streamlined Workflow
 
 1. **Historical Data Collection:** To fetch and save historical data for analysis or backtesting.
     - Run `historical_data.py` periodically or as needed to fetch historical data.
@@ -53,48 +61,52 @@ This project contains a set of tools and scripts to automate trading using the A
 This strategy buys when the short-term moving average crosses above the long-term moving average and sells when it
 crosses below.
 
-### Mean Reversion
+## Strategy Optimization
+To enhance the bot's performance, several key parameters can be adjusted:
 
-This strategy buys when the current price is significantly below the mean price and sells when it is significantly above
-the mean price.
+### Increase risk_percentage
 
-### Optimization Tips
+**What It Does**: Increasing the risk_percentage will increase the amount of capital you allocate to each trade. For
+instance, increasing it from 1% to 2% doubles the amount of money you're willing to risk on each trade.
 
-#### Increase risk_percentage
-   **What It Does**: Increasing the risk_percentage will increase the amount of capital you allocate to each trade. For
-   instance, increasing it from 1% to 2% doubles the amount of money you're willing to risk on each trade.
+**Impact**: This will indeed increase the size of your positions, and hence, your potential profits. However, it also
+increases your exposure to losses. If a trade goes against you, the losses could be larger as well.
 
-   **Impact**: This will indeed increase the size of your positions, and hence, your potential profits. However, it also
-   increases your exposure to losses. If a trade goes against you, the losses could be larger as well.
+### Review max_loss_per_trade and max_daily_loss:
 
-#### Review max_loss_per_trade and max_daily_loss:
-   **What It Does**: These settings limit the amount you can lose on any single trade or in a single day. If these limits
-   are too restrictive, they might be preventing you from taking on larger positions or holding onto trades that could
-   turn profitable.
+**What It Does**: These settings limit the amount you can lose on any single trade or in a single day. If these limits
+are too restrictive, they might be preventing you from taking on larger positions or holding onto trades that could
+turn profitable.
 
-   **Impact**: Adjusting these values upward allows you to potentially stay in trades longer or take on bigger positions,
-   which could result in larger profits.
+**Impact**: Adjusting these values upward allows you to potentially stay in trades longer or take on bigger positions,
+which could result in larger profits.
 
-#### Adjust the Volatility Threshold:
-   **What It Does**: You mentioned that some trades are not being made because the calculated order quantity is zero,
-   particularly when volatility is high. This conservative approach is reducing your exposure in volatile conditions.
-   
-   **Impact**: By allowing higher volatility trades to occur or by lowering the threshold for rejecting a trade due to
-   volatility, you might see higher returns. However, this also increases the risk of losses during volatile periods.
+### Adjust the Volatility Threshold:
 
-#### Optimize Moving Average Parameters:
-   **What It Does**: The short and long moving averages are crucial to your strategy. Tweaking these might allow your
-   strategy to capture more profitable trades.
+**What It Does**: You mentioned that some trades are not being made because the calculated order quantity is zero,
+particularly when volatility is high. This conservative approach is reducing your exposure in volatile conditions.
 
-   **Impact**: Depending on market conditions, different moving average settings might perform better. Experiment with
-   different short_window and long_window values to see if certain settings consistently produce better results.
+**Impact**: By allowing higher volatility trades to occur or by lowering the threshold for rejecting a trade due to
+volatility, you might see higher returns. However, this also increases the risk of losses during volatile periods.
 
-#### Monitor and Analyze Backtest Results:
-   **What It Does**: Analyze the trades where profits were either minimal or non-existent. Understanding why these trades
-   were not profitable could lead to adjustments in your strategy that maximize gains.
+### Optimize Moving Average Parameters:
 
-   **Impact**: By fine-tuning your strategy based on historical data, you could increase the likelihood of hitting more
-   profitable trades.
+**What It Does**: The short and long moving averages are crucial to your strategy. Tweaking these might allow your
+strategy to capture more profitable trades.
+
+**Impact**: Depending on market conditions, different moving average settings might perform better. Experiment with
+different short_window and long_window values to see if certain settings consistently produce better results.
+
+### Monitor and Analyze Backtest Results:
+
+**What It Does**: Analyze the trades where profits were either minimal or non-existent. Understanding why these trades
+were not profitable could lead to adjustments in your strategy that maximize gains.
+
+**Impact**: By fine-tuning your strategy based on historical data, you could increase the likelihood of hitting more
+profitable trades.
+
+## Performance Tracking
+The bot includes a PerformanceTracker to record trades, calculate profit and loss (PnL), and monitor other key performance metrics such as win rate and maximum drawdown. The performance data is saved in the data/performance_data directory for further analysis.
 
 ## License
 

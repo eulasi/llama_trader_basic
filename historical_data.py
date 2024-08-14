@@ -22,16 +22,18 @@ def save_historical_data(symbol, data, timeframe):
     print(f"Saved historical data for {symbol} to {filename}")
 
 
-def main():
-    # Set the timeframe using the appropriate TimeFrame and TimeFrameUnit
-    timeframe = tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Day)
-    all_data = fetch_data_for_all_symbols(timeframe)
+def main(timeframe='1Day'):
+    # Convert string-based timeframe to Alpaca TimeFrame object
+    alpaca_timeframe = tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Day)  # Adjust as needed
+
+    all_data = fetch_data_for_all_symbols(alpaca_timeframe)
 
     for symbol, data in all_data.items():
         if not data:
             continue
-        save_historical_data(symbol, data, '1Day')  # Using '1Day' to match the correct timeframe
+        save_historical_data(symbol, data, timeframe)
 
 
 if __name__ == "__main__":
-    main()
+    # Pass a different timeframe as an argument if needed, e.g., '1Hour', '1Min'
+    main(timeframe='1Day')

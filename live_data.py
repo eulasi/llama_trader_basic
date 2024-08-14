@@ -26,16 +26,17 @@ def save_live_data(symbol, data, timeframe):
     print(f"Appended live data for {symbol} to {filename}")
 
 
-def fetch_and_save_live_data():
+def fetch_and_save_live_data(timeframe='1Min'):
     log_message("Starting live data fetching process")
-    timeframe = tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Minute)  # 1-minute bars
+    alpaca_timeframe = tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Minute)  # Default to 1-minute bars
+
     while True:
         for symbol in symbol_list:
-            data = get_historical_data(symbol, timeframe)
+            data = get_historical_data(symbol, alpaca_timeframe)
             if not data:
                 log_message(f"No live data fetched for {symbol}")
                 continue
-            save_live_data(symbol, data, '1Min')  # Use '1Min' to match the correct timeframe
+            save_live_data(symbol, data, timeframe)
             log_message(f"Appended live data for {symbol}")
 
         # Sleep for 60 seconds before fetching the next batch of live data
@@ -44,7 +45,7 @@ def fetch_and_save_live_data():
 
 def main():
     try:
-        fetch_and_save_live_data()
+        fetch_and_save_live_data(timeframe='1Min')
     except Exception as e:
         log_message(f"Error in live data fetching: {str(e)}", level=logging.ERROR)
 
