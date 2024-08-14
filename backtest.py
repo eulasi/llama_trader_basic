@@ -61,8 +61,10 @@ def backtest(strategy, symbol, symbol_data, initial_cash):
 
 
 def main():
+    # Set Start and End Date
     start_date = '2023-01-01'
     end_date = '2023-12-31'
+    # 1Day, 1Hour, 1Min, 1Sec
     timeframe = convert_timeframe('1Day')
 
     # Fetch data for all symbols upfront

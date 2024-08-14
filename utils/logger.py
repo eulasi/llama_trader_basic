@@ -9,17 +9,14 @@ if not os.path.exists(logs_directory):
     print(f"Created logs directory: {logs_directory}")
 
 
-# Function to create a unique log file name
-def get_unique_log_filename(base_name="trading.log"):
-    log_path = os.path.join(logs_directory, base_name)
-    if os.path.exists(log_path):
-        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        base_name = f"trading_{timestamp}.log"
-    return os.path.join(logs_directory, base_name)
+# Function to create a log file name with a timestamp
+def get_log_filename_with_timestamp(base_name="trading"):
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+    return os.path.join(logs_directory, f"{base_name}_{timestamp}.log")
 
 
-# Configure the logger with a unique log file name
-log_filename = get_unique_log_filename()
+# Configure the logger with a log file name that includes a timestamp
+log_filename = get_log_filename_with_timestamp()
 logging.basicConfig(
     filename=log_filename,
     level=logging.INFO,
