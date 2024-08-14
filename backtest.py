@@ -28,7 +28,7 @@ def backtest(strategy, symbol, symbol_data, initial_cash):
         max_loss_per_trade=50,  # Example value, adjust as needed
         max_daily_loss=100,  # Example value, adjust as needed
         initial_capital=initial_cash,  # Should match the initial cash used in the backtest
-        risk_percentage=50  # Example: 50% risk per trade
+        risk_percentage=20  # Example: 20% risk per trade
     )
 
     closing_prices = [bar._raw['c'] for bar in symbol_data]
