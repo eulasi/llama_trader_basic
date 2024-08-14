@@ -1,10 +1,14 @@
 import logging
+import time
 import alpaca_trade_api as tradeapi
 from config.credentials import API_KEY, API_SECRET, BASE_URL
 from utils.logger import log_message
 from config.symbols import symbol_list
 
 api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
+
+# Cache to store recent data
+data_cache = {}
 
 
 def convert_timeframe(timeframe):
@@ -26,8 +30,14 @@ def convert_timeframe(timeframe):
         raise ValueError(f"Invalid timeframe: {timeframe}")
 
 
-def get_live_data(symbol, timeframe):
+def get_live_data(symbol, timeframe, cache_duration=60):
     try:
+        current_time = time.time()
+        # Check if the data is already cached and is still valid
+        if symbol in data_cache and (current_time - data_cache[symbol]['timestamp']) < cache_duration:
+            log_message(f"Using cached data for {symbol}")
+            return data_cache[symbol]['data']
+
         # Convert timeframe if it's a string
         if isinstance(timeframe, str):
             timeframe = convert_timeframe(timeframe)
@@ -35,6 +45,12 @@ def get_live_data(symbol, timeframe):
         # Fetch the latest live bar
         barset = api.get_bars(symbol, timeframe, limit=1)
         log_message(f"Fetched latest live data for {symbol}: {barset}")
+
+        # Cache the data
+        data_cache[symbol] = {
+            'data': barset,
+            'timestamp': current_time
+        }
         return barset
     except Exception as e:
         log_message(f"Error fetching live data for {symbol}: {str(e)}", level=logging.ERROR)
@@ -47,7 +63,8 @@ def fetch_live_data_for_all_symbols(timeframe):
         try:
             data = get_live_data(symbol, timeframe)
             if not data:
-                log_message(f"{symbol}: No live data fetched. Check symbol validity and timeframe.", level=logging.WARNING)
+                log_message(f"{symbol}: No live data fetched. Check symbol validity and timeframe.",
+                            level=logging.WARNING)
             all_data[symbol] = data
         except Exception as e:
             log_message(f"Error fetching live data for {symbol}: {str(e)}", level=logging.ERROR)
