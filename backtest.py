@@ -23,11 +23,19 @@ def backtest(strategy, symbol, symbol_data, initial_cash):
         log_message(f"No data available for {symbol}")
         return 0
 
+    # Instantiate the RiskManager with the desired parameters
+    risk_manager = RiskManager(
+        max_loss_per_trade=50,  # Example value, adjust as needed
+        max_daily_loss=100,  # Example value, adjust as needed
+        initial_capital=initial_cash,  # Should match the initial cash used in the backtest
+        risk_percentage=50  # 1% risk per trade
+    )
+
     # Accessing the _raw attribute to retrieve the close price
     closing_prices = [bar._raw['c'] for bar in symbol_data]  # Access the closing price through _raw
 
     # Generate detailed orders from the strategy
-    orders = strategy(symbol_data, symbol)
+    orders = strategy(symbol_data, symbol, risk_manager)
 
     # Convert the detailed orders into simple signals
     signals = generate_signals(orders)
@@ -36,12 +44,14 @@ def backtest(strategy, symbol, symbol_data, initial_cash):
     cash = initial_cash
 
     for signal, price in zip(signals, closing_prices):
-        if signal == 'buy' and cash >= price:
-            shares += 1  # Buy one share at a time
-            cash -= price
-        elif signal == 'sell' and shares > 0:
-            cash += price
-            shares -= 1  # Sell one share at a time
+        # Calculate position size for each trade
+        position_size = risk_manager.calculate_position_size(price)
+        if signal == 'buy' and cash >= price * position_size:
+            shares += position_size
+            cash -= price * position_size
+        elif signal == 'sell' and shares >= position_size:
+            cash += price * position_size
+            shares -= position_size
 
     final_portfolio_value = cash + shares * closing_prices[-1]
 
@@ -79,18 +89,8 @@ def main():
     initial_cash = 250
 
     # Define the strategy function
-    def strategy(symbol_data, current_symbol):
-        # Instantiate the RiskManager with the desired parameters
-        risk_manager = RiskManager(
-            max_loss_per_trade=50,  # Example value, adjust as needed
-            max_daily_loss=100,  # Example value, adjust as needed
-            initial_capital=initial_cash,  # Should match the initial cash used in the backtest
-            risk_percentage=1  # 1% risk per trade
-        )
-
-        # Here you can use the risk_manager to calculate position sizes or manage trades
-        risk_manager.calculate_position_size(symbol_data[0]._raw['c'])
-
+    def strategy(symbol_data, current_symbol, risk_manager):
+        # Use the risk_manager within the strategy if needed
         return moving_average_crossover(risk_manager, symbol_data, current_symbol, short_window=short_window,
                                         long_window=long_window)
 
