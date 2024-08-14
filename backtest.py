@@ -18,26 +18,21 @@ def generate_signals(orders):
 
 
 def backtest(strategy, symbol, start_date, end_date):
-    # Convert 'day' string to TimeFrame object
     timeframe = convert_timeframe('1Day')
     data = fetch_data_for_all_symbols(timeframe, start=start_date, end=end_date).get(symbol)
     if not data:
         log_message(f"No data fetched for {symbol} from {start_date} to {end_date}")
         return 0
 
-    # Pass the fetched data directly to the strategy
-    orders = strategy(data)  # Pass data directly here
+    orders = strategy(data, symbol)  # Pass data and symbol directly
 
-    # Convert the detailed orders into simple signals
     signals = generate_signals(orders)
 
     initial_cash = 250
     shares = 0
     cash = initial_cash
 
-    closing_prices = [bar._raw['c'] for bar in data]  # Access the closing price through _raw
-
-    for signal, price in zip(signals, closing_prices):
+    for signal, price in zip(signals, [bar._raw['c'] for bar in data]):
         if signal == 'buy' and cash >= price:
             shares += 1
             cash -= price
@@ -45,7 +40,7 @@ def backtest(strategy, symbol, start_date, end_date):
             cash += price
             shares -= 1
 
-    portfolio_value = cash + shares * closing_prices[-1]
+    portfolio_value = cash + shares * data[-1]._raw['c']
     log_message(f"Backtest completed for {symbol}. Final portfolio value: ${portfolio_value}")
     return portfolio_value
 
@@ -54,14 +49,13 @@ def main():
     start_date = '2023-01-01'
     end_date = '2023-12-31'
 
-    # Define your short and long window lengths
     short_window = 3
     long_window = 7
 
-    # Strategy function that takes the pre-fetched data as input
-    def strategy(data):
+    def strategy(data, current_symbol):
         risk_manager = None  # Define your RiskManager here if needed
-        return moving_average_crossover(risk_manager, data, short_window=short_window, long_window=long_window)
+        return moving_average_crossover(risk_manager, data, current_symbol, short_window=short_window,
+                                        long_window=long_window)
 
     for symbol in symbol_list:
         final_portfolio_value = backtest(strategy, symbol, start_date, end_date)
