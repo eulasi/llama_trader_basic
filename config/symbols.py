@@ -1,4 +1,4 @@
-# Python list of top 250 S&P 500 companies tickers
+# List of top 250 S&P 500 companies tickers
 
 symbol_list = ['AAPL', 'MSFT', 'GOOG', 'GOOGL', 'AMZN', 'TSLA', 'BRK.B', 'META',
                'NVDA', 'UNH', 'JNJ', 'V', 'WMT', 'JPM', 'PG', 'XOM', 'MA', 'CVX', 'HD', 'BAC',
