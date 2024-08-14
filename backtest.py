@@ -17,7 +17,7 @@ def generate_signals(orders):
     return signals
 
 
-def backtest(strategy, symbol, symbol_data):
+def backtest(strategy, symbol, symbol_data, initial_cash):
     if not symbol_data:
         log_message(f"No data available for {symbol}")
         return 0
@@ -31,7 +31,6 @@ def backtest(strategy, symbol, symbol_data):
     # Convert the detailed orders into simple signals
     signals = generate_signals(orders)
 
-    initial_cash = 250
     shares = 0
     cash = initial_cash
 
@@ -43,9 +42,22 @@ def backtest(strategy, symbol, symbol_data):
             cash += price
             shares -= 1
 
-    portfolio_value = cash + shares * closing_prices[-1]
-    log_message(f"Backtest completed for {symbol}. Final portfolio value: ${portfolio_value}")
-    return portfolio_value
+    final_portfolio_value = cash + shares * closing_prices[-1]
+
+    # Calculate profit/loss
+    profit_loss = final_portfolio_value - initial_cash
+    if profit_loss > 0:
+        log_message(
+            f"Backtest completed for {symbol}. Final portfolio value: ${final_portfolio_value:.2f} "
+            f"(Profit: ${profit_loss:.2f})")
+    elif profit_loss < 0:
+        log_message(
+            f"Backtest completed for {symbol}. Final portfolio value: ${final_portfolio_value:.2f} "
+            f"(Loss: ${profit_loss:.2f})")
+    else:
+        log_message(f"Backtest completed for {symbol}. Final portfolio value: ${final_portfolio_value:.2f} (Unchanged)")
+
+    return final_portfolio_value
 
 
 def main():
@@ -60,6 +72,9 @@ def main():
     short_window = 3
     long_window = 7
 
+    # Set the initial cash value, dynamically adjustable
+    initial_cash = 250
+
     # Define the strategy function
     def strategy(symbol_data, current_symbol):
         risk_manager = None  # Define your RiskManager here if needed
@@ -69,8 +84,16 @@ def main():
     # Run the backtest for each symbol
     for symbol in symbol_list:
         data = all_data.get(symbol)
-        final_portfolio_value = backtest(strategy, symbol, data)
-        print(f"Final portfolio value for {symbol}: ${final_portfolio_value:.2f}")
+        final_portfolio_value = backtest(strategy, symbol, data, initial_cash)
+
+        # Calculate profit/loss for terminal output
+        profit_loss = final_portfolio_value - initial_cash  # Use dynamic initial_cash value
+        if profit_loss > 0:
+            print(f"Final portfolio value for {symbol}: ${final_portfolio_value:.2f} (Profit: ${profit_loss:.2f})")
+        elif profit_loss < 0:
+            print(f"Final portfolio value for {symbol}: ${final_portfolio_value:.2f} (Loss: ${profit_loss:.2f})")
+        else:
+            print(f"Final portfolio value for {symbol}: ${final_portfolio_value:.2f} (Unchanged)")
 
 
 if __name__ == "__main__":

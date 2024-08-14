@@ -1,6 +1,6 @@
 # Python list of top 250 S&P 500 companies tickers
 
-symbol_list = ['AAPL', 'MSFT', 'GOOG', 'GOOGL', 'AMZN', 'TSLA', 'BRK.B', 'FB',
+symbol_list = ['AAPL', 'MSFT', 'GOOG', 'GOOGL', 'AMZN', 'TSLA', 'BRK.B', 'META',
                'NVDA', 'UNH', 'JNJ', 'V', 'WMT', 'JPM', 'PG', 'XOM', 'MA', 'CVX', 'HD', 'BAC',
                'PFE', 'ABBV', 'LLY', 'KO', 'COST', 'DIS', 'AVGO', 'PEP', 'TMO', 'CSCO', 'VZ',
                'ACN', 'MRK', 'ABT', 'ORCL', 'CMCSA', 'DHR', 'ADBE', 'NKE', 'CRM', 'INTC', 'MCD',
@@ -19,7 +19,7 @@ symbol_list = ['AAPL', 'MSFT', 'GOOG', 'GOOGL', 'AMZN', 'TSLA', 'BRK.B', 'FB',
                'TRV', 'KR', 'KMI', 'WELL', 'NXPI', 'ADSK', 'CTAS', 'APH', 'PRU', 'SYY', 'CDNS',
                'AZO', 'CTVA', 'CMG', 'MNST', 'O', 'RSG', 'AFL', 'DLR', 'KMB', 'VLO', 'GIS',
                'SPG', 'WMB', 'DVN', 'MSCI', 'XEL', 'TEL', 'HPQ', 'HLT', 'PSX', 'NUE', 'A', 'ANET',
-               'SBAC', 'BAX', 'MSI', 'ALL', 'WBA', 'BK', 'BKR', 'AJG', 'GPN', 'TWTR', 'CARR',
+               'SBAC', 'BAX', 'MSI', 'ALL', 'WBA', 'BK', 'BKR', 'AJG', 'GPN', 'X', 'CARR',
                'MCHP', 'DLTR', 'RMD', 'PEG', 'HAL', 'TDG', 'VRSK', 'DD', 'PH', 'TT', 'HES',
                'AVB', 'EA', 'ED', 'ABC', 'EQR', 'YUM', 'ROST', 'TSN', 'LYB', 'TROW', 'FAST',
                'ALGN', 'ARE', 'WEC', 'OTIS', 'AMP']
