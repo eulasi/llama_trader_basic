@@ -4,6 +4,7 @@ import alpaca_trade_api as tradeapi
 from config.credentials import API_KEY, API_SECRET, BASE_URL
 from utils.logger import log_message
 from config.symbols import symbol_list
+from utils.data_fetcher import get_historical_data  # Ensure this import is added
 
 api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
 
@@ -57,11 +58,20 @@ def get_live_data(symbol, timeframe, cache_duration=60):
         return []
 
 
+def fetch_supplemented_data(symbol, timeframe, required_bars=30):
+    # Fetch a larger set of historical data
+    historical_data = get_historical_data(symbol, timeframe)
+    # Slice the data to get the required number of bars
+    historical_data = historical_data[-(required_bars - 1):]
+    live_data = get_live_data(symbol, timeframe, cache_duration=60)
+    return historical_data + live_data
+
+
 def fetch_live_data_for_all_symbols(timeframe):
     all_data = {}
     for symbol in symbol_list:
         try:
-            data = get_live_data(symbol, timeframe)
+            data = fetch_supplemented_data(symbol, timeframe)  # Use supplemented data
             if not data:
                 log_message(f"{symbol}: No live data fetched. Check symbol validity and timeframe.",
                             level=logging.WARNING)
