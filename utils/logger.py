@@ -13,7 +13,7 @@ if not os.path.exists(logs_directory):
 def get_unique_log_filename(base_name="trading.log"):
     log_path = os.path.join(logs_directory, base_name)
     if os.path.exists(log_path):
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         base_name = f"trading_{timestamp}.log"
     return os.path.join(logs_directory, base_name)
 
