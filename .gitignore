@@ -18,6 +18,8 @@ env/
 !data/live_data/
 !data/performance_data/
 
+# Ignore all log files in the logs directory
+logs/*.log
 
 # Ignore system files
 .DS_Store
