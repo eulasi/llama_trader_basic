@@ -2,6 +2,7 @@ from config.symbols import symbol_list
 from strategies.moving_average_crossover import moving_average_crossover
 from utils.data_fetcher import fetch_data_for_all_symbols, convert_timeframe
 from utils.logger import log_message
+from utils.risk_management import RiskManager
 
 
 def generate_signals(orders):
@@ -36,11 +37,11 @@ def backtest(strategy, symbol, symbol_data, initial_cash):
 
     for signal, price in zip(signals, closing_prices):
         if signal == 'buy' and cash >= price:
-            shares += 1
+            shares += 1  # Buy one share at a time
             cash -= price
         elif signal == 'sell' and shares > 0:
             cash += price
-            shares -= 1
+            shares -= 1  # Sell one share at a time
 
     final_portfolio_value = cash + shares * closing_prices[-1]
 
@@ -79,7 +80,17 @@ def main():
 
     # Define the strategy function
     def strategy(symbol_data, current_symbol):
-        risk_manager = None  # Define your RiskManager here if needed
+        # Instantiate the RiskManager with the desired parameters
+        risk_manager = RiskManager(
+            max_loss_per_trade=50,  # Example value, adjust as needed
+            max_daily_loss=100,  # Example value, adjust as needed
+            initial_capital=initial_cash,  # Should match the initial cash used in the backtest
+            risk_percentage=1  # 1% risk per trade
+        )
+
+        # Here you can use the risk_manager to calculate position sizes or manage trades
+        risk_manager.calculate_position_size(symbol_data[0]._raw['c'])
+
         return moving_average_crossover(risk_manager, symbol_data, current_symbol, short_window=short_window,
                                         long_window=long_window)
 
