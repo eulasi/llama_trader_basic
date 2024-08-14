@@ -19,7 +19,7 @@ def main():
         max_loss_per_trade=100,
         max_daily_loss=500,
         initial_capital=10000,
-        risk_percentage=1  # 1% risk per trade
+        risk_percentage=20  # 20% risk per trade
     )
 
     try:
