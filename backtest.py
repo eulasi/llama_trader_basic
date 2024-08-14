@@ -1,6 +1,6 @@
 from config.symbols import symbol_list
 from strategies.moving_average_crossover import moving_average_crossover
-from utils.data_fetcher import fetch_data_for_all_symbols, convert_timeframe  # Import convert_timeframe
+from utils.data_fetcher import fetch_data_for_all_symbols, convert_timeframe
 from utils.logger import log_message
 
 
@@ -25,11 +25,8 @@ def backtest(strategy, symbol, start_date, end_date):
         log_message(f"No data fetched for {symbol} from {start_date} to {end_date}")
         return 0
 
-    # Accessing the _raw attribute to retrieve the close price
-    closing_prices = [bar._raw['c'] for bar in data]  # Access the closing price through _raw
-
-    # Generate detailed orders from the strategy
-    orders = strategy(closing_prices)
+    # Pass the fetched data directly to the strategy
+    orders = strategy(data)  # Pass data directly here
 
     # Convert the detailed orders into simple signals
     signals = generate_signals(orders)
@@ -37,6 +34,8 @@ def backtest(strategy, symbol, start_date, end_date):
     initial_cash = 250
     shares = 0
     cash = initial_cash
+
+    closing_prices = [bar._raw['c'] for bar in data]  # Access the closing price through _raw
 
     for signal, price in zip(signals, closing_prices):
         if signal == 'buy' and cash >= price:
@@ -59,10 +58,10 @@ def main():
     short_window = 3
     long_window = 7
 
-    # Modify the strategy function to pass the window lengths
-    def strategy(prices):
+    # Strategy function that takes the pre-fetched data as input
+    def strategy(data):
         risk_manager = None  # Define your RiskManager here if needed
-        return moving_average_crossover(risk_manager, short_window=short_window, long_window=long_window)
+        return moving_average_crossover(risk_manager, data, short_window=short_window, long_window=long_window)
 
     for symbol in symbol_list:
         final_portfolio_value = backtest(strategy, symbol, start_date, end_date)
