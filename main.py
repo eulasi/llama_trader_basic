@@ -20,9 +20,10 @@ def get_current_positions():
 
 def get_orders_by_status(status_list):
     """
-    Fetch orders from Alpaca filtered by a list of statuses. Possible statuses: 'open', 'closed', 'all',
-    'pending_new', 'accepted', 'partially_filled', 'filled', 'done_for_day', 'canceled', 'expired', 'replaced',
-    'pending_cancel', 'pending_replace', 'stopped', 'rejected', 'suspended', 'calculated'
+    Fetch orders from Alpaca filtered by a list of statuses.
+    Possible statuses: 'open', 'closed', 'all', 'pending_new', 'accepted', 'partially_filled',
+    'filled', 'done_for_day', 'canceled', 'expired', 'replaced', 'pending_cancel',
+    'pending_replace', 'stopped', 'rejected', 'suspended', 'calculated'
     """
     orders = api.list_orders(status='all', limit=500)  # Fetch last 500 orders
     filtered_orders = [order for order in orders if order.status in status_list]
@@ -32,6 +33,22 @@ def get_orders_by_status(status_list):
             orders_dict[order.symbol] = []
         orders_dict[order.symbol].append(order)
     return orders_dict
+
+
+def modify_or_replace_order(existing_order, new_order_qty, risk_manager):
+    """Modify or replace an existing order based on updated strategy conditions."""
+    try:
+        # Cancel the existing order
+        api.cancel_order(existing_order.id)
+        log_message(f"Canceled existing order for {existing_order.symbol}: {existing_order.id}", level=logging.INFO)
+
+        # Place a new order with the updated quantity
+        new_order = place_order(existing_order.symbol, new_order_qty, existing_order.side, risk_manager=risk_manager)
+        log_message(f"Placed new order for {existing_order.symbol}: {new_order.id}", level=logging.INFO)
+        return new_order
+    except Exception as e:
+        log_message(f"Failed to modify or replace order for {existing_order.symbol}: {str(e)}", level=logging.ERROR)
+        return None
 
 
 def reconcile_positions_and_orders():
@@ -74,10 +91,14 @@ def main():
                         # Check for existing open or pending orders for the symbol
                         existing_orders = open_orders.get(symbol, [])
                         if existing_orders:
-                            log_message(f"Existing orders for {symbol}: {[o.id for o in existing_orders]}",
-                                        level=logging.INFO)
-                            # Further logic can be added here to handle existing orders (e.g., cancel and replace)
-                            continue  # Skip placing a new order if there are existing ones
+                            for existing_order in existing_orders:
+                                log_message(f"Existing orders for {symbol}: {[o.id for o in existing_orders]}",
+                                            level=logging.INFO)
+
+                                # If the existing order's quantity differs from the new one, modify or replace it
+                                if existing_order.qty != order['qty']:
+                                    modify_or_replace_order(existing_order, order['qty'], risk_manager)
+                                continue  # Skip placing a new order if there are existing ones
 
                         if order['side'] == 'buy':
                             position_qty = current_positions.get(symbol, 0)
