@@ -1,4 +1,4 @@
-#  List Optimized
+#  S&P List Optimized
 symbol_list = [
     "MSFT", "TSLA", "V", "WMT", "JPM", "BAC", "CSCO", "ABT", "ORCL", "CRM",
     "INTC", "TMUS", "AMD", "TXN", "QCOM", "UNP", "MDT", "MS", "AXP", "PLD",
@@ -12,6 +12,30 @@ symbol_list = [
     "AVB", "ABC", "EQR", "YUM", "ROST", "OTIS", "AAPL", "PG", "ABBV", "DIS",
     "VZ", "LOW", "CME", "OXY", "PAYX", "MPC", "CDNS", "KMB", "VLO", "WMB",
     "NUE", "RMD", "PEG", "EA"
+]
+
+# List for account starting with $250.00
+symbol_list_250 = [
+    "AAPL",  # Technology - High volume, stable
+    "AMD",  # Technology - Popular in day trading
+    "F",  # Automotive - Lower price, high volume
+    "GE",  # Industrial - Lower price, stable
+    "C",  # Financial - High volume, moderate price
+    "NIO",  # Automotive - Electric vehicle sector
+    "PLUG",  # Energy - Clean energy sector
+    "GPRO",  # Technology - Lower price, high volatility
+    "SIRI",  # Communication - Low price, high volume
+    "SNAP",  # Communication - Social media, high volume
+    "PENN",  # Consumer - Gaming and entertainment
+    "ZNGA",  # Technology - Gaming sector
+    "SPWR",  # Energy - Solar energy, lower price
+    "AMCX",  # Communication - Media, moderate volume
+    "TWTR",  # Communication - Social media, high volume
+    "MU",  # Technology - Memory chips, high volume
+    "T",  # Communication - Telecom, lower price
+    "BB",  # Technology - Cybersecurity, moderate price
+    "X",  # Industrial - Steel, lower price
+    "NCLH"  # Consumer - Cruise line, travel sector
 ]
 
 # List of top 250 S&P 500 companies tickers
