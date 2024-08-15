@@ -18,11 +18,29 @@ def get_current_positions():
     return current_positions
 
 
-def get_open_orders():
-    """Fetch open orders from Alpaca."""
-    open_orders = api.list_orders(status='open')
-    open_orders_dict = {order.symbol: order for order in open_orders}
-    return open_orders_dict
+def get_orders_by_status(status_list):
+    """
+    Fetch orders from Alpaca filtered by a list of statuses. Possible statuses: 'open', 'closed', 'all',
+    'pending_new', 'accepted', 'partially_filled', 'filled', 'done_for_day', 'canceled', 'expired', 'replaced',
+    'pending_cancel', 'pending_replace', 'stopped', 'rejected', 'suspended', 'calculated'
+    """
+    orders = api.list_orders(status='all', limit=500)  # Fetch last 500 orders
+    filtered_orders = [order for order in orders if order.status in status_list]
+    orders_dict = {}
+    for order in filtered_orders:
+        if order.symbol not in orders_dict:
+            orders_dict[order.symbol] = []
+        orders_dict[order.symbol].append(order)
+    return orders_dict
+
+
+def reconcile_positions_and_orders():
+    """
+    Ensures that the bot's internal state aligns with actual account state.
+    """
+    current_positions = get_current_positions()
+    open_orders = get_orders_by_status(['open', 'accepted', 'pending_new', 'partially_filled'])
+    return current_positions, open_orders
 
 
 def main():
@@ -41,11 +59,10 @@ def main():
     )
 
     try:
-        # Fetch current positions and open orders
-        current_positions = get_current_positions()
-        open_orders = get_open_orders()
-
         while True:
+            # Reconcile positions and orders at the start of each iteration
+            current_positions, open_orders = reconcile_positions_and_orders()
+
             all_data = fetch_live_data_for_all_symbols(timeframe)  # Use the live data fetching function
             for symbol, data in all_data.items():
                 if data:
@@ -54,23 +71,34 @@ def main():
 
                     # Place and handle orders
                     for order in orders:
-                        # Check if there's already an open order for the symbol
-                        if symbol in open_orders:
-                            log_message(f"Skipping new order for {symbol} as there is already an open order.",
-                                        level=logging.WARNING)
-                            continue
+                        # Check for existing open or pending orders for the symbol
+                        existing_orders = open_orders.get(symbol, [])
+                        if existing_orders:
+                            log_message(f"Existing orders for {symbol}: {[o.id for o in existing_orders]}",
+                                        level=logging.INFO)
+                            # Further logic can be added here to handle existing orders (e.g., cancel and replace)
+                            continue  # Skip placing a new order if there are existing ones
 
-                        if order['side'] == 'buy' and symbol not in current_positions:
+                        if order['side'] == 'buy':
+                            position_qty = current_positions.get(symbol, 0)
+                            if position_qty > 0:
+                                log_message(f"Already holding {position_qty} shares of {symbol}. Skipping buy order.",
+                                            level=logging.INFO)
+                                continue  # Skip if already holding position
                             placed_order = place_order(order['symbol'], order['qty'], order['side'],
                                                        risk_manager=risk_manager)
                             handle_order_execution(placed_order, order['symbol'], risk_manager)
-                        elif order['side'] == 'sell' and symbol in current_positions:
-                            placed_order = place_order(order['symbol'], order['qty'], order['side'],
+                        elif order['side'] == 'sell':
+                            position_qty = current_positions.get(symbol, 0)
+                            if position_qty <= 0:
+                                log_message(f"No holdings of {symbol} to sell. Skipping sell order.",
+                                            level=logging.INFO)
+                                continue  # Skip if no holdings to sell
+                            # Ensure not to sell more than holdings
+                            sell_qty = min(order['qty'], position_qty)
+                            placed_order = place_order(order['symbol'], sell_qty, order['side'],
                                                        risk_manager=risk_manager)
                             handle_order_execution(placed_order, order['symbol'], risk_manager)
-
-            # Refresh open orders list after each iteration
-            open_orders = get_open_orders()
 
             time.sleep(60)  # Wait for the next minute's data
     except Exception as e:

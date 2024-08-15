@@ -20,10 +20,32 @@ includes robust risk management, performance tracking, and scheduling features.
    - Update the config/credentials.py file with your API key and secret.
    - Ensure you set the correct BASE_URL depending on whether you are using paper or live trading.
 
-#### 4. **Run the trading bot**
+#### 4. **Modify Parameters**
+   - Modify parameters to suit your trading needs
+   ```shell
+   def moving_average_crossover(
+          short_window=10,           # Short moving average window. Suggested: 10 (can vary based on the market's speed)
+          long_window=30,            # Long moving average window. Suggested: 30 (provides a more stable trend indicator)
+          min_volatility=0.5,        # Minimum volatility threshold. Suggested: 0.5 (filters out low volatility environments)
+          max_volatility=50.0,       # Maximum volatility threshold. Suggested: 50.0 (to avoid excessive risk in high volatility)
+          volatility_adjustment=True, # Whether to adjust order sizes based on volatility. Suggested: True (helps manage risk)
+          profit_threshold=1.02,     # Profit target threshold (2% above entry). Suggested: 1.02 (adjust based on risk appetite)
+          stop_loss_threshold=0.98,  # Stop-loss threshold (2% below entry). Suggested: 0.98 (adjust to limit potential losses)
+          trailing_stop_loss=0.95    # Trailing stop-loss as a percentage of the highest price reached. Suggested: 0.95 (5% trailing stop)
+   )
+     
+       risk_manager = RiskManager(
+          max_loss_per_trade=100,   # Maximum loss allowed per trade. Suggested: 1% of initial capital (e.g., $100 for $10,000 capital)
+          max_daily_loss=500,       # Maximum loss allowed per day. Suggested: 5% of initial capital (e.g., $500 for $10,000 capital)
+          initial_capital=10000,    # Starting capital for the trading bot. Adjust based on your trading account size.
+          risk_percentage=20        # Percentage of capital risked per trade. Suggested: 1-2% for conservative trading, up to 20% for aggressive trading.
+   )
+   ```
+
+#### 5. **Run the trading bot**
    - Execute the main.py file to start the bot for live or paper trading. The bot will execute based on the strategy and risk management settings configured.
 
-#### 5. **Run back tests**
+#### 6. **Run back tests**
    - Use the backtesting script to simulate trades based on historical data before deploying your strategy in a live environment.
 
 ## Streamlined Workflow
