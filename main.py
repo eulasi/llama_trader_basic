@@ -88,7 +88,7 @@ def log_pnl_to_file(pnl_data, filename="pnl_log.csv"):
         os.makedirs(directory)
 
     # Get the current timestamp
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now().strftime("%Y:%m:%d_%H:%M:%S")
 
     # Append the timestamp to the filename
     filename = f"pnl_log_{timestamp}.csv"
