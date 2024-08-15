@@ -29,7 +29,8 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
     order_qty = risk_manager.calculate_position_size(current_price) if risk_manager else 1
 
     if order_qty == 0:
-        log_message(f"{symbol}: Order quantity is zero due to risk management constraints. Skipping.", level=logging.WARNING)
+        log_message(f"{symbol}: Order quantity is zero due to risk management constraints. Skipping.",
+                    level=logging.WARNING)
         return orders
 
     # Dynamic Volatility Check
@@ -37,7 +38,8 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
         log_message(f"Volatility {volatility} is too low. Skipping trading.", level=logging.WARNING)
         return orders
     elif volatility > max_volatility:
-        log_message(f"Volatility {volatility} is high but within acceptable range. Proceeding with caution.", level=logging.WARNING)
+        log_message(f"Volatility {volatility} is high but within acceptable range. Proceeding with caution.",
+                    level=logging.WARNING)
 
         if volatility_adjustment:
             # Adjust position size based on volatility
@@ -54,13 +56,18 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
         orders.append({'symbol': symbol, 'qty': order_qty, 'side': 'buy'})
     elif short_ma < long_ma:
         if current_price <= trailing_stop_price:
-            log_message(f"{symbol}: Current price ({current_price}) has dropped below the trailing stop price ({trailing_stop_price}). Generating a sell order.")
+            log_message(
+                f"{symbol}: Current price ({current_price}) has dropped below the trailing stop price "
+                f"({trailing_stop_price}). Generating a sell order.")
             orders.append({'symbol': symbol, 'qty': order_qty, 'side': 'sell'})
         elif current_price >= closing_prices[0] * profit_threshold:
-            log_message(f"{symbol}: Current price ({current_price}) exceeds the profit threshold. Generating a sell order.")
+            log_message(
+                f"{symbol}: Current price ({current_price}) exceeds the profit threshold. Generating a sell order.")
             orders.append({'symbol': symbol, 'qty': order_qty, 'side': 'sell'})
         elif current_price <= closing_prices[0] * stop_loss_threshold:
-            log_message(f"{symbol}: Current price ({current_price}) has dropped below the stop loss threshold. Generating a sell order.")
+            log_message(
+                f"{symbol}: Current price "
+                f"({current_price}) has dropped below the stop loss threshold. Generating a sell order.")
             orders.append({'symbol': symbol, 'qty': order_qty, 'side': 'sell'})
         else:
             log_message(f"{symbol}: No sell condition met. No order generated.")
