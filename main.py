@@ -117,7 +117,7 @@ def main():
     )
 
     target_profit = 85  # Example target profit in dollars
-    stop_loss_limit = -150  # Example stop loss in dollars
+    stop_loss_limit = -100  # Example stop loss in dollars
 
     try:
         while True:
