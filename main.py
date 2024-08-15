@@ -1,11 +1,11 @@
 import logging
 import time
+import alpaca_trade_api as tradeapi
 from strategies.moving_average_crossover import moving_average_crossover
 from utils.live_data_fetcher import fetch_live_data_for_all_symbols
 from utils.order_executor import place_order, handle_order_execution
 from utils.logger import log_message
 from utils.risk_management import RiskManager
-import alpaca_trade_api as tradeapi
 from config.credentials import API_KEY, API_SECRET, BASE_URL
 
 api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
@@ -51,13 +51,54 @@ def modify_or_replace_order(existing_order, new_order_qty, risk_manager):
         return None
 
 
+def calculate_pnl(symbol, entry_price, current_price, qty):
+    """Calculate profit and loss for a given symbol."""
+    pnl = (current_price - entry_price) * qty
+    log_message(f"Calculated PnL for {symbol}: ${pnl:.2f}", level=logging.INFO)
+    return pnl
+
+
+def monitor_pnl(current_positions):
+    """Monitor and log PnL for current positions."""
+    pnl_data = []
+    for symbol, qty in current_positions.items():
+        entry_price = float(api.get_position(symbol).avg_entry_price)
+        current_price = float(api.get_latest_trade(symbol).price)  # Correct method used here
+        pnl = calculate_pnl(symbol, entry_price, current_price, qty)
+        log_message(f"Current PnL for {symbol}: ${pnl:.2f}", level=logging.INFO)
+        pnl_data.append({
+            'symbol': symbol,
+            'pnl': pnl,
+            'timestamp': time.strftime('%Y-%m-%d %H:%M:%S')
+        })
+    log_pnl_to_file(pnl_data)
+
+
+def log_pnl_to_file(pnl_data, filename="pnl_log.csv"):
+    """Log PnL data to a CSV file."""
+    import pandas as pd
+    df = pd.DataFrame(pnl_data)
+    df.to_csv(filename, mode='a', header=False, index=False)
+
+
 def reconcile_positions_and_orders():
-    """
-    Ensures that the bot's internal state aligns with actual account state.
-    """
+    """Ensure that the bot's internal state aligns with actual account state."""
     current_positions = get_current_positions()
     open_orders = get_orders_by_status(['open', 'accepted', 'pending_new', 'partially_filled'])
     return current_positions, open_orders
+
+
+def check_pnl_and_decide(symbol, current_pnl, target_profit, stop_loss_limit):
+    """Check PnL and decide whether to hold, buy, or sell."""
+    if current_pnl >= target_profit:
+        log_message(f"{symbol}: Target profit reached. Selling position.", level=logging.INFO)
+        return 'sell'
+    elif current_pnl <= stop_loss_limit:
+        log_message(f"{symbol}: Stop loss limit reached. Selling position.", level=logging.INFO)
+        return 'sell'
+    else:
+        log_message(f"{symbol}: Holding position. No action required.", level=logging.INFO)
+        return 'hold'
 
 
 def main():
@@ -75,12 +116,17 @@ def main():
         risk_percentage=20  # 20% risk per trade
     )
 
+    target_profit = 100  # Example target profit in dollars
+    stop_loss_limit = -50  # Example stop loss in dollars
+
     try:
         while True:
             # Reconcile positions and orders at the start of each iteration
             current_positions, open_orders = reconcile_positions_and_orders()
 
-            all_data = fetch_live_data_for_all_symbols(timeframe)  # Use the live data fetching function
+            monitor_pnl(current_positions)  # Monitor PnL for current positions
+
+            all_data = fetch_live_data_for_all_symbols(timeframe)
             for symbol, data in all_data.items():
                 if data:
                     # Run the strategy and generate orders
@@ -98,14 +144,13 @@ def main():
                                 # If the existing order's quantity differs from the new one, modify or replace it
                                 if existing_order.qty != order['qty']:
                                     modify_or_replace_order(existing_order, order['qty'], risk_manager)
-                                continue  # Skip placing a new order if there are existing ones
-
+                                continue
                         if order['side'] == 'buy':
                             position_qty = current_positions.get(symbol, 0)
                             if position_qty > 0:
                                 log_message(f"Already holding {position_qty} shares of {symbol}. Skipping buy order.",
                                             level=logging.INFO)
-                                continue  # Skip if already holding position
+                                continue
                             placed_order = place_order(order['symbol'], order['qty'], order['side'],
                                                        risk_manager=risk_manager)
                             handle_order_execution(placed_order, order['symbol'], risk_manager)
@@ -114,14 +159,17 @@ def main():
                             if position_qty <= 0:
                                 log_message(f"No holdings of {symbol} to sell. Skipping sell order.",
                                             level=logging.INFO)
-                                continue  # Skip if no holdings to sell
-                            # Ensure not to sell more than holdings
-                            sell_qty = min(order['qty'], position_qty)
-                            placed_order = place_order(order['symbol'], sell_qty, order['side'],
-                                                       risk_manager=risk_manager)
-                            handle_order_execution(placed_order, order['symbol'], risk_manager)
+                                continue
+                            current_pnl = calculate_pnl(symbol, float(api.get_position(symbol).avg_entry_price),
+                                                        float(api.get_latest_trade(symbol).price), position_qty)
+                            action = check_pnl_and_decide(symbol, current_pnl, target_profit, stop_loss_limit)
+                            if action == 'sell':
+                                sell_qty = min(order['qty'], position_qty)
+                                placed_order = place_order(order['symbol'], sell_qty, order['side'],
+                                                           risk_manager=risk_manager)
+                                handle_order_execution(placed_order, order['symbol'], risk_manager)
 
-            time.sleep(60)  # Wait for the next minute's data
+            time.sleep(60)
     except Exception as e:
         log_message(f"Error in trading bot: {str(e)}", level=logging.ERROR)
 
