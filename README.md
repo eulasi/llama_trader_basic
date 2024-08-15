@@ -40,6 +40,10 @@ includes robust risk management, performance tracking, and scheduling features.
           initial_capital=10000,    # Starting capital for the trading bot. Adjust based on your trading account size.
           risk_percentage=20        # Percentage of capital risked per trade. Suggested: 1-2% for conservative trading, up to 20% for aggressive trading.
    )
+     
+       target_profit = 150  # Adjusted target profit
+       stop_loss_limit = -30  # Adjusted stop loss limit
+
    ```
 
 #### 5. **Run the trading bot**
