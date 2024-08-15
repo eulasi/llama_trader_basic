@@ -1,6 +1,9 @@
 import logging
+import os
 import time
+from datetime import datetime
 import alpaca_trade_api as tradeapi
+import pandas as pd
 from strategies.moving_average_crossover import moving_average_crossover
 from utils.live_data_fetcher import fetch_live_data_for_all_symbols
 from utils.order_executor import place_order, handle_order_execution
@@ -75,10 +78,28 @@ def monitor_pnl(current_positions):
 
 
 def log_pnl_to_file(pnl_data, filename="pnl_log.csv"):
-    """Log PnL data to a CSV file."""
-    import pandas as pd
+    """Log PnL data to a CSV file in the 'pnl' folder with a timestamped filename."""
+
+    # Define the directory path
+    directory = 'pnl'
+
+    # Ensure the directory exists
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    # Get the current timestamp
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    # Append the timestamp to the filename
+    filename = f"pnl_log_{timestamp}.csv"
+
+    # Define the full file path
+    filepath = os.path.join(directory, filename)
+
+    # Create a DataFrame and save it to the CSV file
     df = pd.DataFrame(pnl_data)
-    df.to_csv(filename, mode='a', header=False, index=False)
+    df.to_csv(filepath, mode='a', header=False, index=False)
+    print(f"PnL data logged to {filepath}")
 
 
 def reconcile_positions_and_orders():
