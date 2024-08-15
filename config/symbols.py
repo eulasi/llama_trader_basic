@@ -1,5 +1,4 @@
-# List of top 250 S&P 500 companies tickers
-
+#  List Optimized
 symbol_list = [
     "MSFT", "TSLA", "V", "WMT", "JPM", "BAC", "CSCO", "ABT", "ORCL", "CRM",
     "INTC", "TMUS", "AMD", "TXN", "QCOM", "UNP", "MDT", "MS", "AXP", "PLD",
@@ -15,6 +14,7 @@ symbol_list = [
     "NUE", "RMD", "PEG", "EA"
 ]
 
+# List of top 250 S&P 500 companies tickers
 symbol_list_total = ['AAPL', 'MSFT', 'GOOG', 'GOOGL', 'AMZN', 'TSLA', 'BRK.B', 'META',
                      'NVDA', 'UNH', 'JNJ', 'V', 'WMT', 'JPM', 'PG', 'XOM', 'MA', 'CVX', 'HD', 'BAC',
                      'PFE', 'ABBV', 'LLY', 'KO', 'COST', 'DIS', 'AVGO', 'PEP', 'TMO', 'CSCO', 'VZ',

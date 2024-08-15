@@ -116,8 +116,8 @@ def main():
         risk_percentage=20  # 20% risk per trade
     )
 
-    target_profit = 100  # Example target profit in dollars
-    stop_loss_limit = -50  # Example stop loss in dollars
+    target_profit = 85  # Example target profit in dollars
+    stop_loss_limit = -150  # Example stop loss in dollars
 
     try:
         while True:
