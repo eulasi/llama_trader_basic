@@ -109,12 +109,12 @@ def reconcile_positions_and_orders():
     return current_positions, open_orders
 
 
-def check_pnl_and_decide(symbol, current_pnl, target_profit, stop_loss_limit):
-    """Check PnL and decide whether to hold, buy, or sell."""
-    if current_pnl >= target_profit:
+def check_pnl_and_decide(symbol, total_pnl, target_profit, stop_loss_limit):
+    """Check total PnL and decide whether to hold, buy, or sell."""
+    if total_pnl >= target_profit:
         log_message(f"{symbol}: Target profit reached. Selling position.", level=logging.INFO)
         return 'sell'
-    elif current_pnl <= stop_loss_limit:
+    elif total_pnl <= stop_loss_limit:
         log_message(f"{symbol}: Stop loss limit reached. Selling position.", level=logging.INFO)
         return 'sell'
     else:
@@ -181,9 +181,14 @@ def main():
                                 log_message(f"No holdings of {symbol} to sell. Skipping sell order.",
                                             level=logging.INFO)
                                 continue
-                            current_pnl = calculate_pnl(symbol, float(api.get_position(symbol).avg_entry_price),
-                                                        float(api.get_latest_trade(symbol).price), position_qty)
-                            action = check_pnl_and_decide(symbol, current_pnl, target_profit, stop_loss_limit)
+
+                            # Calculate total PnL for the position
+                            entry_price = float(api.get_position(symbol).avg_entry_price)
+                            current_price = float(api.get_latest_trade(symbol).price)
+                            total_pnl = calculate_pnl(symbol, entry_price, current_price, position_qty)
+
+                            # Decide whether to sell based on the total PnL
+                            action = check_pnl_and_decide(symbol, total_pnl, target_profit, stop_loss_limit)
                             if action == 'sell':
                                 sell_qty = min(order['qty'], position_qty)
                                 placed_order = place_order(order['symbol'], sell_qty, order['side'],
