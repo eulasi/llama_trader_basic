@@ -131,14 +131,14 @@ def main():
 
     # Initialize Risk Manager with risk_percentage
     risk_manager = RiskManager(
-        max_loss_per_trade=100,
-        max_daily_loss=500,
+        max_loss_per_trade=75,
+        max_daily_loss=300,
         initial_capital=10000,
-        risk_percentage=20  # 20% risk per trade
+        risk_percentage=15  # 20% risk per trade
     )
 
-    target_profit = 85  # Example target profit in dollars
-    stop_loss_limit = -100  # Example stop loss in dollars
+    target_profit = 80  # Example target profit in dollars
+    stop_loss_limit = -75  # Example stop loss in dollars
 
     try:
         while True:

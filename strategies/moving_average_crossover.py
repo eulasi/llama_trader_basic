@@ -4,8 +4,8 @@ from utils.logger import log_message
 
 
 def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_window=30, min_volatility=0.5,
-                             max_volatility=50.0, volatility_adjustment=True, profit_threshold=1.02,
-                             stop_loss_threshold=0.98, trailing_stop_loss=0.95):
+                             max_volatility=50.0, volatility_adjustment=True, profit_threshold=1.015,
+                             stop_loss_threshold=0.975, trailing_stop_loss=0.98):
     log_message(f"Executing moving average crossover strategy for {symbol}")
 
     orders = []
