@@ -3,6 +3,7 @@ import os
 import time
 from datetime import datetime
 import alpaca_trade_api as tradeapi
+import numpy as np
 import pandas as pd
 from strategies.moving_average_crossover import moving_average_crossover
 from utils.live_data_fetcher import fetch_live_data_for_all_symbols
@@ -113,17 +114,55 @@ def reconcile_positions_and_orders():
     return current_positions, open_orders
 
 
-def check_pnl_and_decide(symbol, total_pnl, target_profit, stop_loss_limit):
-    """Check total PnL and decide whether to hold, buy, or sell."""
-    if total_pnl >= target_profit:
-        log_message(f"{symbol}: Target profit reached. Selling position.", level=logging.INFO)
+def check_pnl_and_decide(symbol, total_pnl, adjusted_target_profit, adjusted_stop_loss):
+    """
+    Check total PnL and decide whether to hold, buy, or sell.
+
+    Parameters:
+    - symbol: The stock symbol.
+    - total_pnl: The total profit or loss for the position.
+    - adjusted_target_profit: The dynamically adjusted profit target.
+    - adjusted_stop_loss: The dynamically adjusted stop loss limit.
+
+    Returns:
+    - 'sell' if the position should be sold.
+    - 'hold' if the position should be held.
+    """
+    if total_pnl >= adjusted_target_profit:
+        log_message(f"{symbol}: Adjusted target profit of ${adjusted_target_profit} reached. Selling position.",
+                    level=logging.INFO)
         return 'sell'
-    elif total_pnl <= stop_loss_limit:
-        log_message(f"{symbol}: Stop loss limit reached. Selling position.", level=logging.INFO)
+    elif total_pnl <= adjusted_stop_loss:
+        log_message(f"{symbol}: Adjusted stop loss of ${adjusted_stop_loss} reached. Selling position.",
+                    level=logging.INFO)
         return 'sell'
     else:
         log_message(f"{symbol}: Holding position. No action required.", level=logging.INFO)
         return 'hold'
+
+
+def calculate_historical_volatility(symbol, data, lookback_period=30):
+    """
+    Calculate the historical volatility of a stock based on its closing prices.
+
+    :param symbol: The stock symbol
+    :param data: List of historical price bars (assumed to be in chronological order)
+    :param lookback_period: Number of days to calculate volatility over
+    :return: The historical volatility as a percentage
+    """
+    closing_prices = np.array([bar._raw['c'] for bar in data])  # Access the closing price through _raw
+    if len(closing_prices) < lookback_period:
+        log_message(f"{symbol}: Not enough data points to calculate historical volatility.", level=logging.WARNING)
+        return None
+
+    # Calculate daily returns
+    returns = np.diff(closing_prices) / closing_prices[:-1]
+
+    # Calculate standard deviation of returns (historical volatility)
+    volatility = np.std(returns[-lookback_period:]) * np.sqrt(252)  # Annualize the volatility
+
+    log_message(f"{symbol}: Calculated historical volatility: {volatility:.2%}", level=logging.INFO)
+    return volatility
 
 
 def main():
@@ -138,7 +177,7 @@ def main():
         max_loss_per_trade=75,
         max_daily_loss=300,
         initial_capital=10000,
-        risk_percentage=15  # 20% risk per trade
+        risk_percentage=15  # 15% risk per trade
     )
 
     target_profit = 80  # Example target profit in dollars
@@ -154,6 +193,15 @@ def main():
             all_data = fetch_live_data_for_all_symbols(timeframe)
             for symbol, data in all_data.items():
                 if data:
+                    # Calculate Historical Volatility
+                    historical_volatility = calculate_historical_volatility(symbol, data, lookback_period=30)
+                    if historical_volatility is None:
+                        continue  # Skip this symbol if we couldn't calculate volatility
+
+                    # Adjust stop-loss and profit targets based on volatility
+                    adjusted_stop_loss = stop_loss_limit * (1 + historical_volatility)
+                    adjusted_target_profit = target_profit * (1 + historical_volatility)
+
                     # Run the strategy and generate orders
                     orders = strategy(risk_manager, data, symbol)
 
@@ -192,7 +240,7 @@ def main():
                             total_pnl = calculate_pnl(symbol, entry_price, current_price, position_qty)
 
                             # Decide whether to sell based on the total PnL
-                            action = check_pnl_and_decide(symbol, total_pnl, target_profit, stop_loss_limit)
+                            action = check_pnl_and_decide(symbol, total_pnl, adjusted_target_profit, adjusted_stop_loss)
                             if action == 'sell':
                                 sell_qty = min(order['qty'], position_qty)
                                 placed_order = place_order(order['symbol'], sell_qty, order['side'],
