@@ -161,7 +161,7 @@ def calculate_historical_volatility(symbol, data, lookback_period=30):
     # Calculate standard deviation of returns (historical volatility)
     volatility = np.std(returns[-lookback_period:]) * np.sqrt(252)  # Annualize the volatility
 
-    log_message(f"[{symbol}]:Calculated historical volatility: {volatility:.2%}", level=logging.INFO)
+    log_message(f"<{symbol}>:Calculated historical volatility: {volatility:.2%}", level=logging.INFO)
     return volatility
 
 
