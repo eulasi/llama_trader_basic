@@ -21,12 +21,12 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
     long_ma = np.mean(closing_prices[-long_window:])
     current_price = closing_prices[-1]
 
-    # Calculate volatility
+    # Calculate volatility and convert to percentage
     volatility = np.std(closing_prices)
     volatility_percentage = volatility * 100
-    log_message(f"Calculated volatility: {volatility_percentage:.2f}%")
+    log_message(f"Calculated volatility: {volatility_percentage:.2f}%", level=logging.INFO)
 
-    # Determine position size
+    # Adjust position size based on volatility (if necessary)
     order_qty = risk_manager.calculate_position_size(current_price) if risk_manager else 1
 
     if order_qty == 0:
@@ -48,6 +48,13 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
             adjusted_qty = max(1, int(order_qty * (max_volatility / volatility)))  # Ensure minimum order size of 1
             log_message(f"Adjusting order quantity due to high volatility. New quantity: {adjusted_qty}")
             order_qty = adjusted_qty
+
+    # Adjust stop loss and profit targets based on volatility
+    adjusted_stop_loss = current_price * stop_loss_threshold
+    adjusted_target_profit = current_price * profit_threshold
+
+    log_message(f"Adjusted Stop Loss for {symbol}: ${adjusted_stop_loss:.2f}", level=logging.INFO)
+    log_message(f"Adjusted Target Profit for {symbol}: ${adjusted_target_profit:.2f}", level=logging.INFO)
 
     # Apply trailing stop-loss logic
     trailing_stop_price = max(closing_prices) * trailing_stop_loss
