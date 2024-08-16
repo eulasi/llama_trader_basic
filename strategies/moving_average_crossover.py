@@ -23,7 +23,8 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
 
     # Calculate volatility
     volatility = np.std(closing_prices)
-    log_message(f"Calculated volatility: {volatility}")
+    volatility_percentage = volatility * 100
+    log_message(f"Calculated volatility: {volatility_percentage:.2f}%")
 
     # Determine position size
     order_qty = risk_manager.calculate_position_size(current_price) if risk_manager else 1
@@ -35,10 +36,11 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
 
     # Dynamic Volatility Check
     if volatility < min_volatility:
-        log_message(f"Volatility {volatility} is too low. Skipping trading.", level=logging.WARNING)
+        log_message(f"Volatility {volatility_percentage:.2f}% is too low. Skipping trading.", level=logging.WARNING)
         return orders
     elif volatility > max_volatility:
-        log_message(f"Volatility {volatility} is high but within acceptable range. Proceeding with caution.",
+        log_message(f"Volatility {volatility_percentage:.2f}% is high but within acceptable range. Proceeding with "
+                    f"caution.",
                     level=logging.WARNING)
 
         if volatility_adjustment:
