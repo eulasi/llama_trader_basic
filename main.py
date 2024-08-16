@@ -185,6 +185,15 @@ def main():
 
     try:
         while True:
+
+            # Check the current time (in EST)
+            current_time = datetime.now().astimezone().strftime('%H:%M')
+            market_close_time = '16:00'  # 4:00 PM EST
+
+            if current_time >= market_close_time:
+                log_message("Market is closed. Stopping trading bot.", level=logging.INFO)
+                break  # Exit the loop to stop the bot
+
             # Reconcile positions and orders at the start of each iteration
             current_positions, open_orders = reconcile_positions_and_orders()
 
