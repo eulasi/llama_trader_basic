@@ -66,7 +66,7 @@ class PerformanceTracker:
     def save_metrics(self, filename=None):
         try:
             if filename is None:
-                filename = f"performance_metrics_{pd.Timestamp.now().strftime('%Y%m%d_%H%M%S')}.csv"
+                filename = f"performance_metrics_{pd.Timestamp.now().strftime('%Y-%m-%d_%H:%M:%S')}.csv"
             metrics_df = pd.DataFrame(self.trades)
             filepath = os.path.join(self.metrics_directory, filename)
             metrics_df.to_csv(filepath, index=False)

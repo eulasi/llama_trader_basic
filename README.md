@@ -35,14 +35,14 @@ includes robust risk management, performance tracking, and scheduling features.
    )
      
        risk_manager = RiskManager(
-          max_loss_per_trade=100,   # Maximum loss allowed per trade. Suggested: 1% of initial capital (e.g., $100 for $10,000 capital)
-          max_daily_loss=500,       # Maximum loss allowed per day. Suggested: 5% of initial capital (e.g., $500 for $10,000 capital)
+          max_loss_per_trade=75,   # Maximum loss allowed per trade. Suggested: 1% of initial capital (e.g., $100 for $10,000 capital)
+          max_daily_loss=300,       # Maximum loss allowed per day. Suggested: 5% of initial capital (e.g., $500 for $10,000 capital)
           initial_capital=10000,    # Starting capital for the trading bot. Adjust based on your trading account size.
-          risk_percentage=20        # Percentage of capital risked per trade. Suggested: 1-2% for conservative trading, up to 20% for aggressive trading.
+          risk_percentage=15        # Percentage of capital risked per trade. Suggested: 1-2% for conservative trading, up to 20% for aggressive trading.
    )
      
-       target_profit = 150  # Adjusted target profit
-       stop_loss_limit = -30  # Adjusted stop loss limit
+       target_profit = 75  # Adjusted target profit
+       stop_loss_limit = -75  # Adjusted stop loss limit
 
    ```
 

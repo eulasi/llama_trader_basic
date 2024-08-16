@@ -10,8 +10,12 @@ from utils.order_executor import place_order, handle_order_execution
 from utils.logger import log_message
 from utils.risk_management import RiskManager
 from config.credentials import API_KEY, API_SECRET, BASE_URL
+from utils.performance_tracker import PerformanceTracker  # Import the PerformanceTracker
 
 api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
+
+# Initialize PerformanceTracker
+performance_tracker = PerformanceTracker()
 
 
 def get_current_positions():
@@ -88,7 +92,7 @@ def log_pnl_to_file(pnl_data, filename="pnl_log.csv"):
         os.makedirs(directory)
 
     # Get the current timestamp
-    timestamp = datetime.now().strftime("%Y:%m:%d_%H:%M:%S")
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
 
     # Append the timestamp to the filename
     filename = f"pnl_log_{timestamp}.csv"
@@ -195,9 +199,15 @@ def main():
                                                            risk_manager=risk_manager)
                                 handle_order_execution(placed_order, order['symbol'], risk_manager)
 
+                                # Record the trade in the PerformanceTracker
+                                performance_tracker.record_trade(symbol, sell_qty, current_price, 'sell', total_pnl)
+
             time.sleep(60)
     except Exception as e:
         log_message(f"Error in trading bot: {str(e)}", level=logging.ERROR)
+    finally:
+        # Save performance metrics at the end of the trading session
+        performance_tracker.save_metrics()
 
 
 if __name__ == "__main__":
