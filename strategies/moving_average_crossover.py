@@ -55,8 +55,8 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
     adjusted_target_profit = current_price * profit_threshold
 
     log_message(f"Adjusted Stop Loss for {symbol}: ${adjusted_stop_loss:.2f}", level=logging.INFO)
-    log_message(f"Adjusted Target Profit for {symbol}: ${adjusted_target_profit:.2f}", level=logging.INFO)
     log_message(f"Current Price for {symbol}: ${current_price:.2f}", level=logging.INFO)
+    log_message(f"Adjusted Target Profit for {symbol}: ${adjusted_target_profit:.2f}", level=logging.INFO)
 
     # Apply trailing stop-loss logic
     trailing_stop_price = max(closing_prices) * trailing_stop_loss
