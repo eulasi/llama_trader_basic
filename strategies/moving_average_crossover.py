@@ -1,10 +1,28 @@
 import logging
 import numpy as np
+from strategies.calculate_atr import calculate_atr
 from utils.logger import log_message
 
 
+def dynamic_profit_threshold(volatility_percentage, atr, base_threshold=1.015):
+    """
+    Adjust the profit threshold based on volatility and ATR.
+    :param volatility_percentage: Current volatility percentage of the stock.
+    :param atr: The average true range of the stock.
+    :param base_threshold: The base profit threshold.
+    :return: Adjusted profit threshold.
+    """
+    # Example logic to adjust the profit threshold
+    if volatility_percentage > 20:
+        return base_threshold * 1.05  # Increase threshold by 5% if volatility is high
+    elif atr > 2.0:  # Assuming ATR value greater than 2.0 is considered high
+        return base_threshold * 1.03  # Increase threshold by 3% if ATR is high
+    else:
+        return base_threshold  # Default to the base threshold
+
+
 def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_window=30, min_volatility=0.5,
-                             max_volatility=50.0, volatility_adjustment=True, profit_threshold=1.015,
+                             max_volatility=50.0, volatility_adjustment=True, base_profit_threshold=1.015,
                              stop_loss_threshold=0.975, trailing_stop_loss=0.98):
     log_message(f"Executing moving average crossover strategy for {symbol}")
 
@@ -20,6 +38,10 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
     short_ma = np.mean(closing_prices[-short_window:])
     long_ma = np.mean(closing_prices[-long_window:])
     current_price = closing_prices[-1]
+
+    # Calculate ATR
+    atr = calculate_atr(data)
+    log_message(f"{symbol}: Calculated ATR: {atr:.2f}", level=logging.INFO)
 
     # Calculate volatility and convert to percentage
     volatility = np.std(closing_prices)
@@ -50,9 +72,12 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
             log_message(f"Adjusting order quantity due to high volatility. New quantity: {adjusted_qty}")
             order_qty = adjusted_qty
 
-    # Adjust stop loss and profit targets based on volatility
-    adjusted_stop_loss = current_price * stop_loss_threshold
-    adjusted_target_profit = current_price * profit_threshold
+    # Calculate dynamic profit threshold
+    dynamic_profit_threshold_value = dynamic_profit_threshold(volatility_percentage, atr, base_profit_threshold)
+
+    # Adjust stop loss and profit targets based on ATR and dynamic profit threshold
+    adjusted_stop_loss = current_price - (atr * stop_loss_threshold)
+    adjusted_target_profit = current_price + (atr * dynamic_profit_threshold_value)
 
     log_message(f"Adjusted Stop Loss for {symbol}: ${adjusted_stop_loss:.2f}", level=logging.INFO)
     log_message(f"Current Price for {symbol}: ${current_price:.2f}", level=logging.INFO)
@@ -71,7 +96,7 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
                 f"{symbol}: Current price ({current_price}) has dropped below the trailing stop price "
                 f"({trailing_stop_price}). Generating a sell order.")
             orders.append({'symbol': symbol, 'qty': order_qty, 'side': 'sell'})
-        elif current_price >= closing_prices[0] * profit_threshold:
+        elif current_price >= closing_prices[0] * base_profit_threshold:
             log_message(
                 f"{symbol}: Current price ({current_price}) exceeds the profit threshold. Generating a sell order.")
             orders.append({'symbol': symbol, 'qty': order_qty, 'side': 'sell'})
