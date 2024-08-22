@@ -1,5 +1,5 @@
 #  S&P List Optimized
-symbol_list = [
+symbol_list_opt = [
     "MSFT", "TSLA", "V", "WMT", "JPM", "BAC", "CSCO", "ABT", "ORCL", "CRM",
     "INTC", "TMUS", "AMD", "TXN", "QCOM", "UNP", "MDT", "MS", "AXP", "PLD",
     "AMT", "CAT", "IBM", "AMAT", "SYK", "C", "ADP", "GE", "ZTS", "CB", "MDLZ",
@@ -15,7 +15,7 @@ symbol_list = [
 ]
 
 # List for account starting with $250.00
-symbol_list_250 = [
+symbol_list = [
     "AAPL",  # Technology - High volume, stable
     "AMD",  # Technology - Popular in day trading
     "F",  # Automotive - Lower price, high volume
