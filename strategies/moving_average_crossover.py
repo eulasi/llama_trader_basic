@@ -1,24 +1,8 @@
 import logging
 import numpy as np
+from dynamics.dynamic_profit_threshold import dynamic_profit_threshold
 from strategies.calculate_atr import calculate_atr
 from utils.logger import log_message
-
-
-def dynamic_profit_threshold(volatility_percentage, atr, base_threshold=1.015):
-    """
-    Adjust the profit threshold based on volatility and ATR.
-    :param volatility_percentage: Current volatility percentage of the stock.
-    :param atr: The average true range of the stock.
-    :param base_threshold: The base profit threshold.
-    :return: Adjusted profit threshold.
-    """
-    # Example logic to adjust the profit threshold
-    if volatility_percentage > 20:
-        return base_threshold * 1.05  # Increase threshold by 5% if volatility is high
-    elif atr > 2.0:  # Assuming ATR value greater than 2.0 is considered high
-        return base_threshold * 1.03  # Increase threshold by 3% if ATR is high
-    else:
-        return base_threshold  # Default to the base threshold
 
 
 def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_window=30, min_volatility=0.5,
@@ -68,7 +52,7 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
         if volatility_adjustment:
             # Adjust position size based on volatility
             adjusted_qty = max(1, int(order_qty * (
-                        max_volatility / volatility_percentage)))  # Ensure minimum order size of 1
+                    max_volatility / volatility_percentage)))  # Ensure minimum order size of 1
             log_message(f"Adjusting order quantity due to high volatility. New quantity: {adjusted_qty}")
             order_qty = adjusted_qty
 
