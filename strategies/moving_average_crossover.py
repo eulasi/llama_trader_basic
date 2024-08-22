@@ -1,13 +1,11 @@
 import logging
 import numpy as np
-
-from strategies.calculate_atr import calculate_atr
 from utils.logger import log_message
 
 
 def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_window=30, min_volatility=0.5,
-                             max_volatility=50.0, volatility_adjustment=True, base_profit_threshold=1.015,
-                             base_stop_loss_threshold=0.975, trailing_stop_loss=0.98):
+                             max_volatility=50.0, volatility_adjustment=True, profit_threshold=1.015,
+                             stop_loss_threshold=0.975, trailing_stop_loss=0.98):
     log_message(f"Executing moving average crossover strategy for {symbol}")
 
     orders = []
@@ -23,15 +21,14 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
     long_ma = np.mean(closing_prices[-long_window:])
     current_price = closing_prices[-1]
 
-    # Calculate ATR
-    atr = calculate_atr(data)
-    log_message(f"{symbol}: Calculated ATR: {atr:.2f}", level=logging.INFO)
-
+    # Calculate volatility
     # Calculate volatility and convert to percentage
     volatility = np.std(closing_prices)
     volatility_percentage = volatility * 100
+    log_message(f"Calculated volatility: {volatility_percentage:.2f}%")
     log_message(f"Calculated volatility: {volatility_percentage:.2f}%", level=logging.INFO)
 
+    # Determine position size
     # Adjust position size based on volatility (if necessary)
     order_qty = risk_manager.calculate_position_size(current_price) if risk_manager else 1
 
@@ -41,31 +38,25 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
         return orders
 
     # Dynamic Volatility Check
-    if volatility_percentage < min_volatility:
+    if volatility < min_volatility:
         log_message(f"Volatility {volatility_percentage:.2f}% is too low. Skipping trading.", level=logging.WARNING)
         return orders
-    elif volatility_percentage > max_volatility:
-        log_message(
-            f"Volatility {volatility_percentage:.2f}% is high but within acceptable range. Proceeding with caution.",
-            level=logging.WARNING)
+    elif volatility > max_volatility:
+        log_message(f"Volatility {volatility_percentage:.2f}% is high but within acceptable range. Proceeding with "
+                    f"caution.",
+                    level=logging.WARNING)
 
         if volatility_adjustment:
             # Adjust position size based on volatility
-            adjusted_qty = max(1, int(order_qty * (
-                    max_volatility / volatility_percentage)))  # Ensure minimum order size of 1
+            adjusted_qty = max(1, int(order_qty * (max_volatility / volatility)))  # Ensure minimum order size of 1
             log_message(f"Adjusting order quantity due to high volatility. New quantity: {adjusted_qty}")
             order_qty = adjusted_qty
 
-    # Dynamic adjustment for stop loss threshold based on ATR and volatility
-    dynamic_stop_loss_threshold = base_stop_loss_threshold * (1 + (volatility_percentage / 100))
-    adjusted_stop_loss = current_price - (atr * dynamic_stop_loss_threshold)
-
-    # Dynamic adjustment for profit threshold
-    dynamic_profit_threshold = base_profit_threshold * (1 + (volatility_percentage / 100))
-    adjusted_target_profit = current_price + (atr * dynamic_profit_threshold)
+    # Adjust stop loss and profit targets based on volatility
+    adjusted_stop_loss = current_price * stop_loss_threshold
+    adjusted_target_profit = current_price * profit_threshold
 
     log_message(f"Adjusted Stop Loss for {symbol}: ${adjusted_stop_loss:.2f}", level=logging.INFO)
-    log_message(f"Current Price for {symbol}: ${current_price:.2f}", level=logging.INFO)
     log_message(f"Adjusted Target Profit for {symbol}: ${adjusted_target_profit:.2f}", level=logging.INFO)
 
     # Apply trailing stop-loss logic
@@ -81,15 +72,14 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
                 f"{symbol}: Current price ({current_price}) has dropped below the trailing stop price "
                 f"({trailing_stop_price}). Generating a sell order.")
             orders.append({'symbol': symbol, 'qty': order_qty, 'side': 'sell'})
-        elif current_price >= adjusted_target_profit:
+        elif current_price >= closing_prices[0] * profit_threshold:
             log_message(
-                f"{symbol}: Current price ({current_price}) exceeds the adjusted profit threshold. Generating a sell "
-                f"order.")
+                f"{symbol}: Current price ({current_price}) exceeds the profit threshold. Generating a sell order.")
             orders.append({'symbol': symbol, 'qty': order_qty, 'side': 'sell'})
-        elif current_price <= adjusted_stop_loss:
+        elif current_price <= closing_prices[0] * stop_loss_threshold:
             log_message(
                 f"{symbol}: Current price "
-                f"({current_price}) has dropped below the adjusted stop loss threshold. Generating a sell order.")
+                f"({current_price}) has dropped below the stop loss threshold. Generating a sell order.")
             orders.append({'symbol': symbol, 'qty': order_qty, 'side': 'sell'})
         else:
             log_message(f"{symbol}: No sell condition met. No order generated.")
