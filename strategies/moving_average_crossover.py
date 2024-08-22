@@ -1,13 +1,13 @@
 import logging
 import numpy as np
-from dynamics.dynamic_profit_threshold import dynamic_profit_threshold
+
 from strategies.calculate_atr import calculate_atr
 from utils.logger import log_message
 
 
 def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_window=30, min_volatility=0.5,
                              max_volatility=50.0, volatility_adjustment=True, base_profit_threshold=1.015,
-                             stop_loss_threshold=0.975, trailing_stop_loss=0.98):
+                             base_stop_loss_threshold=0.975, trailing_stop_loss=0.98):
     log_message(f"Executing moving average crossover strategy for {symbol}")
 
     orders = []
@@ -56,12 +56,13 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
             log_message(f"Adjusting order quantity due to high volatility. New quantity: {adjusted_qty}")
             order_qty = adjusted_qty
 
-    # Calculate dynamic profit threshold
-    dynamic_profit_threshold_value = dynamic_profit_threshold(volatility_percentage, atr, base_profit_threshold)
+    # Dynamic adjustment for stop loss threshold based on ATR and volatility
+    dynamic_stop_loss_threshold = base_stop_loss_threshold * (1 + (volatility_percentage / 100))
+    adjusted_stop_loss = current_price - (atr * dynamic_stop_loss_threshold)
 
-    # Adjust stop loss and profit targets based on ATR and dynamic profit threshold
-    adjusted_stop_loss = current_price - (atr * stop_loss_threshold)
-    adjusted_target_profit = current_price + (atr * dynamic_profit_threshold_value)
+    # Dynamic adjustment for profit threshold
+    dynamic_profit_threshold = base_profit_threshold * (1 + (volatility_percentage / 100))
+    adjusted_target_profit = current_price + (atr * dynamic_profit_threshold)
 
     log_message(f"Adjusted Stop Loss for {symbol}: ${adjusted_stop_loss:.2f}", level=logging.INFO)
     log_message(f"Current Price for {symbol}: ${current_price:.2f}", level=logging.INFO)
@@ -80,14 +81,15 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
                 f"{symbol}: Current price ({current_price}) has dropped below the trailing stop price "
                 f"({trailing_stop_price}). Generating a sell order.")
             orders.append({'symbol': symbol, 'qty': order_qty, 'side': 'sell'})
-        elif current_price >= closing_prices[0] * base_profit_threshold:
+        elif current_price >= adjusted_target_profit:
             log_message(
-                f"{symbol}: Current price ({current_price}) exceeds the profit threshold. Generating a sell order.")
+                f"{symbol}: Current price ({current_price}) exceeds the adjusted profit threshold. Generating a sell "
+                f"order.")
             orders.append({'symbol': symbol, 'qty': order_qty, 'side': 'sell'})
-        elif current_price <= closing_prices[0] * stop_loss_threshold:
+        elif current_price <= adjusted_stop_loss:
             log_message(
                 f"{symbol}: Current price "
-                f"({current_price}) has dropped below the stop loss threshold. Generating a sell order.")
+                f"({current_price}) has dropped below the adjusted stop loss threshold. Generating a sell order.")
             orders.append({'symbol': symbol, 'qty': order_qty, 'side': 'sell'})
         else:
             log_message(f"{symbol}: No sell condition met. No order generated.")
