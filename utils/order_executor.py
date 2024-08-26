@@ -9,6 +9,10 @@ api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
 
 def place_order(symbol, qty, side, risk_manager, order_type='market', time_in_force='day'):
     try:
+        if risk_manager is None:
+            log_message(f"Risk Manager is not initialized. Order not placed for {symbol}.", level=logging.ERROR)
+            return None
+
         latest_trade = api.get_latest_trade(symbol)
         if latest_trade is None:
             log_message(f"Failed to retrieve the latest trade for {symbol}. Order not placed.", level=logging.ERROR)

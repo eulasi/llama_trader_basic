@@ -20,18 +20,23 @@ api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
 performance_tracker = PerformanceTracker()
 
 
-def sell_profitable_positions(current_positions):
-    """Sell any position that is currently profitable to free up capital."""
+def sell_profitable_positions(current_positions, risk_manager):
     for symbol, qty in current_positions.items():
-        entry_price = float(api.get_position(symbol).avg_entry_price)
-        current_price = float(api.get_latest_trade(symbol).price)
-        pnl = calculate_pnl(symbol, entry_price, current_price, qty)
-        if pnl > 0:  # If the position is in profit
-            log_message(f"{symbol}: Position is in profit. Selling {qty} shares to free up capital.",
-                        level=logging.INFO)
-            placed_order = place_order(symbol, qty, 'sell', risk_manager=None)  # Risk manager not needed for selling
-            # profit
-            handle_order_execution(placed_order, symbol, risk_manager=None)
+        try:
+            # Check if the position exists before proceeding
+            position = api.get_position(symbol)
+            entry_price = float(position.avg_entry_price)
+            current_price = float(api.get_latest_trade(symbol).price)
+            if current_price > entry_price:
+                placed_order = place_order(symbol, qty, 'sell', risk_manager=risk_manager)
+                handle_order_execution(placed_order, symbol, risk_manager)
+                log_message(f"Sold {qty} shares of {symbol} at ${current_price:.2f} to free up capital.",
+                            level=logging.INFO)
+        except tradeapi.rest.APIError as e:
+            # Handle case where position does not exist or other API errors
+            log_message(f"Failed to sell {symbol}: {str(e)}", level=logging.ERROR)
+        except Exception as e:
+            log_message(f"Unexpected error occurred for {symbol}: {str(e)}", level=logging.ERROR)
 
 
 def get_current_positions():
@@ -216,7 +221,7 @@ def main():
             current_positions, open_orders = reconcile_positions_and_orders()
 
             # Sell profitable positions to free up capital
-            sell_profitable_positions(current_positions)
+            sell_profitable_positions(current_positions, risk_manager)
 
             monitor_pnl(current_positions)  # Monitor PnL for current positions
 
@@ -258,27 +263,36 @@ def main():
                                                        risk_manager=risk_manager)
                             handle_order_execution(placed_order, order['symbol'], risk_manager)
                         elif order['side'] == 'sell':
-                            position_qty = current_positions.get(symbol, 0)
-                            if position_qty <= 0:
-                                log_message(f"No holdings of {symbol} to sell. Skipping sell order.",
-                                            level=logging.INFO)
+                            try:
+                                # Ensure the position exists before attempting to sell
+                                position = api.get_position(symbol)
+                                position_qty = float(position.qty)
+                                if position_qty <= 0:
+                                    log_message(f"No holdings of {symbol} to sell. Skipping sell order.",
+                                                level=logging.INFO)
+                                    continue
+
+                                # Calculate total PnL for the position
+                                entry_price = float(position.avg_entry_price)
+                                current_price = float(api.get_latest_trade(symbol).price)
+                                total_pnl = calculate_pnl(symbol, entry_price, current_price, position_qty)
+
+                                # Decide whether to sell based on the total PnL
+                                action = check_pnl_and_decide(symbol, total_pnl, adjusted_target_profit,
+                                                              adjusted_stop_loss)
+                                if action == 'sell':
+                                    sell_qty = min(order['qty'], position_qty)
+                                    placed_order = place_order(order['symbol'], sell_qty, order['side'],
+                                                               risk_manager=risk_manager)
+                                    handle_order_execution(placed_order, order['symbol'], risk_manager)
+
+                                    # Record the trade in the PerformanceTracker
+                                    performance_tracker.record_trade(symbol, sell_qty, current_price, 'sell', total_pnl)
+
+                            except tradeapi.rest.APIError as e:
+                                log_message(f"Error handling sell order for {symbol}: {str(e)}", level=logging.ERROR)
+                                # Continue to the next symbol if an error occurs
                                 continue
-
-                            # Calculate total PnL for the position
-                            entry_price = float(api.get_position(symbol).avg_entry_price)
-                            current_price = float(api.get_latest_trade(symbol).price)
-                            total_pnl = calculate_pnl(symbol, entry_price, current_price, position_qty)
-
-                            # Decide whether to sell based on the total PnL
-                            action = check_pnl_and_decide(symbol, total_pnl, adjusted_target_profit, adjusted_stop_loss)
-                            if action == 'sell':
-                                sell_qty = min(order['qty'], position_qty)
-                                placed_order = place_order(order['symbol'], sell_qty, order['side'],
-                                                           risk_manager=risk_manager)
-                                handle_order_execution(placed_order, order['symbol'], risk_manager)
-
-                                # Record the trade in the PerformanceTracker
-                                performance_tracker.record_trade(symbol, sell_qty, current_price, 'sell', total_pnl)
 
             time.sleep(60)
     except Exception as e:
