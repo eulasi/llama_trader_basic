@@ -59,6 +59,10 @@ def modify_or_replace_order(existing_order, new_order_qty, risk_manager):
         return None
 
 
+def pnl_header():
+    log_message(f"<Calculated PnL>")
+
+
 def calculate_pnl(symbol, entry_price, current_price, qty):
     """Calculate profit and loss for a given symbol."""
     pnl = (current_price - entry_price) * qty

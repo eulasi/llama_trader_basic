@@ -2,7 +2,7 @@ import logging
 import numpy as np
 
 from config.credentials import API_KEY, API_SECRET, BASE_URL
-from strategies.calculate_atr import calculate_atr
+from dynamics.calculate_atr import calculate_atr
 from utils.logger import log_message
 import alpaca_trade_api as tradeapi
 
