@@ -49,6 +49,7 @@ def get_historical_data(symbol, timeframe, start=None, end=None):
             barset = api.get_bars(symbol, timeframe, limit=1000)
             all_bars.extend(barset)
 
+        log_message(f"--------------------------------------------------------------")
         log_message(f"Fetched {len(all_bars)} historical data points for {symbol} from {start} to {end}")
         return all_bars
     except Exception as e:

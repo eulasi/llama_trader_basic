@@ -62,6 +62,7 @@ def modify_or_replace_order(existing_order, new_order_qty, risk_manager):
 def calculate_pnl(symbol, entry_price, current_price, qty):
     """Calculate profit and loss for a given symbol."""
     pnl = (current_price - entry_price) * qty
+    log_message(f"-------------------------------")
     log_message(f"Calculated PnL for {symbol}: ${pnl:.2f}", level=logging.INFO)
     return pnl
 
@@ -82,7 +83,7 @@ def monitor_pnl(current_positions):
     log_pnl_to_file(pnl_data)
 
 
-def log_pnl_to_file(pnl_data, filename="pnl_log.csv"):
+def log_pnl_to_file(pnl_data):
     """Log PnL data to a CSV file in the 'pnl' folder with a timestamped filename."""
 
     # Define the directory path
@@ -161,6 +162,7 @@ def calculate_historical_volatility(symbol, data, lookback_period=30):
     # Calculate standard deviation of returns (historical volatility)
     volatility = np.std(returns[-lookback_period:]) * np.sqrt(252)  # Annualize the volatility
 
+    log_message(f"----------------------------------------------")
     log_message(f"<{symbol}>:Calculated historical volatility: {volatility:.2%}", level=logging.INFO)
     return volatility
 

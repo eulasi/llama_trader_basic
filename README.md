@@ -134,6 +134,38 @@ profitable trades.
 ## Performance Tracking
 The bot includes a PerformanceTracker to record trades, calculate profit and loss (PnL), and monitor other key performance metrics such as win rate and maximum drawdown. The performance data is saved in the data/performance_data directory for further analysis.
 
+## Understanding Logs
+
+### Latest Bar Data (BarV2)
+* c: Close price (the price at the close of the bar)
+* h: High price (the highest price during the bar's timeframe)
+* l: Low price (the lowest price during the bar's timeframe)
+* n: Number of trades (the total number of trades during the bar's timeframe)
+* o: Open price (the price at the start of the bar's timeframe)
+* t: Timestamp (when the bar data was recorded, often the end of the bar's timeframe)
+* v: Volume (the total number of shares traded during the bar's timeframe)
+* vw: Volume-weighted average price (an average price of the trades during the bar's timeframe, weighted by volume)
+
+### Latest Trade Data (TradeV2)
+* c: Trade conditions (specific conditions of the trade, represented as a list of strings)
+* i: Trade ID (a unique identifier for the trade)
+* p: Price (the price at which the trade occurred)
+* s: Size (the number of shares traded)
+* t: Timestamp (when the trade was executed)
+* x: Exchange (the exchange where the trade occurred, represented by a letter code)
+* z: Tape (a designation for the reporting facility or "tape" where the trade was recorded)
+
+### Latest Quote Data (QuoteV2)
+* ap: Ask price (the price at which sellers are willing to sell)
+* as: Ask size (the number of shares available for sale at the ask price)
+* ax: Ask exchange (the exchange where the ask price is quoted)
+* bp: Bid price (the price at which buyers are willing to buy)
+* bs: Bid size (the number of shares available for purchase at the bid price)
+* bx: Bid exchange (the exchange where the bid price is quoted)
+* c: Quote conditions (specific conditions of the quote, represented as a list of strings)
+* t: Timestamp (when the quote was last updated)
+* z: Tape (a designation for the reporting facility or "tape" where the quote was recorded)
+
 ## License
 
 This project is licensed under the MIT License.
