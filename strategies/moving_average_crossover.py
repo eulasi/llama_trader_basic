@@ -1,8 +1,10 @@
 import logging
 import numpy as np
 
+from config.credentials import API_KEY, API_SECRET, BASE_URL
 from strategies.calculate_atr import calculate_atr
 from utils.logger import log_message
+import alpaca_trade_api as tradeapi
 
 
 def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_window=30, min_volatility=0.5,
@@ -41,7 +43,7 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
         return orders
 
     # Dynamic Volatility Check
-    if volatility_percentage < min_volatility:
+    if volatility_percentage < min_volatility and not is_holding_position(symbol):
         log_message(f"Volatility {volatility_percentage:.2f}% is too low. Skipping trading.", level=logging.WARNING)
         return orders
     elif volatility_percentage > max_volatility:
@@ -60,7 +62,7 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
     dynamic_stop_loss_threshold = base_stop_loss_threshold * (1 + (volatility_percentage / 100))
     adjusted_stop_loss = current_price - (atr * dynamic_stop_loss_threshold)
 
-    # Dynamic adjustment for profit threshold
+    # Dynamic adjustment for profit threshold (already implemented)
     dynamic_profit_threshold = base_profit_threshold * (1 + (volatility_percentage / 100))
     adjusted_target_profit = current_price + (atr * dynamic_profit_threshold)
 
@@ -95,3 +97,31 @@ def moving_average_crossover(risk_manager, data, symbol, short_window=10, long_w
             log_message(f"{symbol}: No sell condition met. No order generated.")
 
     return orders
+
+
+api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
+
+
+def is_holding_position(symbol):
+    """
+    Checks if the bot is currently holding a position for the given symbol.
+    Queries the current positions from the broker API.
+    Returns True if the bot is holding the position, False otherwise.
+    """
+    try:
+        # Fetch current positions from the broker API
+        positions = api.list_positions()
+
+        # Iterate through the positions to find the symbol
+        for position in positions:
+            if position.symbol == symbol and float(position.qty) > 0:
+                log_message(f"Holding position for {symbol}: {position.qty} shares.", level=logging.INFO)
+                return True
+
+        # If symbol is not found or quantity is zero, return False
+        log_message(f"No position held for {symbol}.", level=logging.INFO)
+        return False
+
+    except Exception as e:
+        log_message(f"Error checking position for {symbol}: {str(e)}", level=logging.ERROR)
+        return False
