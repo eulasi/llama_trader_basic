@@ -11,7 +11,7 @@ if not os.path.exists(logs_directory):
 
 # Function to create a log file name with a timestamp
 def get_log_filename_with_timestamp(base_name="trading"):
-    timestamp = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+    timestamp = datetime.now().astimezone().strftime("%Y-%m-%d_%H:%M:%S")
     return os.path.join(logs_directory, f"{base_name}_{timestamp}.log")
 
 

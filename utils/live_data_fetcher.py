@@ -31,28 +31,43 @@ def convert_timeframe(timeframe):
         raise ValueError(f"Invalid timeframe: {timeframe}")
 
 
-def get_live_data(symbol, timeframe, cache_duration=60):
+def get_live_data(symbol, use_latest_methods=True):
     try:
         current_time = time.time()
-        # Check if the data is already cached and is still valid
-        if symbol in data_cache and (current_time - data_cache[symbol]['timestamp']) < cache_duration:
-            log_message(f"Using cached data for {symbol}")
-            return data_cache[symbol]['data']
 
-        # Convert timeframe if it's a string
-        if isinstance(timeframe, str):
-            timeframe = convert_timeframe(timeframe)
+        # Use the direct methods to get the latest bar, trade, and quote
+        if use_latest_methods:
+            bar = api.get_latest_bar(symbol)
+            trade = api.get_latest_trade(symbol)
+            quote = api.get_latest_quote(symbol)
 
-        # Fetch the latest live bar
-        barset = api.get_bars(symbol, timeframe, limit=1)
-        log_message(f"Fetched latest live data for {symbol}: {barset}")
+            log_message(f"Fetched latest bar for {symbol}: {bar}")
+            log_message(f"Fetched latest trade for {symbol}: {trade}")
+            log_message(f"Fetched latest quote for {symbol}: {quote}")
 
-        # Cache the data
-        data_cache[symbol] = {
-            'data': barset,
-            'timestamp': current_time
-        }
-        return barset
+            # Cache the data
+            data_cache[symbol] = {
+                'data': [bar],  # Store the bar data as a list to keep the format consistent
+                'timestamp': current_time
+            }
+            return [bar]  # Return the latest bar as a list
+
+        else:
+            # Use TimeFrame(1, TimeFrameUnit.Minute) to specify a 1-minute timeframe
+            timeframe = tradeapi.TimeFrame(1, tradeapi.TimeFrameUnit.Minute)
+            barset = api.get_bars(symbol, timeframe, limit=1)
+            log_message(f"Fetched latest live data for {symbol}: {barset}")
+            last_bar = barset[-1] if barset else None
+            if last_bar:
+                last_bar_time = last_bar.t.astimezone().strftime('%Y-%m-%d %H:%M:%S %Z')
+                log_message(f"Last bar for {symbol} fetched at {last_bar_time} with close price {last_bar.c}")
+
+            # Cache the data
+            data_cache[symbol] = {
+                'data': barset,
+                'timestamp': current_time
+            }
+            return barset
     except Exception as e:
         log_message(f"Error fetching live data for {symbol}: {str(e)}", level=logging.ERROR)
         return []
@@ -63,7 +78,7 @@ def fetch_supplemented_data(symbol, timeframe, required_bars=30):
     historical_data = get_historical_data(symbol, timeframe)
     # Slice the data to get the required number of bars
     historical_data = historical_data[-(required_bars - 1):]
-    live_data = get_live_data(symbol, timeframe, cache_duration=60)
+    live_data = get_live_data(symbol)
     return historical_data + live_data
 
 

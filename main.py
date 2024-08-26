@@ -59,10 +59,6 @@ def modify_or_replace_order(existing_order, new_order_qty, risk_manager):
         return None
 
 
-def pnl_header():
-    log_message(f"<Calculated PnL>")
-
-
 def calculate_pnl(symbol, entry_price, current_price, qty):
     """Calculate profit and loss for a given symbol."""
     pnl = (current_price - entry_price) * qty
@@ -97,7 +93,7 @@ def log_pnl_to_file(pnl_data, filename="pnl_log.csv"):
         os.makedirs(directory)
 
     # Get the current timestamp
-    timestamp = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+    timestamp = datetime.now().astimezone().strftime("%Y-%m-%d_%H:%M:%S")
 
     # Append the timestamp to the filename
     filename = f"pnl_log_{timestamp}.csv"
