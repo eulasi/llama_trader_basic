@@ -5,6 +5,7 @@ from datetime import datetime
 import alpaca_trade_api as tradeapi
 import numpy as np
 import pandas as pd
+
 from strategies.moving_average_crossover import moving_average_crossover
 from utils.live_data_fetcher import fetch_live_data_for_all_symbols
 from utils.order_executor import place_order, handle_order_execution
@@ -17,6 +18,20 @@ api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
 
 # Initialize PerformanceTracker
 performance_tracker = PerformanceTracker()
+
+
+def sell_profitable_positions(current_positions):
+    """Sell any position that is currently profitable to free up capital."""
+    for symbol, qty in current_positions.items():
+        entry_price = float(api.get_position(symbol).avg_entry_price)
+        current_price = float(api.get_latest_trade(symbol).price)
+        pnl = calculate_pnl(symbol, entry_price, current_price, qty)
+        if pnl > 0:  # If the position is in profit
+            log_message(f"{symbol}: Position is in profit. Selling {qty} shares to free up capital.",
+                        level=logging.INFO)
+            placed_order = place_order(symbol, qty, 'sell', risk_manager=None)  # Risk manager not needed for selling
+            # profit
+            handle_order_execution(placed_order, symbol, risk_manager=None)
 
 
 def get_current_positions():
@@ -182,6 +197,7 @@ def main():
         risk_percentage=5  # 5% risk per trade
     )
 
+    # Define target profit and stop loss limit
     target_profit = 7.5  # Adjusted target profit
     stop_loss_limit = -5  # Adjusted stop loss limit
 
@@ -198,6 +214,9 @@ def main():
 
             # Reconcile positions and orders at the start of each iteration
             current_positions, open_orders = reconcile_positions_and_orders()
+
+            # Sell profitable positions to free up capital
+            sell_profitable_positions(current_positions)
 
             monitor_pnl(current_positions)  # Monitor PnL for current positions
 
